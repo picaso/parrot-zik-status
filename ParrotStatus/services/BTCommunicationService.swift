@@ -1,7 +1,6 @@
 import IOBluetooth
 import AEXML
-protocol BTCommunicationServiceInterface {
-}
+protocol BTCommunicationServiceInterface {}
 
 class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMMChannelDelegate {
 
