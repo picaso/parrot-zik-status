@@ -16,7 +16,7 @@
 		2FB287AC1C9A3BFD00C4A53E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */; };
 		3FC7102663FAE6E939B82B3E /* BTCommunicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC71D4D3FDF5796E37CEE55 /* BTCommunicationService.swift */; };
 		3FC710CB503C4402089FC5C6 /* ParrotZikEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7113FB1F7998882EF81C7 /* ParrotZikEndpoints.swift */; };
-		3FC711D396482D259D1F67D5 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7121330F15EBF6BC13E0A /* MenuController.swift */; };
+		3FC711D396482D259D1F67D5 /* ZikMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7121330F15EBF6BC13E0A /* ZikMenu.swift */; };
 		3FC719A58F133E52A6DE2CD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC71EC84AA3D81B9DD6EEB4 /* ViewController.swift */; };
 		3FC71BC9F449E9C9A021FBCB /* ParrotRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC711AD684052C6576C866A /* ParrotRequestProtocol.swift */; };
 		3FC71C5C73C7B60EE0E6A39D /* BTResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC710512DB7F6DBBBCC7894 /* BTResponseHandler.swift */; };
@@ -53,7 +53,7 @@
 		3FC710F1C056A192B314F837 /* BTConnectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTConnectionService.swift; sourceTree = "<group>"; };
 		3FC7113FB1F7998882EF81C7 /* ParrotZikEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotZikEndpoints.swift; sourceTree = "<group>"; };
 		3FC711AD684052C6576C866A /* ParrotRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotRequestProtocol.swift; sourceTree = "<group>"; };
-		3FC7121330F15EBF6BC13E0A /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		3FC7121330F15EBF6BC13E0A /* ZikMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZikMenu.swift; path = views/ZikMenu.swift; sourceTree = "<group>"; };
 		3FC717DE9317BEA2D91078A2 /* ZikResponseHandlerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZikResponseHandlerTest.swift; sourceTree = "<group>"; };
 		3FC7187853617CA4FD75203B /* DeviceState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceState.swift; sourceTree = "<group>"; };
 		3FC71BD4DAE16E0059B9EAD2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +95,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2F1890341D0F6F44008C6BEA /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3FC7121330F15EBF6BC13E0A /* ZikMenu.swift */,
+				2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
 		2F3682811D0E8C6300E55E87 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,7 +140,7 @@
 			children = (
 				2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */,
 				2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */,
-				2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */,
+				2F1890341D0F6F44008C6BEA /* views */,
 				3FC7138D80D52ED494CC3DA2 /* controllers */,
 				3FC71702503BC7A3B88B5F5A /* models */,
 				3FC71CD6E02C6AF1B630F8BD /* services */,
@@ -153,7 +162,6 @@
 		3FC7138D80D52ED494CC3DA2 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3FC7121330F15EBF6BC13E0A /* MenuController.swift */,
 				3FC71EC84AA3D81B9DD6EEB4 /* ViewController.swift */,
 			);
 			path = controllers;
@@ -432,7 +440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FB287A51C9A3BFD00C4A53E /* AppDelegate.swift in Sources */,
-				3FC711D396482D259D1F67D5 /* MenuController.swift in Sources */,
+				3FC711D396482D259D1F67D5 /* ZikMenu.swift in Sources */,
 				3FC719A58F133E52A6DE2CD4 /* ViewController.swift in Sources */,
 				3FC71D7B0336AA9C80F5FC09 /* DeviceState.swift in Sources */,
 				3FC71EDC9C6EB259D95933A2 /* BTConnectionService.swift in Sources */,
@@ -469,6 +477,7 @@
 				2FB287AB1C9A3BFD00C4A53E /* Base */,
 			);
 			name = Main.storyboard;
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

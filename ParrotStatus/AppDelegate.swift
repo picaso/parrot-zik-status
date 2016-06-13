@@ -5,7 +5,7 @@ import Swinject
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     let container = Container() { container in
-        container.register(MenuControllerInterface.self) { _ in MenuController() }
+        container.register(ZikMemuInterface.self) { _ in ZikMenu() }
             .inObjectScope(.Container)
         container.register(ParrotZik2Api.self) { _ in ParrotZik2Api() }
             .inObjectScope(.Container)
@@ -25,7 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         NSApplication.sharedApplication().windows.last!.close()
-        container.resolve(MenuControllerInterface)?.showMenu()
+        container.resolve(ZikMemuInterface)?.showMenu()
         container.resolve(BTConnectionServiceInterface)
     }
 
