@@ -4,58 +4,81 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ParrotStatusTests/services/ZikResponseHandlerTest.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ParrotStatusTests/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParrotStatusTests/resources/BatteryInfoAnswer.xml" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParrotStatusTests/resources/SoftwareVersionAnswer.xml" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParrotStatusTests/resources/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParrotStatusTests/resources/NoiseCancellationStatusAnswer.xml" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/resources/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/controllers/MenuController.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/controllers/ViewController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/AppDelegate.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/zikAPI/ParrotZik2Api.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/zikAPI/ParrotRequestProtocol.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/zikAPI/ParrotZikEndpoints.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/models/DeviceState.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/AppDelegate.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/controllers/MenuController.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/controllers/ViewController.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/services/BTConnectionService.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/services/BTResponseHandler.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/services/BTCommunicationService.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/Assets.xcassets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/models/DeviceState.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/ParrotStatus/Base.lproj/Main.storyboard" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ParrotStatusUITests/ParrotStatusUITests.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/ParrotStatusUITests/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject.modulemap" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject-umbrella.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject-dummy.m" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/AEXML/Sources/AEXML.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Quick/Quick.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Quick/Quick-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Quick/Quick-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Quick/Quick-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Quick/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Quick/Quick.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEXML/AEXML-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEXML/AEXML-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEXML/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEXML/AEXML.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEXML/AEXML.modulemap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/AEXML/AEXML-prefix.pch" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-resources.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests-resources.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests-acknowledgements.markdown" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests-acknowledgements.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests.release.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatusTests/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests-frameworks.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.modulemap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-acknowledgements.markdown" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-frameworks.sh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-resources.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatus/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.debug.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-acknowledgements.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.release.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/AEXML/Sources/AEXML.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Nimble/Nimble.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Nimble/Nimble-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Nimble/Nimble-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Nimble/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Nimble/Nimble-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Nimble/Nimble.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Swinject/Swinject-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Swinject.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Resolvable.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Assembler.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/PropertyRetrievable.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/PlistPropertyLoader.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Box.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/ResolutionPool.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/ServiceEntry.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/PropertyRetrievable.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/ResolutionPool.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/SynchronizedResolver.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/ObjectScope.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/JsonPropertyLoader.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/RegistrationNameAssociatable.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Container.Arguments.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/PropertyLoaderError.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/AssemblyType.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/FunctionType.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/SwinjectStoryboard/ViewController+Swinject.swift" isTestSource="false" />
@@ -67,10 +90,93 @@
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/SwinjectStoryboard/Storyboard+Swizzling.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Container.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/SpinLock.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/PropertyLoaderError.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/Container.Arguments.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/ServiceKey.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/SynchronizedResolver.Arguments.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Swinject/Sources/PropertyLoaderType.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Expectation.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/FailureMessage.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Expression.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Nimble.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/DSL+Wait.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/MatcherProtocols.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeLessThanOrEqual.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeIdenticalTo.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeGreaterThan.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/PostNotification.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/Contain.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/SatisfyAnyOf.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeNil.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeGreaterThanOrEqualTo.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/Match.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeEmpty.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/AllPass.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeLogical.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeAKindOf.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/HaveCount.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeAnInstanceOf.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/RaisesException.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeVoid.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/MatchError.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeCloseTo.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/AsyncMatcherWrapper.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/ThrowError.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/Equal.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeLessThan.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/MatcherFunc.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/EndWith.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Matchers/BeginWith.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/ObjectiveC/NMBExceptionCapture.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/ObjectiveC/CurrentTestCaseTracker.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/ObjectiveC/NMBExpectation.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/ObjectiveC/NMBExceptionCapture.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/ObjectiveC/DSL.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/ObjectiveC/NMBStringify.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/ObjectiveC/XCTestObservationCenter+Register.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/ObjectiveC/NMBObjCMatcher.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/ObjectiveC/NMBStringify.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/ObjectiveC/DSL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/AdapterProtocols.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/AssertionDispatcher.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/NimbleXCTestHandler.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/NimbleEnvironment.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Adapters/AssertionRecorder.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Utils/Stringers.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Utils/Async.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Utils/Errors.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Utils/SourceLocation.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/Utils/Functional.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Nimble/Sources/Nimble/DSL.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/DSL/World+DSL.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/DSL/QCKDSL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/DSL/QCKDSL.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/DSL/World+DSL.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/DSL/DSL.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/QuickSelectedTestSuiteBuilder.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/Callsite.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/Filter.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/Quick.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/QuickSpec.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/NSString+QCKSelectorName.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/String+FileName.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/QuickSpec.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/NSString+QCKSelectorName.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/Hooks/Closures.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/Hooks/HooksPhase.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/Hooks/SuiteHooks.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/Hooks/ExampleHooks.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/Configuration/QuickConfiguration.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/Configuration/QuickConfiguration.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/Configuration/Configuration.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/ExampleMetadata.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/ExampleGroup.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/World.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/World.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/Example.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/XCTestSuite+QuickTestSuiteBuilder.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/QuickTestSuite.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/NSBundle+CurrentTestBundle.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Quick/Sources/Quick/ErrorUtility.swift" isTestSource="false" />
     </content>
     <content url="file://$USER_HOME$/Library/Caches/AppCode2016.1/DerivedData/ParrotStatus-aqnkhvicnrcvhhfijcuwjnjgsshz/Build/Intermediates/ParrotStatus.build/Debug/ParrotStatus.build/DerivedSources" />
     <content url="file://$USER_HOME$/Library/Caches/AppCode2016.1/DerivedData/ParrotStatus-aqnkhvicnrcvhhfijcuwjnjgsshz/Build/Intermediates/Pods.build/Debug/AEXML.build/DerivedSources" />

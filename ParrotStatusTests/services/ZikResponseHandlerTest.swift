@@ -23,7 +23,6 @@ class ZikResponseHandlerTest: QuickSpec {
         }
 
         describe("zik response handler") {
-
             it ("should mutate deviceState version") {
                 let answer = self.loadXml("SoftwareVersionAnswer")
                 expect(deviceState.version).to(beEmpty())
@@ -45,9 +44,7 @@ class ZikResponseHandlerTest: QuickSpec {
                 expect(deviceState.noiseCancellationEnabled).to(beFalse())
                 handler.handle(answer!)
                 expect(deviceState.noiseCancellationEnabled).to(beTrue())
-
             }
-
         }
     }
 }
