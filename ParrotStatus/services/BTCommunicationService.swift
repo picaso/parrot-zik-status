@@ -8,9 +8,15 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
     private let api: ParrotZik2Api!
     private let zikResponseHandler: BTResponseHandlerInterface!
 
+    typealias function = AEXMLDocument -> Void
+    private var handlers = [String: function]()
+
     init(api: ParrotZik2Api, zikResponseHandler: BTResponseHandlerInterface) {
         self.api = api
         self.zikResponseHandler = zikResponseHandler
+
+        handlers["answer"] = answerHandler
+        handlers["notify"] = notificationHandler
     }
 
     @objc func rfcommChannelData(rfcommChannel: IOBluetoothRFCOMMChannel!,
@@ -20,10 +26,8 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
 
             if communication(message: message) {
                 let communication = extractResponsePackage(from: message)
-                if "answer" == communication.type {
-                    answerHandler(communication.package)
-                } else if "notify" == communication.type {
-                    notificationHandler(communication.package)
+                if let handle = handlers[communication.type] {
+                    handle(communication.package!)
                 }
             } else if initialization(message: message) {
 
@@ -67,14 +71,14 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
     }
 
     private func notificationHandler(package: AEXMLDocument?) {
-        if let pkg = package {
-            //TODO: Implement
+        if package != nil {
+           api.sendRequest(package!.root.attributes["path"]!)
         }
     }
 
     private func answerHandler(package: AEXMLDocument?) {
-        if let pkg = package {
-             zikResponseHandler.handle(pkg)
+        if package != nil {
+             zikResponseHandler.handle(package!)
         }
     }
 

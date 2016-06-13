@@ -5,19 +5,20 @@ protocol BTConnectionServiceInterface {}
 class BTConnectionService: BTConnectionServiceInterface {
 
     private let serviceName = "Parrot RFcomm service"
-    private let connected = Selector("connected:fromDevice:")
-    private let disconnected = Selector("disconnected:fromDevice:")
 
     private var communcationService: BTCommunicationServiceInterface!
 
     init(service: BTCommunicationServiceInterface) {
         self.communcationService = service
-        IOBluetoothDevice.registerForConnectNotifications(self, selector: connected )
+        IOBluetoothDevice
+            .registerForConnectNotifications(self, selector: #selector(connected(_:fromDevice:)))
     }
 
     private dynamic func connected(_: IOBluetoothUserNotification, fromDevice: IOBluetoothDevice) {
         if let deviceService = searchForBluetoothService(fromDevice) {
-            fromDevice.registerForDisconnectNotification(self, selector: disconnected)
+            fromDevice.registerForDisconnectNotification(
+                self, selector: #selector(disconnected(_:fromDevice:))
+            )
             assert(openConnectionChannel(with: deviceService), "Error Opening connection")
             NSLog("\(fromDevice.name) is Open")
 

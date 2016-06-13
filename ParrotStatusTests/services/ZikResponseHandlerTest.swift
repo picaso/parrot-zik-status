@@ -1,47 +1,12 @@
 import XCTest
 import AEXML
-
+import Quick
+import Nimble
 
 @testable import ParrotStatus
 
-class ZikResponseHandlerTest: XCTestCase {
-    var deviceState: DeviceState!
-    var handler: ZikResponseHandler!
+class ZikResponseHandlerTest: QuickSpec {
 
-    override func setUp() {
-        super.setUp()
-        deviceState = DeviceState()
-        handler = ZikResponseHandler(deviceState: deviceState)
-    }
-
-    override func tearDown() {
-        super.tearDown()
-        deviceState = nil
-        handler = nil
-    }
-
-    func test_should_mutate_deviceState_version() {
-        let answer = loadXml("SoftwareVersionAnswer")
-        XCTAssert(deviceState.version == String(), "Device version not in empty state")
-        handler.handle(answer!)
-        XCTAssert(deviceState.version == "2.05", "Device version wasn't set pdroperly")
-    }
-
-    func test_should_mutate_deviceState_battery_info() {
-        let answer = loadXml("BatteryInfoAnswer")
-        XCTAssert(deviceState.batteryLevel == String(), "Battery Level not in empty state")
-        XCTAssert(deviceState.batteryStatus == String(), "Battery Status not in empty state")
-        handler.handle(answer!)
-        XCTAssert(deviceState.batteryLevel == "74", "Battery Level not set properly")
-        XCTAssert(deviceState.batteryStatus == "charging", "Battery Status not set properly")
-    }
-    func test_should_mutate_deviceState_battery_noise_cancellation_status() {
-        let answer = loadXml("NoiseCancellationStatusAnswer")
-        XCTAssert(deviceState.noiseCancellationEnabled == false)
-        handler.handle(answer!)
-        XCTAssert(deviceState.noiseCancellationEnabled == true, "Error setting noise cancellation")
-
-    }
     private func loadXml(filePath: String) -> AEXMLDocument? {
         let bundle = NSBundle(forClass: self.dynamicType)
         let path = bundle.pathForResource(filePath, ofType: "xml")
@@ -49,4 +14,40 @@ class ZikResponseHandlerTest: XCTestCase {
         return try? AEXMLDocument(xmlData: content!)
     }
 
+    override func spec() {
+        var deviceState: DeviceState!
+        var handler: ZikResponseHandler!
+        beforeEach {
+            deviceState = DeviceState()
+            handler = ZikResponseHandler(deviceState: deviceState)
+        }
+
+        describe("zik response handler") {
+
+            it ("should mutate deviceState version") {
+                let answer = self.loadXml("SoftwareVersionAnswer")
+                expect(deviceState.version).to(beEmpty())
+                handler.handle(answer!)
+                expect(deviceState.version).to(equal("2.05"))
+            }
+
+            it ("should mutate deviceState battery info") {
+                let answer = self.loadXml("BatteryInfoAnswer")
+                expect(deviceState.batteryLevel).to(beEmpty())
+                expect(deviceState.batteryStatus).to(beEmpty())
+                handler.handle(answer!)
+                expect(deviceState.batteryLevel).to(equal("74"))
+                expect(deviceState.batteryStatus).to(equal("charging"))
+            }
+
+            it ("should mutate deviceState battery noise cancellation status") {
+                let answer = self.loadXml("NoiseCancellationStatusAnswer")
+                expect(deviceState.noiseCancellationEnabled).to(beFalse())
+                handler.handle(answer!)
+                expect(deviceState.noiseCancellationEnabled).to(beTrue())
+
+            }
+
+        }
+    }
 }

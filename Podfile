@@ -12,6 +12,6 @@ end
 
 target 'ParrotStatusTests' do
     pod 'AEXML'
-#    pod 'Quick'
-#    pod 'Nimble'
+    pod 'Quick'
+    pod 'Nimble'
 end

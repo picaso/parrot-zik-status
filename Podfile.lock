@@ -1,13 +1,19 @@
 PODS:
   - AEXML (3.0.0)
+  - Nimble (4.0.1)
+  - Quick (0.9.2)
   - Swinject (1.1.2)
 
 DEPENDENCIES:
   - AEXML
+  - Nimble
+  - Quick
   - Swinject
 
 SPEC CHECKSUMS:
   AEXML: 716fb0a8decba4a3517324a71fee3685b30233d2
+  Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
   Swinject: 3debc5ac926dcd1be00947265a9db7a5f31b272a
 
 COCOAPODS: 0.39.0

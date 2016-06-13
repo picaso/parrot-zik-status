@@ -17,13 +17,13 @@ class MenuController: MenuControllerInterface {
             button.image = NSImage(named: "playStatus")
         }
 
-        menu.addItem(NSMenuItem(title: "Print Quote",
-            action: Selector("printQuote:"),
-            keyEquivalent: ""))
-        menu.addItem(NSMenuItem.separatorItem())
-        menu.addItem(NSMenuItem(title: "Quit Quotes",
-            action: Selector("terminate:"),
-            keyEquivalent: ""))
+//        menu.addItem(NSMenuItem(title: "Print Quote",
+//            action: Selector("printQuote:"),
+//            keyEquivalent: ""))
+//        menu.addItem(NSMenuItem.separatorItem())
+//        menu.addItem(NSMenuItem(title: "Quit Quotes",
+//            action: Selector("terminate:"),
+//            keyEquivalent: ""))
 
         statusItem.menu = menu
     }

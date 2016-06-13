@@ -30,6 +30,10 @@ class ParrotZik2Api {
         return  sendRequest(get(ParrotZikEndpoints.BatteryInfo))
     }
 
+    func sendRequest(request: String) -> Bool {
+        return sendRequest(get(request))
+    }
+
     func initializeDevice(rfCommChannel: IOBluetoothRFCOMMChannel) -> Bool {
         self._rfCommChannel = rfCommChannel
         return sendRequest(createInitMessage())
