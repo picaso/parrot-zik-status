@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<answer path="/api/audio/noise_cancellation/enabled/get">
+    <audio>
+        <noise_cancellation enabled="true" />
+    </audio>
+</answer>

@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2FB287B11C9A3BFD00C4A53E"
-               BuildableName = "ParrotStatus.xctest"
+               BuildableName = "ParrotStatusTests.xctest"
                BlueprintName = "ParrotStatusTests"
                ReferencedContainer = "container:ParrotStatus.xcodeproj">
             </BuildableReference>

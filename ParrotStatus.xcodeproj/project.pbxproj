@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09AF70C505B98C8CA3205ABA /* Pods_ParrotStatusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F595715865C436742665181 /* Pods_ParrotStatusTests.framework */; };
+		2F0A2CBD1D0EA08B0091616A /* SoftwareVersionAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */; };
+		2F0A2CE01D0EA1100091616A /* NoiseCancellationStatusAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */; };
+		2F0A2CE71D0EA1130091616A /* BatteryInfoAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */; };
 		2FB287A51C9A3BFD00C4A53E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */; };
 		2FB287A91C9A3BFD00C4A53E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */; };
 		2FB287AC1C9A3BFD00C4A53E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */; };
-		2FB287B71C9A3BFD00C4A53E /* ParrotStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287B61C9A3BFD00C4A53E /* ParrotStatusTests.swift */; };
-		2FB287C21C9A3BFD00C4A53E /* ParrotStatusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287C11C9A3BFD00C4A53E /* ParrotStatusUITests.swift */; };
 		3FC7102663FAE6E939B82B3E /* BTCommunicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC71D4D3FDF5796E37CEE55 /* BTCommunicationService.swift */; };
 		3FC710CB503C4402089FC5C6 /* ParrotZikEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7113FB1F7998882EF81C7 /* ParrotZikEndpoints.swift */; };
 		3FC711D396482D259D1F67D5 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7121330F15EBF6BC13E0A /* MenuController.swift */; };
 		3FC719A58F133E52A6DE2CD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC71EC84AA3D81B9DD6EEB4 /* ViewController.swift */; };
 		3FC71BC9F449E9C9A021FBCB /* ParrotRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC711AD684052C6576C866A /* ParrotRequestProtocol.swift */; };
-		3FC71C5C73C7B60EE0E6A39D /* ZikResponseTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC710512DB7F6DBBBCC7894 /* ZikResponseTransformation.swift */; };
+		3FC71C5C73C7B60EE0E6A39D /* BTResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC710512DB7F6DBBBCC7894 /* BTResponseHandler.swift */; };
+		3FC71C688BD5CA9499CC15AA /* ZikResponseHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC717DE9317BEA2D91078A2 /* ZikResponseHandlerTest.swift */; };
 		3FC71D7B0336AA9C80F5FC09 /* DeviceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7187853617CA4FD75203B /* DeviceState.swift */; };
 		3FC71DE661D5A6D3354A9663 /* ParrotZik2Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC71DFD440B6D0849D599E8 /* ParrotZik2Api.swift */; };
 		3FC71EDC9C6EB259D95933A2 /* BTConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC710F1C056A192B314F837 /* BTConnectionService.swift */; };
@@ -32,37 +35,33 @@
 			remoteGlobalIDString = 2FB287A01C9A3BFD00C4A53E;
 			remoteInfo = ParrotStatus;
 		};
-		2FB287BE1C9A3BFD00C4A53E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FB287991C9A3BFD00C4A53E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2FB287A01C9A3BFD00C4A53E;
-			remoteInfo = ParrotStatus;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F595715865C436742665181 /* Pods_ParrotStatusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParrotStatusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E63782BA0DD4F9E93C9B02A /* Pods-ParrotStatusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SoftwareVersionAnswer.xml; sourceTree = "<group>"; };
+		2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NoiseCancellationStatusAnswer.xml; sourceTree = "<group>"; };
+		2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BatteryInfoAnswer.xml; sourceTree = "<group>"; };
 		2FB287A11C9A3BFD00C4A53E /* ParrotStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParrotStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FB287AB1C9A3BFD00C4A53E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2FB287B21C9A3BFD00C4A53E /* ParrotStatus.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParrotStatus.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FB287B61C9A3BFD00C4A53E /* ParrotStatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParrotStatusTests.swift; sourceTree = "<group>"; };
+		2FB287B21C9A3BFD00C4A53E /* ParrotStatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParrotStatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB287B81C9A3BFD00C4A53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2FB287BD1C9A3BFD00C4A53E /* ParrotStatus.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParrotStatus.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FB287C11C9A3BFD00C4A53E /* ParrotStatusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParrotStatusUITests.swift; sourceTree = "<group>"; };
-		2FB287C31C9A3BFD00C4A53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FC710512DB7F6DBBBCC7894 /* ZikResponseTransformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZikResponseTransformation.swift; sourceTree = "<group>"; };
+		3FC710512DB7F6DBBBCC7894 /* BTResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTResponseHandler.swift; sourceTree = "<group>"; };
 		3FC710F1C056A192B314F837 /* BTConnectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTConnectionService.swift; sourceTree = "<group>"; };
 		3FC7113FB1F7998882EF81C7 /* ParrotZikEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotZikEndpoints.swift; sourceTree = "<group>"; };
 		3FC711AD684052C6576C866A /* ParrotRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotRequestProtocol.swift; sourceTree = "<group>"; };
 		3FC7121330F15EBF6BC13E0A /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		3FC717DE9317BEA2D91078A2 /* ZikResponseHandlerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZikResponseHandlerTest.swift; sourceTree = "<group>"; };
 		3FC7187853617CA4FD75203B /* DeviceState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceState.swift; sourceTree = "<group>"; };
 		3FC71BD4DAE16E0059B9EAD2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		3FC71D4D3FDF5796E37CEE55 /* BTCommunicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCommunicationService.swift; sourceTree = "<group>"; };
 		3FC71DFD440B6D0849D599E8 /* ParrotZik2Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotZik2Api.swift; sourceTree = "<group>"; };
 		3FC71EC84AA3D81B9DD6EEB4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		72053123F3CF6C6F7D724BA5 /* Pods-ParrotStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.debug.xcconfig"; sourceTree = "<group>"; };
+		814DDAB9A523933BEE896F9C /* Pods-ParrotStatusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests.release.xcconfig"; sourceTree = "<group>"; };
 		DD0ED15EFF06125C5A303EFB /* Pods-ParrotStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.release.xcconfig"; sourceTree = "<group>"; };
 		DD55150BBB6472DDAB4C4421 /* Pods_ParrotStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParrotStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,13 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2FB287BA1C9A3BFD00C4A53E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				09AF70C505B98C8CA3205ABA /* Pods_ParrotStatusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +90,20 @@
 			isa = PBXGroup;
 			children = (
 				DD55150BBB6472DDAB4C4421 /* Pods_ParrotStatus.framework */,
+				0F595715865C436742665181 /* Pods_ParrotStatusTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F3682811D0E8C6300E55E87 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				2FB287B81C9A3BFD00C4A53E /* Info.plist */,
+				2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */,
+				2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */,
+				2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 		2FB287981C9A3BFD00C4A53E = {
@@ -106,7 +111,6 @@
 			children = (
 				2FB287A31C9A3BFD00C4A53E /* ParrotStatus */,
 				2FB287B51C9A3BFD00C4A53E /* ParrotStatusTests */,
-				2FB287C01C9A3BFD00C4A53E /* ParrotStatusUITests */,
 				2FB287A21C9A3BFD00C4A53E /* Products */,
 				AADAEBF66DD491BBFE7AD0FE /* Pods */,
 				29181B0E6A836D521776A904 /* Frameworks */,
@@ -117,8 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				2FB287A11C9A3BFD00C4A53E /* ParrotStatus.app */,
-				2FB287B21C9A3BFD00C4A53E /* ParrotStatus.xctest */,
-				2FB287BD1C9A3BFD00C4A53E /* ParrotStatus.xctest */,
+				2FB287B21C9A3BFD00C4A53E /* ParrotStatusTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,19 +144,10 @@
 		2FB287B51C9A3BFD00C4A53E /* ParrotStatusTests */ = {
 			isa = PBXGroup;
 			children = (
-				2FB287B61C9A3BFD00C4A53E /* ParrotStatusTests.swift */,
-				2FB287B81C9A3BFD00C4A53E /* Info.plist */,
+				2F3682811D0E8C6300E55E87 /* resources */,
+				3FC717A94A09A51FDB4A3D17 /* services */,
 			);
 			path = ParrotStatusTests;
-			sourceTree = "<group>";
-		};
-		2FB287C01C9A3BFD00C4A53E /* ParrotStatusUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2FB287C11C9A3BFD00C4A53E /* ParrotStatusUITests.swift */,
-				2FB287C31C9A3BFD00C4A53E /* Info.plist */,
-			);
-			path = ParrotStatusUITests;
 			sourceTree = "<group>";
 		};
 		3FC7138D80D52ED494CC3DA2 /* controllers */ = {
@@ -183,6 +177,14 @@
 			path = models;
 			sourceTree = "<group>";
 		};
+		3FC717A94A09A51FDB4A3D17 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				3FC717DE9317BEA2D91078A2 /* ZikResponseHandlerTest.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
 		3FC718975113FB093459FD16 /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,7 +198,7 @@
 			children = (
 				3FC710F1C056A192B314F837 /* BTConnectionService.swift */,
 				3FC71D4D3FDF5796E37CEE55 /* BTCommunicationService.swift */,
-				3FC710512DB7F6DBBBCC7894 /* ZikResponseTransformation.swift */,
+				3FC710512DB7F6DBBBCC7894 /* BTResponseHandler.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -206,6 +208,8 @@
 			children = (
 				72053123F3CF6C6F7D724BA5 /* Pods-ParrotStatus.debug.xcconfig */,
 				DD0ED15EFF06125C5A303EFB /* Pods-ParrotStatus.release.xcconfig */,
+				2E63782BA0DD4F9E93C9B02A /* Pods-ParrotStatusTests.debug.xcconfig */,
+				814DDAB9A523933BEE896F9C /* Pods-ParrotStatusTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -238,9 +242,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FB287C91C9A3BFD00C4A53E /* Build configuration list for PBXNativeTarget "ParrotStatusTests" */;
 			buildPhases = (
+				7EECD1E76D9EC2BB249C676C /* Check Pods Manifest.lock */,
 				2FB287AE1C9A3BFD00C4A53E /* Sources */,
 				2FB287AF1C9A3BFD00C4A53E /* Frameworks */,
 				2FB287B01C9A3BFD00C4A53E /* Resources */,
+				72EFD4B04CA7209D66A20E31 /* Embed Pods Frameworks */,
+				C2AA8AF2E4C3A0AC9F0EB4EB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,26 +256,8 @@
 			);
 			name = ParrotStatusTests;
 			productName = ParrotStatusTests;
-			productReference = 2FB287B21C9A3BFD00C4A53E /* ParrotStatus.xctest */;
+			productReference = 2FB287B21C9A3BFD00C4A53E /* ParrotStatusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2FB287BC1C9A3BFD00C4A53E /* ParrotStatusUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2FB287CC1C9A3BFD00C4A53E /* Build configuration list for PBXNativeTarget "ParrotStatusUITests" */;
-			buildPhases = (
-				2FB287B91C9A3BFD00C4A53E /* Sources */,
-				2FB287BA1C9A3BFD00C4A53E /* Frameworks */,
-				2FB287BB1C9A3BFD00C4A53E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2FB287BF1C9A3BFD00C4A53E /* PBXTargetDependency */,
-			);
-			name = ParrotStatusUITests;
-			productName = ParrotStatusUITests;
-			productReference = 2FB287BD1C9A3BFD00C4A53E /* ParrotStatus.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -284,10 +273,6 @@
 						CreatedOnToolsVersion = 7.2;
 					};
 					2FB287B11C9A3BFD00C4A53E = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 2FB287A01C9A3BFD00C4A53E;
-					};
-					2FB287BC1C9A3BFD00C4A53E = {
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = 2FB287A01C9A3BFD00C4A53E;
 					};
@@ -308,7 +293,6 @@
 			targets = (
 				2FB287A01C9A3BFD00C4A53E /* ParrotStatus */,
 				2FB287B11C9A3BFD00C4A53E /* ParrotStatusTests */,
-				2FB287BC1C9A3BFD00C4A53E /* ParrotStatusUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,13 +311,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2FB287BB1C9A3BFD00C4A53E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				2F0A2CBD1D0EA08B0091616A /* SoftwareVersionAnswer.xml in Resources */,
+				2F0A2CE01D0EA1100091616A /* NoiseCancellationStatusAnswer.xml in Resources */,
+				2F0A2CE71D0EA1130091616A /* BatteryInfoAnswer.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +364,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		72EFD4B04CA7209D66A20E31 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EECD1E76D9EC2BB249C676C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2AA8AF2E4C3A0AC9F0EB4EB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F5001DBDD8B20F397B168401 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -412,7 +437,7 @@
 				3FC71D7B0336AA9C80F5FC09 /* DeviceState.swift in Sources */,
 				3FC71EDC9C6EB259D95933A2 /* BTConnectionService.swift in Sources */,
 				3FC7102663FAE6E939B82B3E /* BTCommunicationService.swift in Sources */,
-				3FC71C5C73C7B60EE0E6A39D /* ZikResponseTransformation.swift in Sources */,
+				3FC71C5C73C7B60EE0E6A39D /* BTResponseHandler.swift in Sources */,
 				3FC71BC9F449E9C9A021FBCB /* ParrotRequestProtocol.swift in Sources */,
 				3FC710CB503C4402089FC5C6 /* ParrotZikEndpoints.swift in Sources */,
 				3FC71DE661D5A6D3354A9663 /* ParrotZik2Api.swift in Sources */,
@@ -423,15 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB287B71C9A3BFD00C4A53E /* ParrotStatusTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2FB287B91C9A3BFD00C4A53E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2FB287C21C9A3BFD00C4A53E /* ParrotStatusUITests.swift in Sources */,
+				3FC71C688BD5CA9499CC15AA /* ZikResponseHandlerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,11 +459,6 @@
 			isa = PBXTargetDependency;
 			target = 2FB287A01C9A3BFD00C4A53E /* ParrotStatus */;
 			targetProxy = 2FB287B31C9A3BFD00C4A53E /* PBXContainerItemProxy */;
-		};
-		2FB287BF1C9A3BFD00C4A53E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2FB287A01C9A3BFD00C4A53E /* ParrotStatus */;
-			targetProxy = 2FB287BE1C9A3BFD00C4A53E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -501,6 +513,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = ParrotStatus;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -538,6 +551,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ParrotStatus;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -561,6 +575,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = ParrotStatus/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-status";
@@ -570,53 +585,31 @@
 		};
 		2FB287CA1C9A3BFD00C4A53E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E63782BA0DD4F9E93C9B02A /* Pods-ParrotStatusTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ParrotStatusTests/Info.plist;
+				INFOPLIST_FILE = ParrotStatusTests/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-statusTests";
-				PRODUCT_NAME = ParrotStatus;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)Tests";
+				PRODUCT_NAME = ParrotStatusTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParrotStatus.app/Contents/MacOS/ParrotStatus";
 			};
 			name = Debug;
 		};
 		2FB287CB1C9A3BFD00C4A53E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 814DDAB9A523933BEE896F9C /* Pods-ParrotStatusTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ParrotStatusTests/Info.plist;
+				INFOPLIST_FILE = ParrotStatusTests/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-statusTests";
-				PRODUCT_NAME = ParrotStatus;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)Tests";
+				PRODUCT_NAME = ParrotStatusTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParrotStatus.app/Contents/MacOS/ParrotStatus";
-			};
-			name = Release;
-		};
-		2FB287CD1C9A3BFD00C4A53E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ParrotStatusUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-statusUITests";
-				PRODUCT_NAME = ParrotStatus;
-				TEST_TARGET_NAME = ParrotStatus;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		2FB287CE1C9A3BFD00C4A53E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = ParrotStatusUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-statusUITests";
-				PRODUCT_NAME = ParrotStatus;
-				TEST_TARGET_NAME = ParrotStatus;
-				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -646,15 +639,6 @@
 			buildConfigurations = (
 				2FB287CA1C9A3BFD00C4A53E /* Debug */,
 				2FB287CB1C9A3BFD00C4A53E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2FB287CC1C9A3BFD00C4A53E /* Build configuration list for PBXNativeTarget "ParrotStatusUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2FB287CD1C9A3BFD00C4A53E /* Debug */,
-				2FB287CE1C9A3BFD00C4A53E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

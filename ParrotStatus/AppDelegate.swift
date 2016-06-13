@@ -12,11 +12,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         container.register(BTCommunicationServiceInterface.self) { r in
             BTCommunicationService(
                 api: r.resolve(ParrotZik2Api)!,
-                zikResponseHandler: r.resolve(ZikResponseTransformation)!)
+                zikResponseHandler: r.resolve(BTResponseHandlerInterface)!)
         }.inObjectScope(.Container)
         container.register(DeviceState.self) { _ in DeviceState() }
-        container.register(ZikResponseTransformation.self) { r in
-            ZikResponseTransformation(deviceState: r.resolve(DeviceState)!)
+        container.register(BTResponseHandlerInterface.self) { r in
+            ZikResponseHandler(deviceState: r.resolve(DeviceState)!)
         }
         container.register(BTConnectionServiceInterface.self) { r in
             BTConnectionService(service: r.resolve(BTCommunicationServiceInterface)!)

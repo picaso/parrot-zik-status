@@ -6,9 +6,9 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
 
     private let rfcommChannel: IOBluetoothRFCOMMChannel? = nil
     private let api: ParrotZik2Api!
-    private let zikResponseHandler: ZikResponseTransformation!
+    private let zikResponseHandler: BTResponseHandlerInterface!
 
-    init(api: ParrotZik2Api, zikResponseHandler: ZikResponseTransformation) {
+    init(api: ParrotZik2Api, zikResponseHandler: BTResponseHandlerInterface) {
         self.api = api
         self.zikResponseHandler = zikResponseHandler
     }

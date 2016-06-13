@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<answer path="/api/system/battery/get">
+    <system>
+        <battery percent="74" timeleft="-1" state="charging" />
+    </system>
+</answer>

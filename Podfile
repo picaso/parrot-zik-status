@@ -6,6 +6,12 @@ inhibit_all_warnings!
 platform :osx, '10.10'
 
 target 'ParrotStatus' do 
-    pod 'Swinject', '~> 1.1.0'
+    pod 'Swinject'
     pod 'AEXML'
+end
+
+target 'ParrotStatusTests' do
+    pod 'AEXML'
+#    pod 'Quick'
+#    pod 'Nimble'
 end

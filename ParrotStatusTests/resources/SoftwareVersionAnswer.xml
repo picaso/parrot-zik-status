@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<answer path="/api/software/version/get">
+    <software sip6="2.05" tts="none" pic="5" />
+</answer>
