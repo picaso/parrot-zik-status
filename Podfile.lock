@@ -1,0 +1,13 @@
+PODS:
+  - AEXML (3.0.0)
+  - Swinject (1.1.2)
+
+DEPENDENCIES:
+  - AEXML
+  - Swinject (~> 1.1.0)
+
+SPEC CHECKSUMS:
+  AEXML: 716fb0a8decba4a3517324a71fee3685b30233d2
+  Swinject: 3debc5ac926dcd1be00947265a9db7a5f31b272a
+
+COCOAPODS: 0.39.0

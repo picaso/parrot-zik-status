@@ -1,0 +1,657 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F0E77A31D0B455B007F6202 /* BTConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0E77A21D0B455B007F6202 /* BTConnectionService.swift */; };
+		2F5B2E9F1D0B6CEF007DA132 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5B2E9E1D0B6CEF007DA132 /* MenuController.swift */; };
+		2F799FC81D0CE081006D6DC0 /* BTCommunicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F799FC71D0CE081006D6DC0 /* BTCommunicationService.swift */; };
+		2F79A0061D0D1B50006D6DC0 /* ParrotRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79A0051D0D1B50006D6DC0 /* ParrotRequestProtocol.swift */; };
+		2F79A1661D0DEF3F006D6DC0 /* ParrotZik2Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79A1651D0DEF3F006D6DC0 /* ParrotZik2Api.swift */; };
+		2F79A3161D0E53B7006D6DC0 /* ParrotZikEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79A3151D0E53B7006D6DC0 /* ParrotZikEndpoints.swift */; };
+		2F79A3321D0E5EC0006D6DC0 /* ZikResponseTransformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79A3311D0E5EC0006D6DC0 /* ZikResponseTransformation.swift */; };
+		2F79A3421D0E60A0006D6DC0 /* DeviceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F79A3411D0E60A0006D6DC0 /* DeviceState.swift */; };
+		2FB287A51C9A3BFD00C4A53E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */; };
+		2FB287A71C9A3BFD00C4A53E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287A61C9A3BFD00C4A53E /* ViewController.swift */; };
+		2FB287A91C9A3BFD00C4A53E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */; };
+		2FB287AC1C9A3BFD00C4A53E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */; };
+		2FB287B71C9A3BFD00C4A53E /* ParrotStatusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287B61C9A3BFD00C4A53E /* ParrotStatusTests.swift */; };
+		2FB287C21C9A3BFD00C4A53E /* ParrotStatusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287C11C9A3BFD00C4A53E /* ParrotStatusUITests.swift */; };
+		901078D6AD35D519585D1AF6 /* Pods_ParrotStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD55150BBB6472DDAB4C4421 /* Pods_ParrotStatus.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2FB287B31C9A3BFD00C4A53E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FB287991C9A3BFD00C4A53E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FB287A01C9A3BFD00C4A53E;
+			remoteInfo = ParrotStatus;
+		};
+		2FB287BE1C9A3BFD00C4A53E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FB287991C9A3BFD00C4A53E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FB287A01C9A3BFD00C4A53E;
+			remoteInfo = ParrotStatus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2F0E77A21D0B455B007F6202 /* BTConnectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTConnectionService.swift; sourceTree = "<group>"; };
+		2F5B2E9E1D0B6CEF007DA132 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		2F799FC71D0CE081006D6DC0 /* BTCommunicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCommunicationService.swift; sourceTree = "<group>"; };
+		2F79A0051D0D1B50006D6DC0 /* ParrotRequestProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotRequestProtocol.swift; sourceTree = "<group>"; };
+		2F79A1651D0DEF3F006D6DC0 /* ParrotZik2Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotZik2Api.swift; sourceTree = "<group>"; };
+		2F79A3151D0E53B7006D6DC0 /* ParrotZikEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotZikEndpoints.swift; sourceTree = "<group>"; };
+		2F79A3311D0E5EC0006D6DC0 /* ZikResponseTransformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZikResponseTransformation.swift; sourceTree = "<group>"; };
+		2F79A3411D0E60A0006D6DC0 /* DeviceState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceState.swift; sourceTree = "<group>"; };
+		2FB287A11C9A3BFD00C4A53E /* ParrotStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParrotStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2FB287A61C9A3BFD00C4A53E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2FB287AB1C9A3BFD00C4A53E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2FB287AD1C9A3BFD00C4A53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB287B21C9A3BFD00C4A53E /* ParrotStatus.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParrotStatus.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB287B61C9A3BFD00C4A53E /* ParrotStatusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParrotStatusTests.swift; sourceTree = "<group>"; };
+		2FB287B81C9A3BFD00C4A53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB287BD1C9A3BFD00C4A53E /* ParrotStatus.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParrotStatus.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FB287C11C9A3BFD00C4A53E /* ParrotStatusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParrotStatusUITests.swift; sourceTree = "<group>"; };
+		2FB287C31C9A3BFD00C4A53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72053123F3CF6C6F7D724BA5 /* Pods-ParrotStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.debug.xcconfig"; sourceTree = "<group>"; };
+		DD0ED15EFF06125C5A303EFB /* Pods-ParrotStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.release.xcconfig"; sourceTree = "<group>"; };
+		DD55150BBB6472DDAB4C4421 /* Pods_ParrotStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParrotStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2FB2879E1C9A3BFD00C4A53E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				901078D6AD35D519585D1AF6 /* Pods_ParrotStatus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB287AF1C9A3BFD00C4A53E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB287BA1C9A3BFD00C4A53E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29181B0E6A836D521776A904 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD55150BBB6472DDAB4C4421 /* Pods_ParrotStatus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2F0E77A11D0B4542007F6202 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				2F0E77A21D0B455B007F6202 /* BTConnectionService.swift */,
+				2F799FC71D0CE081006D6DC0 /* BTCommunicationService.swift */,
+				2F79A3311D0E5EC0006D6DC0 /* ZikResponseTransformation.swift */,
+			);
+			name = services;
+			sourceTree = "<group>";
+		};
+		2F5B2E9D1D0B6CB8007DA132 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2FB287A61C9A3BFD00C4A53E /* ViewController.swift */,
+				2F5B2E9E1D0B6CEF007DA132 /* MenuController.swift */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		2F79A0041D0D1B1F006D6DC0 /* zikAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2F79A0051D0D1B50006D6DC0 /* ParrotRequestProtocol.swift */,
+				2F79A1651D0DEF3F006D6DC0 /* ParrotZik2Api.swift */,
+				2F79A3151D0E53B7006D6DC0 /* ParrotZikEndpoints.swift */,
+			);
+			name = zikAPI;
+			sourceTree = "<group>";
+		};
+		2F79A3401D0E6089006D6DC0 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				2F79A3411D0E60A0006D6DC0 /* DeviceState.swift */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		2FB287981C9A3BFD00C4A53E = {
+			isa = PBXGroup;
+			children = (
+				2FB287A31C9A3BFD00C4A53E /* ParrotStatus */,
+				2FB287B51C9A3BFD00C4A53E /* ParrotStatusTests */,
+				2FB287C01C9A3BFD00C4A53E /* ParrotStatusUITests */,
+				2FB287A21C9A3BFD00C4A53E /* Products */,
+				AADAEBF66DD491BBFE7AD0FE /* Pods */,
+				29181B0E6A836D521776A904 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2FB287A21C9A3BFD00C4A53E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FB287A11C9A3BFD00C4A53E /* ParrotStatus.app */,
+				2FB287B21C9A3BFD00C4A53E /* ParrotStatus.xctest */,
+				2FB287BD1C9A3BFD00C4A53E /* ParrotStatus.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2FB287A31C9A3BFD00C4A53E /* ParrotStatus */ = {
+			isa = PBXGroup;
+			children = (
+				2F79A3401D0E6089006D6DC0 /* models */,
+				2F79A0041D0D1B1F006D6DC0 /* zikAPI */,
+				2F5B2E9D1D0B6CB8007DA132 /* controllers */,
+				2F0E77A11D0B4542007F6202 /* services */,
+				2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */,
+				2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */,
+				2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */,
+				2FB287AD1C9A3BFD00C4A53E /* Info.plist */,
+			);
+			path = ParrotStatus;
+			sourceTree = "<group>";
+		};
+		2FB287B51C9A3BFD00C4A53E /* ParrotStatusTests */ = {
+			isa = PBXGroup;
+			children = (
+				2FB287B61C9A3BFD00C4A53E /* ParrotStatusTests.swift */,
+				2FB287B81C9A3BFD00C4A53E /* Info.plist */,
+			);
+			path = ParrotStatusTests;
+			sourceTree = "<group>";
+		};
+		2FB287C01C9A3BFD00C4A53E /* ParrotStatusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2FB287C11C9A3BFD00C4A53E /* ParrotStatusUITests.swift */,
+				2FB287C31C9A3BFD00C4A53E /* Info.plist */,
+			);
+			path = ParrotStatusUITests;
+			sourceTree = "<group>";
+		};
+		AADAEBF66DD491BBFE7AD0FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				72053123F3CF6C6F7D724BA5 /* Pods-ParrotStatus.debug.xcconfig */,
+				DD0ED15EFF06125C5A303EFB /* Pods-ParrotStatus.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2FB287A01C9A3BFD00C4A53E /* ParrotStatus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FB287C61C9A3BFD00C4A53E /* Build configuration list for PBXNativeTarget "ParrotStatus" */;
+			buildPhases = (
+				1B3730B33953136BB07DACF9 /* Check Pods Manifest.lock */,
+				2FB2879D1C9A3BFD00C4A53E /* Sources */,
+				2FB2879E1C9A3BFD00C4A53E /* Frameworks */,
+				2FB2879F1C9A3BFD00C4A53E /* Resources */,
+				F5001DBDD8B20F397B168401 /* Embed Pods Frameworks */,
+				531811E22ECDDEA472D3691E /* Copy Pods Resources */,
+				2F79A1341D0DE88B006D6DC0 /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParrotStatus;
+			productName = ParrotStatus;
+			productReference = 2FB287A11C9A3BFD00C4A53E /* ParrotStatus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2FB287B11C9A3BFD00C4A53E /* ParrotStatusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FB287C91C9A3BFD00C4A53E /* Build configuration list for PBXNativeTarget "ParrotStatusTests" */;
+			buildPhases = (
+				2FB287AE1C9A3BFD00C4A53E /* Sources */,
+				2FB287AF1C9A3BFD00C4A53E /* Frameworks */,
+				2FB287B01C9A3BFD00C4A53E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FB287B41C9A3BFD00C4A53E /* PBXTargetDependency */,
+			);
+			name = ParrotStatusTests;
+			productName = ParrotStatusTests;
+			productReference = 2FB287B21C9A3BFD00C4A53E /* ParrotStatus.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2FB287BC1C9A3BFD00C4A53E /* ParrotStatusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FB287CC1C9A3BFD00C4A53E /* Build configuration list for PBXNativeTarget "ParrotStatusUITests" */;
+			buildPhases = (
+				2FB287B91C9A3BFD00C4A53E /* Sources */,
+				2FB287BA1C9A3BFD00C4A53E /* Frameworks */,
+				2FB287BB1C9A3BFD00C4A53E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FB287BF1C9A3BFD00C4A53E /* PBXTargetDependency */,
+			);
+			name = ParrotStatusUITests;
+			productName = ParrotStatusUITests;
+			productReference = 2FB287BD1C9A3BFD00C4A53E /* ParrotStatus.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2FB287991C9A3BFD00C4A53E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = urbanhill;
+				TargetAttributes = {
+					2FB287A01C9A3BFD00C4A53E = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					2FB287B11C9A3BFD00C4A53E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2FB287A01C9A3BFD00C4A53E;
+					};
+					2FB287BC1C9A3BFD00C4A53E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2FB287A01C9A3BFD00C4A53E;
+					};
+				};
+			};
+			buildConfigurationList = 2FB2879C1C9A3BFD00C4A53E /* Build configuration list for PBXProject "ParrotStatus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2FB287981C9A3BFD00C4A53E;
+			productRefGroup = 2FB287A21C9A3BFD00C4A53E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2FB287A01C9A3BFD00C4A53E /* ParrotStatus */,
+				2FB287B11C9A3BFD00C4A53E /* ParrotStatusTests */,
+				2FB287BC1C9A3BFD00C4A53E /* ParrotStatusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2FB2879F1C9A3BFD00C4A53E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB287A91C9A3BFD00C4A53E /* Assets.xcassets in Resources */,
+				2FB287AC1C9A3BFD00C4A53E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB287B01C9A3BFD00C4A53E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB287BB1C9A3BFD00C4A53E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B3730B33953136BB07DACF9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2F79A1341D0DE88B006D6DC0 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		531811E22ECDDEA472D3691E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5001DBDD8B20F397B168401 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2FB2879D1C9A3BFD00C4A53E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F799FC81D0CE081006D6DC0 /* BTCommunicationService.swift in Sources */,
+				2F79A3421D0E60A0006D6DC0 /* DeviceState.swift in Sources */,
+				2F5B2E9F1D0B6CEF007DA132 /* MenuController.swift in Sources */,
+				2F79A3321D0E5EC0006D6DC0 /* ZikResponseTransformation.swift in Sources */,
+				2F0E77A31D0B455B007F6202 /* BTConnectionService.swift in Sources */,
+				2FB287A71C9A3BFD00C4A53E /* ViewController.swift in Sources */,
+				2F79A0061D0D1B50006D6DC0 /* ParrotRequestProtocol.swift in Sources */,
+				2F79A3161D0E53B7006D6DC0 /* ParrotZikEndpoints.swift in Sources */,
+				2F79A1661D0DEF3F006D6DC0 /* ParrotZik2Api.swift in Sources */,
+				2FB287A51C9A3BFD00C4A53E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB287AE1C9A3BFD00C4A53E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB287B71C9A3BFD00C4A53E /* ParrotStatusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB287B91C9A3BFD00C4A53E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FB287C21C9A3BFD00C4A53E /* ParrotStatusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2FB287B41C9A3BFD00C4A53E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FB287A01C9A3BFD00C4A53E /* ParrotStatus */;
+			targetProxy = 2FB287B31C9A3BFD00C4A53E /* PBXContainerItemProxy */;
+		};
+		2FB287BF1C9A3BFD00C4A53E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FB287A01C9A3BFD00C4A53E /* ParrotStatus */;
+			targetProxy = 2FB287BE1C9A3BFD00C4A53E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FB287AB1C9A3BFD00C4A53E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2FB287C41C9A3BFD00C4A53E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2FB287C51C9A3BFD00C4A53E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2FB287C71C9A3BFD00C4A53E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72053123F3CF6C6F7D724BA5 /* Pods-ParrotStatus.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ParrotStatus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-status";
+				PRODUCT_NAME = ParrotStatus;
+			};
+			name = Debug;
+		};
+		2FB287C81C9A3BFD00C4A53E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD0ED15EFF06125C5A303EFB /* Pods-ParrotStatus.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ParrotStatus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-status";
+				PRODUCT_NAME = ParrotStatus;
+			};
+			name = Release;
+		};
+		2FB287CA1C9A3BFD00C4A53E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ParrotStatusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-statusTests";
+				PRODUCT_NAME = ParrotStatus;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParrotStatus.app/Contents/MacOS/ParrotStatus";
+			};
+			name = Debug;
+		};
+		2FB287CB1C9A3BFD00C4A53E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ParrotStatusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-statusTests";
+				PRODUCT_NAME = ParrotStatus;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParrotStatus.app/Contents/MacOS/ParrotStatus";
+			};
+			name = Release;
+		};
+		2FB287CD1C9A3BFD00C4A53E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ParrotStatusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-statusUITests";
+				PRODUCT_NAME = ParrotStatus;
+				TEST_TARGET_NAME = ParrotStatus;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		2FB287CE1C9A3BFD00C4A53E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ParrotStatusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-statusUITests";
+				PRODUCT_NAME = ParrotStatus;
+				TEST_TARGET_NAME = ParrotStatus;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FB2879C1C9A3BFD00C4A53E /* Build configuration list for PBXProject "ParrotStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FB287C41C9A3BFD00C4A53E /* Debug */,
+				2FB287C51C9A3BFD00C4A53E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FB287C61C9A3BFD00C4A53E /* Build configuration list for PBXNativeTarget "ParrotStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FB287C71C9A3BFD00C4A53E /* Debug */,
+				2FB287C81C9A3BFD00C4A53E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FB287C91C9A3BFD00C4A53E /* Build configuration list for PBXNativeTarget "ParrotStatusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FB287CA1C9A3BFD00C4A53E /* Debug */,
+				2FB287CB1C9A3BFD00C4A53E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FB287CC1C9A3BFD00C4A53E /* Build configuration list for PBXNativeTarget "ParrotStatusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FB287CD1C9A3BFD00C4A53E /* Debug */,
+				2FB287CE1C9A3BFD00C4A53E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2FB287991C9A3BFD00C4A53E /* Project object */;
+}
