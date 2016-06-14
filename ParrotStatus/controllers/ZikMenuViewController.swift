@@ -16,7 +16,9 @@ extension NSView {
 }
 
 class ZikMenuViewController: NSViewController, NSPopoverDelegate {
+
     @IBOutlet weak var header: NSView!
+    @IBOutlet weak var footer: NSView!
 
     var deviceState: DeviceState! = nil
     let notificationCenter = NSNotificationCenter.defaultCenter()
@@ -30,6 +32,7 @@ class ZikMenuViewController: NSViewController, NSPopoverDelegate {
     }
     override func viewWillAppear() {
         header.backgroundColor = FlatUIColors.midnightBlueColor()
+        footer.backgroundColor = FlatUIColors.midnightBlueColor()
         view.backgroundColor = FlatUIColors.wetAsphaltColor()
         notificationCenter
             .addObserver(

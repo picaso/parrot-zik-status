@@ -170,71 +170,426 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FFH-hy-Bn2" userLabel="Header" colorLabel="IBBuiltInLabel-Red">
-                                <rect key="frame" x="-40" y="245" width="304" height="55"/>
+                                <rect key="frame" x="0.0" y="251" width="264" height="49"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akd-NN-5ge">
-                                        <rect key="frame" x="197" y="25" width="97" height="25"/>
+                                        <rect key="frame" x="149" y="23" width="97" height="25"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Connected" id="KV6-6I-zNQ">
                                             <font key="font" size="14" name="Futura-Medium"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFs-em-r4J">
+                                        <rect key="frame" x="15" y="11" width="79" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="  100%" id="qMa-Kn-9Iq">
+                                            <font key="font" size="16" name="FontAwesome"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elh-eZ-IZ3">
-                                        <rect key="frame" x="197" y="6" width="103" height="21"/>
+                                        <rect key="frame" x="149" y="5" width="103" height="21"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version: 2.09" id="u1c-wL-dxq">
                                             <font key="font" size="13" name="Futura-Medium"/>
                                             <color key="textColor" red="0.29696338191573829" green="0.33432404907063301" blue="0.4643229166666667" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFs-em-r4J">
-                                        <rect key="frame" x="73" y="13" width="79" height="25"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" 100%" id="qMa-Kn-9Iq">
-                                            <font key="font" size="16" name="FontAwesome"/>
+                                    <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbv-5i-X37">
+                                        <rect key="frame" x="223" y="25" width="16" height="16"/>
+                                        <contentFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.08235294371843338" green="0.69803923368453979" blue="0.54117649793624878" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="0.08235294371843338" green="0.69803923368453979" blue="0.54117649793624878" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </contentFilters>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" image="NSStatusAvailable" id="A1U-Rh-ne9"/>
+                                    </imageView>
+                                </subviews>
+                            </customView>
+                            <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JdY-Kv-L19" userLabel="Footer" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="0.0" width="264" height="36"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jCZ-qe-1aW">
+                                        <rect key="frame" x="224" y="8" width="22" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="jXT-y2-8F0">
+                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4T-aJ-yey">
+                                        <rect key="frame" x="198" y="8" width="22" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="bf8-8W-drq">
+                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <color key="textColor" red="0.78823529410000004" green="0.2470588235" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                            <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUe-BX-dUc" userLabel="option" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="209" width="264" height="36"/>
+                                <subviews>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRO-O7-BOi" customClass="ITSwitch">
+                                        <rect key="frame" x="178" y="4" width="44" height="27"/>
+                                        <backgroundFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.29999999999999999" green="0.0" blue="0.0" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="1" green="0.90000000000000002" blue="0.80000000000000004" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </backgroundFilters>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                <color key="value" red="0.082352941176470587" green="0.69803921568627447" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </customView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qLC-En-QlC">
+                                        <rect key="frame" x="34" y="6" width="138" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Noise Controll" id="aJS-Yw-vcX">
+                                            <font key="font" size="14" name="Futura-Medium"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jtB-vm-Bxw">
-                                        <rect key="frame" x="271" y="27" width="16" height="16"/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="NSStatusAvailable" id="hJY-gq-7Gx"/>
-                                    </imageView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-dw-gBb">
+                                        <rect key="frame" x="11" y="2" width="24" height="27"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="upO-yg-Au1">
+                                            <font key="font" size="16" name="FontAwesome"/>
+                                            <color key="textColor" red="0.93333333330000001" green="0.73333333329999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRj-vb-Me4">
+                                        <rect key="frame" x="228" y="8" width="19" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="tSQ-Zq-LAD">
+                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                             </customView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qLC-En-QlC">
-                                <rect key="frame" x="18" y="212" width="129" height="25"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Noise Cancellation:" id="aJS-Yw-vcX">
-                                    <font key="font" size="14" name="Futura-Medium"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Esk-Qa-SoW">
-                                <rect key="frame" x="18" y="179" width="129" height="25"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Noise Cancellation:" id="67r-xi-luK">
-                                    <font key="font" size="14" name="Futura-Medium"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcm-F4-736">
-                                <rect key="frame" x="18" y="146" width="129" height="25"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Noise Cancellation:" id="kyc-Bc-8Sw">
-                                    <font key="font" size="14" name="Futura-Medium"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bpB-ov-iF6" userLabel="option" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="175" width="264" height="36"/>
+                                <subviews>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOf-es-oBv" customClass="ITSwitch">
+                                        <rect key="frame" x="178" y="4" width="44" height="27"/>
+                                        <backgroundFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.30000001192092896" green="0.0" blue="0.0" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="1" green="0.89999997615814209" blue="0.80000001192092896" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </backgroundFilters>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                <color key="value" red="0.08235294118" green="0.69803921570000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </customView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lk0-V7-CgR">
+                                        <rect key="frame" x="34" y="6" width="138" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Equalizer" id="RLZ-Ct-VwT">
+                                            <font key="font" size="14" name="Futura-Medium"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32i-7L-d51">
+                                        <rect key="frame" x="11" y="2" width="24" height="27"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="OxJ-Vt-Ax2">
+                                            <font key="font" size="16" name="FontAwesome"/>
+                                            <color key="textColor" red="0.53333333329999999" green="0.23529411759999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                            <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y4p-0s-2u0" userLabel="option" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="140" width="264" height="36"/>
+                                <subviews>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fxv-Re-GHL" customClass="ITSwitch">
+                                        <rect key="frame" x="178" y="4" width="44" height="27"/>
+                                        <backgroundFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.30000001192092896" green="0.0" blue="0.0" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="1" green="0.89999997615814209" blue="0.80000001192092896" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </backgroundFilters>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                <color key="value" red="0.08235294118" green="0.69803921570000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </customView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c7I-UJ-dtd">
+                                        <rect key="frame" x="34" y="6" width="138" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Concert Hall" id="PmL-LN-ofm">
+                                            <font key="font" size="14" name="Futura-Medium"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l6F-1D-6aE">
+                                        <rect key="frame" x="11" y="2" width="24" height="27"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="yCi-sW-ih3">
+                                            <font key="font" size="16" name="FontAwesome"/>
+                                            <color key="textColor" red="0.14901960784313725" green="0.50980392156862742" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t6I-IK-3XA">
+                                        <rect key="frame" x="228" y="8" width="22" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="zMP-7l-Un2">
+                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
                         </subviews>
                     </customView>
                     <connections>
+                        <outlet property="footer" destination="JdY-Kv-L19" id="nAP-6g-A8Y"/>
                         <outlet property="header" destination="FFH-hy-Bn2" id="TTi-bX-2fh"/>
                     </connections>
                 </viewController>
                 <customObject id="EYs-sc-MFn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-140" y="275"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7kZ-eU-DTi">
+            <objects>
+                <viewController storyboardIdentifier="Prototype" showSeguePresentationStyle="single" id="P47-iK-zPo" sceneMemberID="viewController">
+                    <customView key="view" wantsLayer="YES" id="Jyf-F8-EGG">
+                        <rect key="frame" x="0.0" y="0.0" width="264" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MPC-27-Wau" userLabel="Header" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="251" width="264" height="49"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUJ-Zp-JFp">
+                                        <rect key="frame" x="149" y="23" width="97" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Connected" id="toZ-L3-bNK">
+                                            <font key="font" size="14" name="Futura-Medium"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e1R-tr-nxL">
+                                        <rect key="frame" x="15" y="11" width="79" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="  100%" id="f1p-9I-W8J">
+                                            <font key="font" size="16" name="FontAwesome"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQh-nr-EFb">
+                                        <rect key="frame" x="149" y="5" width="103" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version: 2.09" id="NU5-CM-Fu0">
+                                            <font key="font" size="13" name="Futura-Medium"/>
+                                            <color key="textColor" red="0.29696338189999999" green="0.33432404910000002" blue="0.46432291669999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-Ns-CUe">
+                                        <rect key="frame" x="223" y="25" width="16" height="16"/>
+                                        <contentFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.08235294371843338" green="0.69803923368453979" blue="0.54117649793624878" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="0.08235294371843338" green="0.69803923368453979" blue="0.54117649793624878" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </contentFilters>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" image="NSStatusAvailable" id="7hJ-gX-Pop"/>
+                                    </imageView>
+                                </subviews>
+                            </customView>
+                            <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qNi-PW-435" userLabel="Footer" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="0.0" width="264" height="36"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7tr-Z9-7ri">
+                                        <rect key="frame" x="224" y="8" width="22" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="4tb-ws-PRN">
+                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ssw-TY-htN">
+                                        <rect key="frame" x="198" y="8" width="22" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="cTJ-7u-yAD">
+                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <color key="textColor" red="0.78823529410000004" green="0.2470588235" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                            <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GbA-t0-28I" userLabel="option" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="209" width="264" height="36"/>
+                                <subviews>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vkv-bp-RW2" customClass="ITSwitch">
+                                        <rect key="frame" x="178" y="4" width="44" height="27"/>
+                                        <backgroundFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.30000001192092896" green="0.0" blue="0.0" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="1" green="0.89999997615814209" blue="0.80000001192092896" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </backgroundFilters>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                <color key="value" red="0.08235294118" green="0.69803921570000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </customView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kzy-dL-5LS">
+                                        <rect key="frame" x="34" y="6" width="138" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Noise Controll" id="adk-a2-hW2">
+                                            <font key="font" size="14" name="Futura-Medium"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Udx-rL-meK">
+                                        <rect key="frame" x="11" y="2" width="24" height="27"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="y57-Ad-Haw">
+                                            <font key="font" size="16" name="FontAwesome"/>
+                                            <color key="textColor" red="0.93333333330000001" green="0.73333333329999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sbl-Fv-2Hi">
+                                        <rect key="frame" x="228" y="8" width="19" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="z2a-G6-ljE">
+                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                            <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iNU-9A-xcX" userLabel="option" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="175" width="264" height="36"/>
+                                <subviews>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h9i-5R-mbc" customClass="ITSwitch">
+                                        <rect key="frame" x="178" y="4" width="44" height="27"/>
+                                        <backgroundFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.30000001192092896" green="0.0" blue="0.0" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="1" green="0.89999997615814209" blue="0.80000001192092896" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </backgroundFilters>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                <color key="value" red="0.08235294118" green="0.69803921570000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </customView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQF-Xs-4fX">
+                                        <rect key="frame" x="34" y="6" width="138" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Equalizer" id="G15-Za-5jZ">
+                                            <font key="font" size="14" name="Futura-Medium"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uP1-c6-MbC">
+                                        <rect key="frame" x="11" y="2" width="24" height="27"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="zA7-hR-O9W">
+                                            <font key="font" size="16" name="FontAwesome"/>
+                                            <color key="textColor" red="0.53333333329999999" green="0.23529411759999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                            <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mj4-n3-AyB" userLabel="option" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="140" width="264" height="36"/>
+                                <subviews>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QlB-lt-4Fv" customClass="ITSwitch">
+                                        <rect key="frame" x="178" y="4" width="44" height="27"/>
+                                        <backgroundFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.30000001192092896" green="0.0" blue="0.0" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="1" green="0.89999997615814209" blue="0.80000001192092896" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </backgroundFilters>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                <color key="value" red="0.08235294118" green="0.69803921570000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </customView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2A-UM-b03">
+                                        <rect key="frame" x="34" y="6" width="138" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Concert Hall" id="Phw-kA-rVN">
+                                            <font key="font" size="14" name="Futura-Medium"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7XW-x1-huP">
+                                        <rect key="frame" x="11" y="2" width="24" height="27"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="CYA-nc-xiz">
+                                            <font key="font" size="16" name="FontAwesome"/>
+                                            <color key="textColor" red="0.14901960780000001" green="0.50980392159999999" blue="0.83529411760000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0T7-QB-GCZ">
+                                        <rect key="frame" x="228" y="8" width="22" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="Hsb-1M-LAQ">
+                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                        </subviews>
+                    </customView>
+                    <connections>
+                        <outlet property="footer" destination="qNi-PW-435" id="aou-ay-Dv4"/>
+                        <outlet property="header" destination="MPC-27-Wau" id="fqD-9L-qWv"/>
+                    </connections>
+                </viewController>
+                <customObject id="QtR-Ra-IAh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-140" y="679"/>
         </scene>
     </scenes>
     <resources>
