@@ -11,13 +11,14 @@
 		2F0A2CBD1D0EA08B0091616A /* SoftwareVersionAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */; };
 		2F0A2CE01D0EA1100091616A /* NoiseCancellationStatusAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */; };
 		2F0A2CE71D0EA1130091616A /* BatteryInfoAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */; };
+		2F74730D1D0F74CE0050B0A4 /* ZikMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */; };
+		2F74730F1D0FB0960050B0A4 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74730E1D0FB0960050B0A4 /* ApplicationContext.swift */; };
 		2FB287A51C9A3BFD00C4A53E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */; };
 		2FB287A91C9A3BFD00C4A53E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */; };
 		2FB287AC1C9A3BFD00C4A53E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */; };
 		3FC7102663FAE6E939B82B3E /* BTCommunicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC71D4D3FDF5796E37CEE55 /* BTCommunicationService.swift */; };
 		3FC710CB503C4402089FC5C6 /* ParrotZikEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7113FB1F7998882EF81C7 /* ParrotZikEndpoints.swift */; };
 		3FC711D396482D259D1F67D5 /* ZikMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7121330F15EBF6BC13E0A /* ZikMenu.swift */; };
-		3FC719A58F133E52A6DE2CD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC71EC84AA3D81B9DD6EEB4 /* ViewController.swift */; };
 		3FC71BC9F449E9C9A021FBCB /* ParrotRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC711AD684052C6576C866A /* ParrotRequestProtocol.swift */; };
 		3FC71C5C73C7B60EE0E6A39D /* BTResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC710512DB7F6DBBBCC7894 /* BTResponseHandler.swift */; };
 		3FC71C688BD5CA9499CC15AA /* ZikResponseHandlerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC717DE9317BEA2D91078A2 /* ZikResponseHandlerTest.swift */; };
@@ -43,6 +44,8 @@
 		2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SoftwareVersionAnswer.xml; sourceTree = "<group>"; };
 		2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NoiseCancellationStatusAnswer.xml; sourceTree = "<group>"; };
 		2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BatteryInfoAnswer.xml; sourceTree = "<group>"; };
+		2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZikMenuViewController.swift; sourceTree = "<group>"; };
+		2F74730E1D0FB0960050B0A4 /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		2FB287A11C9A3BFD00C4A53E /* ParrotStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParrotStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +62,6 @@
 		3FC71BD4DAE16E0059B9EAD2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		3FC71D4D3FDF5796E37CEE55 /* BTCommunicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCommunicationService.swift; sourceTree = "<group>"; };
 		3FC71DFD440B6D0849D599E8 /* ParrotZik2Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotZik2Api.swift; sourceTree = "<group>"; };
-		3FC71EC84AA3D81B9DD6EEB4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		72053123F3CF6C6F7D724BA5 /* Pods-ParrotStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.debug.xcconfig"; sourceTree = "<group>"; };
 		814DDAB9A523933BEE896F9C /* Pods-ParrotStatusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests.release.xcconfig"; sourceTree = "<group>"; };
 		DD0ED15EFF06125C5A303EFB /* Pods-ParrotStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				3FC71CD6E02C6AF1B630F8BD /* services */,
 				3FC715DE042079FFEEFBFAC0 /* zikAPI */,
 				3FC718975113FB093459FD16 /* resources */,
+				2F74730E1D0FB0960050B0A4 /* ApplicationContext.swift */,
 			);
 			path = ParrotStatus;
 			sourceTree = "<group>";
@@ -162,7 +165,7 @@
 		3FC7138D80D52ED494CC3DA2 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3FC71EC84AA3D81B9DD6EEB4 /* ViewController.swift */,
+				2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -441,14 +444,15 @@
 			files = (
 				2FB287A51C9A3BFD00C4A53E /* AppDelegate.swift in Sources */,
 				3FC711D396482D259D1F67D5 /* ZikMenu.swift in Sources */,
-				3FC719A58F133E52A6DE2CD4 /* ViewController.swift in Sources */,
 				3FC71D7B0336AA9C80F5FC09 /* DeviceState.swift in Sources */,
 				3FC71EDC9C6EB259D95933A2 /* BTConnectionService.swift in Sources */,
 				3FC7102663FAE6E939B82B3E /* BTCommunicationService.swift in Sources */,
+				2F74730F1D0FB0960050B0A4 /* ApplicationContext.swift in Sources */,
 				3FC71C5C73C7B60EE0E6A39D /* BTResponseHandler.swift in Sources */,
 				3FC71BC9F449E9C9A021FBCB /* ParrotRequestProtocol.swift in Sources */,
 				3FC710CB503C4402089FC5C6 /* ParrotZikEndpoints.swift in Sources */,
 				3FC71DE661D5A6D3354A9663 /* ParrotZik2Api.swift in Sources */,
+				2F74730D1D0F74CE0050B0A4 /* ZikMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

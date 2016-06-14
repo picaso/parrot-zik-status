@@ -1,16 +1,17 @@
 import Cocoa
 
-class ViewController: NSViewController {
+class ZikMenuViewController: NSViewController, NSPopoverDelegate {
+
+    var deviceState: DeviceState! = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        NSLog("blaaaa")
+        print(deviceState)
     }
 
     override var representedObject: AnyObject? {
         didSet {
-        // Update the view, if already loaded.
         }
     }
 
