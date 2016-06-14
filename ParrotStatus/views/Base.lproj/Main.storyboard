@@ -230,6 +230,14 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i2s-6U-kS7">
+                                        <rect key="frame" x="18" y="2" width="103" height="32"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Device Name" id="YWH-Rn-wuG">
+                                            <font key="font" size="15" name="Futura-Medium"/>
+                                            <color key="textColor" red="0.29696338189999999" green="0.33432404910000002" blue="0.46432291669999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                             </customView>
                             <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AUe-BX-dUc" userLabel="option" colorLabel="IBBuiltInLabel-Red">
@@ -333,7 +341,7 @@
                                             </ciFilter>
                                         </backgroundFilters>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="NO"/>
                                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
                                                 <color key="value" red="0.08235294118" green="0.69803921570000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
