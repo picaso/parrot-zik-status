@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09AF70C505B98C8CA3205ABA /* Pods_ParrotStatusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F595715865C436742665181 /* Pods_ParrotStatusTests.framework */; };
+		015B42217C9A1AF054B9B6F0 /* Pods_ParrotStatusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E205BDFEC980F693102E00E3 /* Pods_ParrotStatusTests.framework */; };
 		2F0A2CBD1D0EA08B0091616A /* SoftwareVersionAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */; };
 		2F0A2CE01D0EA1100091616A /* NoiseCancellationStatusAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */; };
 		2F0A2CE71D0EA1130091616A /* BatteryInfoAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */; };
@@ -25,7 +25,7 @@
 		3FC71D7B0336AA9C80F5FC09 /* DeviceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7187853617CA4FD75203B /* DeviceState.swift */; };
 		3FC71DE661D5A6D3354A9663 /* ParrotZik2Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC71DFD440B6D0849D599E8 /* ParrotZik2Api.swift */; };
 		3FC71EDC9C6EB259D95933A2 /* BTConnectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC710F1C056A192B314F837 /* BTConnectionService.swift */; };
-		901078D6AD35D519585D1AF6 /* Pods_ParrotStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD55150BBB6472DDAB4C4421 /* Pods_ParrotStatus.framework */; };
+		976FCE7E3D93E092BBEC7283 /* Pods_ParrotStatus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB61BD46668A229D9CBD8A6 /* Pods_ParrotStatus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F595715865C436742665181 /* Pods_ParrotStatusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParrotStatusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E63782BA0DD4F9E93C9B02A /* Pods-ParrotStatusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		066711D2111939AF9EA36E92 /* Pods-ParrotStatusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests.release.xcconfig"; sourceTree = "<group>"; };
+		157A45AE87C38D5711CC58C4 /* Pods-ParrotStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.debug.xcconfig"; sourceTree = "<group>"; };
+		1DB61BD46668A229D9CBD8A6 /* Pods_ParrotStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParrotStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SoftwareVersionAnswer.xml; sourceTree = "<group>"; };
 		2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NoiseCancellationStatusAnswer.xml; sourceTree = "<group>"; };
 		2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BatteryInfoAnswer.xml; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		2FB287AB1C9A3BFD00C4A53E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FB287B21C9A3BFD00C4A53E /* ParrotStatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParrotStatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB287B81C9A3BFD00C4A53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FF544341D1006AD00E1B040 /* parrot-bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "parrot-bridging-header.h"; sourceTree = "<group>"; };
 		3FC710512DB7F6DBBBCC7894 /* BTResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTResponseHandler.swift; sourceTree = "<group>"; };
 		3FC710F1C056A192B314F837 /* BTConnectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTConnectionService.swift; sourceTree = "<group>"; };
 		3FC7113FB1F7998882EF81C7 /* ParrotZikEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotZikEndpoints.swift; sourceTree = "<group>"; };
@@ -62,10 +64,9 @@
 		3FC71BD4DAE16E0059B9EAD2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		3FC71D4D3FDF5796E37CEE55 /* BTCommunicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCommunicationService.swift; sourceTree = "<group>"; };
 		3FC71DFD440B6D0849D599E8 /* ParrotZik2Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotZik2Api.swift; sourceTree = "<group>"; };
-		72053123F3CF6C6F7D724BA5 /* Pods-ParrotStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.debug.xcconfig"; sourceTree = "<group>"; };
-		814DDAB9A523933BEE896F9C /* Pods-ParrotStatusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests.release.xcconfig"; sourceTree = "<group>"; };
-		DD0ED15EFF06125C5A303EFB /* Pods-ParrotStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.release.xcconfig"; sourceTree = "<group>"; };
-		DD55150BBB6472DDAB4C4421 /* Pods_ParrotStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParrotStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		507EC4DFA842FEC00BC5D70C /* Pods-ParrotStatus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatus.release.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.release.xcconfig"; sourceTree = "<group>"; };
+		6B37E7D9612B337A8121257B /* Pods-ParrotStatusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E205BDFEC980F693102E00E3 /* Pods_ParrotStatusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParrotStatusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				901078D6AD35D519585D1AF6 /* Pods_ParrotStatus.framework in Frameworks */,
+				976FCE7E3D93E092BBEC7283 /* Pods_ParrotStatus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,22 +82,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09AF70C505B98C8CA3205ABA /* Pods_ParrotStatusTests.framework in Frameworks */,
+				015B42217C9A1AF054B9B6F0 /* Pods_ParrotStatusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		29181B0E6A836D521776A904 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DD55150BBB6472DDAB4C4421 /* Pods_ParrotStatus.framework */,
-				0F595715865C436742665181 /* Pods_ParrotStatusTests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		2F1890341D0F6F44008C6BEA /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +115,8 @@
 				2FB287A31C9A3BFD00C4A53E /* ParrotStatus */,
 				2FB287B51C9A3BFD00C4A53E /* ParrotStatusTests */,
 				2FB287A21C9A3BFD00C4A53E /* Products */,
-				AADAEBF66DD491BBFE7AD0FE /* Pods */,
-				29181B0E6A836D521776A904 /* Frameworks */,
+				8E6A9D4C96A5BF8D4023F414 /* Pods */,
+				D5CA8440091091198168CA28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +132,7 @@
 		2FB287A31C9A3BFD00C4A53E /* ParrotStatus */ = {
 			isa = PBXGroup;
 			children = (
+				2FF544341D1006AD00E1B040 /* parrot-bridging-header.h */,
 				2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */,
 				2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */,
 				2F1890341D0F6F44008C6BEA /* views */,
@@ -214,15 +207,24 @@
 			path = services;
 			sourceTree = "<group>";
 		};
-		AADAEBF66DD491BBFE7AD0FE /* Pods */ = {
+		8E6A9D4C96A5BF8D4023F414 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				72053123F3CF6C6F7D724BA5 /* Pods-ParrotStatus.debug.xcconfig */,
-				DD0ED15EFF06125C5A303EFB /* Pods-ParrotStatus.release.xcconfig */,
-				2E63782BA0DD4F9E93C9B02A /* Pods-ParrotStatusTests.debug.xcconfig */,
-				814DDAB9A523933BEE896F9C /* Pods-ParrotStatusTests.release.xcconfig */,
+				157A45AE87C38D5711CC58C4 /* Pods-ParrotStatus.debug.xcconfig */,
+				507EC4DFA842FEC00BC5D70C /* Pods-ParrotStatus.release.xcconfig */,
+				6B37E7D9612B337A8121257B /* Pods-ParrotStatusTests.debug.xcconfig */,
+				066711D2111939AF9EA36E92 /* Pods-ParrotStatusTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5CA8440091091198168CA28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DB61BD46668A229D9CBD8A6 /* Pods_ParrotStatus.framework */,
+				E205BDFEC980F693102E00E3 /* Pods_ParrotStatusTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,13 +234,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FB287C61C9A3BFD00C4A53E /* Build configuration list for PBXNativeTarget "ParrotStatus" */;
 			buildPhases = (
-				1B3730B33953136BB07DACF9 /* Check Pods Manifest.lock */,
+				838CF1C4097F6F2F33DDAFE8 /* [CP] Check Pods Manifest.lock */,
 				2FB2879D1C9A3BFD00C4A53E /* Sources */,
 				2FB2879E1C9A3BFD00C4A53E /* Frameworks */,
 				2FB2879F1C9A3BFD00C4A53E /* Resources */,
-				F5001DBDD8B20F397B168401 /* Embed Pods Frameworks */,
-				531811E22ECDDEA472D3691E /* Copy Pods Resources */,
 				2F79A1341D0DE88B006D6DC0 /* SwiftLint */,
+				2445577EC3FAC52D149CC797 /* [CP] Embed Pods Frameworks */,
+				644C11273BA4BE1723B54EE2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,12 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FB287C91C9A3BFD00C4A53E /* Build configuration list for PBXNativeTarget "ParrotStatusTests" */;
 			buildPhases = (
-				7EECD1E76D9EC2BB249C676C /* Check Pods Manifest.lock */,
+				20599217A7A9F1DCB29C5178 /* [CP] Check Pods Manifest.lock */,
 				2FB287AE1C9A3BFD00C4A53E /* Sources */,
 				2FB287AF1C9A3BFD00C4A53E /* Frameworks */,
 				2FB287B01C9A3BFD00C4A53E /* Resources */,
-				72EFD4B04CA7209D66A20E31 /* Embed Pods Frameworks */,
-				C2AA8AF2E4C3A0AC9F0EB4EB /* Copy Pods Resources */,
+				488F18A98A7ECD62368CDCBB /* [CP] Embed Pods Frameworks */,
+				810AB49128A18C479A117878 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,19 +333,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1B3730B33953136BB07DACF9 /* Check Pods Manifest.lock */ = {
+		20599217A7A9F1DCB29C5178 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2445577EC3FAC52D149CC797 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2F79A1341D0DE88B006D6DC0 /* SwiftLint */ = {
@@ -360,29 +377,14 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		531811E22ECDDEA472D3691E /* Copy Pods Resources */ = {
+		488F18A98A7ECD62368CDCBB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		72EFD4B04CA7209D66A20E31 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,29 +392,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7EECD1E76D9EC2BB249C676C /* Check Pods Manifest.lock */ = {
+		644C11273BA4BE1723B54EE2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C2AA8AF2E4C3A0AC9F0EB4EB /* Copy Pods Resources */ = {
+		810AB49128A18C479A117878 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,19 +422,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParrotStatusTests/Pods-ParrotStatusTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F5001DBDD8B20F397B168401 /* Embed Pods Frameworks */ = {
+		838CF1C4097F6F2F33DDAFE8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -571,7 +573,7 @@
 		};
 		2FB287C71C9A3BFD00C4A53E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72053123F3CF6C6F7D724BA5 /* Pods-ParrotStatus.debug.xcconfig */;
+			baseConfigurationReference = 157A45AE87C38D5711CC58C4 /* Pods-ParrotStatus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -584,7 +586,7 @@
 		};
 		2FB287C81C9A3BFD00C4A53E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD0ED15EFF06125C5A303EFB /* Pods-ParrotStatus.release.xcconfig */;
+			baseConfigurationReference = 507EC4DFA842FEC00BC5D70C /* Pods-ParrotStatus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -598,7 +600,7 @@
 		};
 		2FB287CA1C9A3BFD00C4A53E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E63782BA0DD4F9E93C9B02A /* Pods-ParrotStatusTests.debug.xcconfig */;
+			baseConfigurationReference = 6B37E7D9612B337A8121257B /* Pods-ParrotStatusTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -613,7 +615,7 @@
 		};
 		2FB287CB1C9A3BFD00C4A53E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 814DDAB9A523933BEE896F9C /* Pods-ParrotStatusTests.release.xcconfig */;
+			baseConfigurationReference = 066711D2111939AF9EA36E92 /* Pods-ParrotStatusTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;

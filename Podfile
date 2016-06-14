@@ -7,6 +7,8 @@ platform :osx, '10.10'
 
 target 'ParrotStatus' do 
     pod 'Swinject'
+    pod 'FlatUIColors'
+    pod 'ITSwitch'
     pod 'AEXML'
 end
 

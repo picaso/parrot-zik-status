@@ -14,6 +14,7 @@ class ZikMenu: NSObject, ZikMemuInterface {
             .instantiateControllerWithIdentifier("zikView") as? ZikMenuViewController
         popover.delegate = vc
         popover.contentViewController = vc!
+        popover.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
         popover.behavior = .Transient
     }
 

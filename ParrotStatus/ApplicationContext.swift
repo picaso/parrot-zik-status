@@ -20,7 +20,7 @@ extension SwinjectStoryboard {
             }.inObjectScope(.Container)
 
         defaultContainer.register(DeviceState.self) { _ in DeviceState() }
-
+            .inObjectScope(.Container)
         defaultContainer.register(BTResponseHandlerInterface.self) { r in
             ZikResponseHandler(deviceState: r.resolve(DeviceState)!)
         }

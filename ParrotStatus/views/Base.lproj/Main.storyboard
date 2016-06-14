@@ -165,24 +165,79 @@
         <scene sceneID="gvj-C2-Xtk">
             <objects>
                 <viewController storyboardIdentifier="zikView" showSeguePresentationStyle="single" id="joH-ec-mXa" customClass="ZikMenuViewController" customModule="ParrotStatus" sceneMemberID="viewController">
-                    <customView key="view" id="HF2-rP-LXg">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                    <customView key="view" wantsLayer="YES" id="fW3-Bi-IbM">
+                        <rect key="frame" x="0.0" y="0.0" width="264" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ioe-cX-SQb">
-                                <rect key="frame" x="57" y="230" width="37" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Zcw-WZ-4jf">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FFH-hy-Bn2" userLabel="Header" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="-40" y="245" width="304" height="55"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akd-NN-5ge">
+                                        <rect key="frame" x="197" y="25" width="97" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Connected" id="KV6-6I-zNQ">
+                                            <font key="font" size="14" name="Futura-Medium"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elh-eZ-IZ3">
+                                        <rect key="frame" x="197" y="6" width="103" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version: 2.09" id="u1c-wL-dxq">
+                                            <font key="font" size="13" name="Futura-Medium"/>
+                                            <color key="textColor" red="0.29696338191573829" green="0.33432404907063301" blue="0.4643229166666667" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFs-em-r4J">
+                                        <rect key="frame" x="73" y="13" width="79" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=" 100%" id="qMa-Kn-9Iq">
+                                            <font key="font" size="16" name="FontAwesome"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jtB-vm-Bxw">
+                                        <rect key="frame" x="271" y="27" width="16" height="16"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="NSStatusAvailable" id="hJY-gq-7Gx"/>
+                                    </imageView>
+                                </subviews>
+                            </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qLC-En-QlC">
+                                <rect key="frame" x="18" y="212" width="129" height="25"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Noise Cancellation:" id="aJS-Yw-vcX">
+                                    <font key="font" size="14" name="Futura-Medium"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Esk-Qa-SoW">
+                                <rect key="frame" x="18" y="179" width="129" height="25"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Noise Cancellation:" id="67r-xi-luK">
+                                    <font key="font" size="14" name="Futura-Medium"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcm-F4-736">
+                                <rect key="frame" x="18" y="146" width="129" height="25"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Noise Cancellation:" id="kyc-Bc-8Sw">
+                                    <font key="font" size="14" name="Futura-Medium"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                         </subviews>
                     </customView>
+                    <connections>
+                        <outlet property="header" destination="FFH-hy-Bn2" id="TTi-bX-2fh"/>
+                    </connections>
                 </viewController>
                 <customObject id="EYs-sc-MFn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74.5" y="275"/>
+            <point key="canvasLocation" x="-140" y="275"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSStatusAvailable" width="16" height="16"/>
+    </resources>
 </document>
