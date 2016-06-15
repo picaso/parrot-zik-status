@@ -1,20 +1,6 @@
 import Cocoa
 import FlatUIColors
 
-extension NSView {
-    var backgroundColor: NSColor? {
-        get {
-            guard let layer = layer, backgroundColor = layer.backgroundColor else { return nil }
-            return NSColor(CGColor: backgroundColor)
-        }
-
-        set {
-            wantsLayer = true
-            layer?.backgroundColor = newValue?.CGColor
-        }
-    }
-}
-
 class ZikMenuViewController: NSViewController, NSPopoverDelegate {
 
     @IBOutlet weak var header: NSView!
@@ -23,17 +9,12 @@ class ZikMenuViewController: NSViewController, NSPopoverDelegate {
     var deviceState: DeviceState! = nil
     let notificationCenter = NSNotificationCenter.defaultCenter()
 
-
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     override func viewWillAppear() {
-        header.backgroundColor = FlatUIColors.midnightBlueColor()
-        footer.backgroundColor = FlatUIColors.midnightBlueColor()
-        view.backgroundColor = FlatUIColors.wetAsphaltColor()
+        makeViewPretty()
         notificationCenter
             .addObserver(
                 self, selector: #selector(refreshView),
@@ -42,6 +23,13 @@ class ZikMenuViewController: NSViewController, NSPopoverDelegate {
         )
         refreshView()
     }
+
+    private func makeViewPretty() {
+        header.backgroundColor = FlatUIColors.midnightBlueColor()
+        footer.backgroundColor = FlatUIColors.midnightBlueColor()
+        view.backgroundColor = FlatUIColors.wetAsphaltColor()
+    }
+
     override var representedObject: AnyObject? {
         didSet {
         }

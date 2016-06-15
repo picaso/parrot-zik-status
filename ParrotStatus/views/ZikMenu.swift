@@ -1,19 +1,37 @@
 import Cocoa
+import IOBluetooth
 
 protocol ZikMemuInterface {
     func showMenu()
 }
 
-class ZikMenu: NSObject, ZikMemuInterface {
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
-    let popover = NSPopover()
-    let mainStoryBoard = NSStoryboard(name: "Main", bundle: nil)
+class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
+    private let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
+    private let popover = NSPopover()
+    private static let mainStoryBoard = NSStoryboard(name: "Main", bundle: nil)
 
+    let notificationCenter = NSNotificationCenter.defaultCenter()
+
+    let zikConnectedViewController = mainStoryBoard
+        .instantiateControllerWithIdentifier("zikConnected") as? ZikMenuViewController
+    let zikDisconnectedViewController = mainStoryBoard
+        .instantiateControllerWithIdentifier("zikDisconnected") as? DisconnectedViewController
     override init () {
-        let vc = mainStoryBoard
-            .instantiateControllerWithIdentifier("zikView") as? ZikMenuViewController
-        popover.delegate = vc
-        popover.contentViewController = vc!
+        super.init()
+        notificationCenter
+            .addObserver(
+                self, selector: #selector(connected),
+                name: "connected",
+                object: nil
+        )
+        notificationCenter
+            .addObserver(
+                self, selector: #selector(disconnected),
+                name: "disconnected",
+                object: nil
+        )
+        popover.delegate = zikDisconnectedViewController
+        popover.contentViewController = zikDisconnectedViewController!
         popover.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
         popover.behavior = .Transient
     }
@@ -24,6 +42,19 @@ class ZikMenu: NSObject, ZikMemuInterface {
             button.action = #selector(ZikMenu.togglePopOverView(_:))
             button.target = self
         }
+    }
+
+    private dynamic func disconnected() {
+        popover.delegate = zikDisconnectedViewController
+        popover.contentViewController = zikDisconnectedViewController
+//        zikConnectedViewController?.presentViewControllerAsModalWindow(zikDisconnectedViewController!)
+    }
+
+    private dynamic func connected() {
+        print("WAAAAAAAAAAAAAAAAATTT")
+        popover.delegate = zikConnectedViewController
+        popover.contentViewController = zikConnectedViewController
+//        zikDisconnectedViewController?.presentViewControllerAsModalWindow(zikConnectedViewController!)
     }
 
     @objc private func togglePopOverView(sender: AnyObject) {

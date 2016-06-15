@@ -159,12 +159,12 @@
                     </connections>
                 </application>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="-219" y="-665"/>
         </scene>
-        <!--Zik Menu View Controller-->
+        <!--Prototype-->
         <scene sceneID="gvj-C2-Xtk">
             <objects>
-                <viewController storyboardIdentifier="zikView" showSeguePresentationStyle="single" id="joH-ec-mXa" customClass="ZikMenuViewController" customModule="ParrotStatus" sceneMemberID="viewController">
+                <viewController title="Prototype" storyboardIdentifier="prototypeConnected" showSeguePresentationStyle="single" id="joH-ec-mXa" sceneMemberID="viewController">
                     <customView key="view" wantsLayer="YES" id="fW3-Bi-IbM">
                         <rect key="frame" x="0.0" y="0.0" width="264" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -181,9 +181,9 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFs-em-r4J">
-                                        <rect key="frame" x="15" y="11" width="79" height="25"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="  100%" id="qMa-Kn-9Iq">
-                                            <font key="font" size="16" name="FontAwesome"/>
+                                        <rect key="frame" x="15" y="9" width="47" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="100%" id="qMa-Kn-9Iq">
+                                            <font key="font" size="13" name="Futura-Medium"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -209,6 +209,22 @@
                                         </contentFilters>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" image="NSStatusAvailable" id="A1U-Rh-ne9"/>
                                     </imageView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NQ6-K6-jMN">
+                                        <rect key="frame" x="54" y="13" width="25" height="20"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="z2y-ys-RSm">
+                                            <font key="font" size="16" name="FontAwesome"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwP-ms-W3F">
+                                        <rect key="frame" x="78" y="15" width="19" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="kHE-oL-rOk">
+                                            <font key="font" size="13" name="FontAwesome"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                             </customView>
                             <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JdY-Kv-L19" userLabel="Footer" colorLabel="IBBuiltInLabel-Red">
@@ -217,7 +233,7 @@
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jCZ-qe-1aW">
                                         <rect key="frame" x="224" y="8" width="22" height="21"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="jXT-y2-8F0">
-                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <font key="font" metaFont="system" size="17"/>
                                             <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -225,7 +241,7 @@
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4T-aJ-yey">
                                         <rect key="frame" x="198" y="8" width="22" height="21"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="bf8-8W-drq">
-                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <font key="font" metaFont="system" size="17"/>
                                             <color key="textColor" red="0.78823529410000004" green="0.2470588235" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -271,8 +287,8 @@
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j4f-dw-gBb">
                                         <rect key="frame" x="11" y="2" width="24" height="27"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="upO-yg-Au1">
-                                            <font key="font" size="16" name="FontAwesome"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="upO-yg-Au1">
+                                            <font key="font" metaFont="system" size="16"/>
                                             <color key="textColor" red="0.93333333330000001" green="0.73333333329999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -280,7 +296,7 @@
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRj-vb-Me4">
                                         <rect key="frame" x="228" y="8" width="19" height="21"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="tSQ-Zq-LAD">
-                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <font key="font" metaFont="system" size="17"/>
                                             <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -319,7 +335,7 @@
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="32i-7L-d51">
                                         <rect key="frame" x="11" y="2" width="24" height="27"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="OxJ-Vt-Ax2">
-                                            <font key="font" size="16" name="FontAwesome"/>
+                                            <font key="font" metaFont="system" size="16"/>
                                             <color key="textColor" red="0.53333333329999999" green="0.23529411759999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -358,7 +374,7 @@
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l6F-1D-6aE">
                                         <rect key="frame" x="11" y="2" width="24" height="27"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="yCi-sW-ih3">
-                                            <font key="font" size="16" name="FontAwesome"/>
+                                            <font key="font" metaFont="system" size="16"/>
                                             <color key="textColor" red="0.14901960784313725" green="0.50980392156862742" blue="0.83529411764705885" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -366,7 +382,7 @@
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t6I-IK-3XA">
                                         <rect key="frame" x="228" y="8" width="22" height="21"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="zMP-7l-Un2">
-                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <font key="font" metaFont="system" size="17"/>
                                             <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
@@ -375,19 +391,15 @@
                             </customView>
                         </subviews>
                     </customView>
-                    <connections>
-                        <outlet property="footer" destination="JdY-Kv-L19" id="nAP-6g-A8Y"/>
-                        <outlet property="header" destination="FFH-hy-Bn2" id="TTi-bX-2fh"/>
-                    </connections>
                 </viewController>
                 <customObject id="EYs-sc-MFn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-140" y="275"/>
+            <point key="canvasLocation" x="-219" y="-427"/>
         </scene>
-        <!--View Controller-->
+        <!--ZikConnected-->
         <scene sceneID="7kZ-eU-DTi">
             <objects>
-                <viewController storyboardIdentifier="Prototype" showSeguePresentationStyle="single" id="P47-iK-zPo" sceneMemberID="viewController">
+                <viewController title="ZikConnected" storyboardIdentifier="zikConnected" showSeguePresentationStyle="single" id="P47-iK-zPo" customClass="ZikMenuViewController" customModule="ParrotStatus" sceneMemberID="viewController">
                     <customView key="view" wantsLayer="YES" id="Jyf-F8-EGG">
                         <rect key="frame" x="0.0" y="0.0" width="264" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -591,13 +603,87 @@
                         </subviews>
                     </customView>
                     <connections>
-                        <outlet property="footer" destination="qNi-PW-435" id="aou-ay-Dv4"/>
-                        <outlet property="header" destination="MPC-27-Wau" id="fqD-9L-qWv"/>
+                        <outlet property="footer" destination="qNi-PW-435" id="a9n-th-d5X"/>
+                        <outlet property="header" destination="MPC-27-Wau" id="fkB-vm-86W"/>
                     </connections>
                 </viewController>
                 <customObject id="QtR-Ra-IAh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-140" y="679"/>
+            <point key="canvasLocation" x="-219" y="-44"/>
+        </scene>
+        <!--ZikDisconnected-->
+        <scene sceneID="1kn-yL-TQR">
+            <objects>
+                <customObject id="zXI-fL-jZa" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController title="ZikDisconnected" storyboardIdentifier="zikDisconnected" showSeguePresentationStyle="single" id="T4n-Pn-y67" customClass="DisconnectedViewController" customModule="ParrotStatus" sceneMemberID="viewController">
+                    <customView key="view" wantsLayer="YES" id="ZOl-pc-uxB">
+                        <rect key="frame" x="0.0" y="0.0" width="264" height="159"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6C-RT-CyW" userLabel="Header" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="110" width="264" height="49"/>
+                                <subviews>
+                                    <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eD-Ut-gVr">
+                                        <rect key="frame" x="132" y="16" width="16" height="16"/>
+                                        <contentFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.78823529410000004" green="0.2470588235" blue="0.0" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="0.78823529410000004" green="0.2470588235" blue="0.0" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </contentFilters>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" image="NSStatusAvailable" id="Jkl-iB-mzH"/>
+                                    </imageView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qjc-Ug-fjd">
+                                        <rect key="frame" x="18" y="12" width="113" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Disconnected" id="DAR-h6-sYY">
+                                            <font key="font" size="18" name="Futura-Medium"/>
+                                            <color key="textColor" red="0.67843137254901964" green="0.70588235294117652" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                            <customView identifier="Header" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dfG-YB-0lC" userLabel="Footer" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="0.0" width="264" height="36"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kaw-zp-dxS">
+                                        <rect key="frame" x="224" y="8" width="22" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="g8x-80-YaV">
+                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="inv-ud-D2m">
+                                        <rect key="frame" x="198" y="8" width="22" height="21"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="" id="yVh-K3-hqE">
+                                            <font key="font" size="17" name="FontAwesome"/>
+                                            <color key="textColor" red="0.78823529410000004" green="0.2470588235" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AER-SY-Gfm">
+                                <rect key="frame" x="18" y="39" width="175" height="68"/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Pair and connect your Zik headPhone with your computer" id="0dr-Je-ASc">
+                                    <font key="font" size="13" name="Futura-Medium"/>
+                                    <color key="textColor" red="0.67843137249999996" green="0.70588235290000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </customView>
+                    <connections>
+                        <outlet property="footer" destination="dfG-YB-0lC" id="Ix3-Gt-hkf"/>
+                        <outlet property="header" destination="O6C-RT-CyW" id="DMT-CL-Anz"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="89" y="-114.5"/>
         </scene>
     </scenes>
     <resources>

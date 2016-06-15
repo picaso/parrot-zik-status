@@ -7,6 +7,10 @@ extension SwinjectStoryboard {
             controller.deviceState = r.resolve(DeviceState.self)
         }
 
+        defaultContainer.registerForStoryboard(DisconnectedViewController.self) {
+            _ in DisconnectedViewController()
+        }
+
         defaultContainer.register(ZikMemuInterface.self) { r in ZikMenu()
             }.inObjectScope(.Container)
 
@@ -21,6 +25,7 @@ extension SwinjectStoryboard {
 
         defaultContainer.register(DeviceState.self) { _ in DeviceState() }
             .inObjectScope(.Container)
+
         defaultContainer.register(BTResponseHandlerInterface.self) { r in
             ZikResponseHandler(deviceState: r.resolve(DeviceState)!)
         }

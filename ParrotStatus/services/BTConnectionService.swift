@@ -7,6 +7,7 @@ class BTConnectionService: BTConnectionServiceInterface {
     private let serviceName = "Parrot RFcomm service"
 
     private var communcationService: BTCommunicationServiceInterface!
+    let notificationCenter = NSNotificationCenter.defaultCenter()
 
     init(service: BTCommunicationServiceInterface) {
         self.communcationService = service
@@ -21,13 +22,15 @@ class BTConnectionService: BTConnectionServiceInterface {
             )
             assert(openConnectionChannel(with: deviceService), "Error Opening connection")
             NSLog("\(fromDevice.name) is Open")
-
+            notificationCenter.postNotificationName("connected", object: nil)
         }
     }
 
     private dynamic func disconnected(notification: IOBluetoothUserNotification,
         fromDevice device: IOBluetoothDevice) {
-            NSLog("\(device.name) is Disonnected")
+
+        NSLog("\(device.name) is Disonnected")
+        notificationCenter.postNotificationName("disconnected", object: nil)
     }
 
     private func searchForBluetoothService(fromDevice: IOBluetoothDevice)
