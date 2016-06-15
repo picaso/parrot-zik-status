@@ -6,6 +6,12 @@ class DeviceState {
     private var _batteryLevel: String = Empty
     private var _batteryStatus: String = Empty
     private var _noiseCancellationEnabled: Bool = false
+    private var _deviceName: String = Empty
+
+    var name: String {
+        get { return _deviceName }
+        set { _deviceName = newValue }
+    }
 
     var version: String {
         get { return _version }

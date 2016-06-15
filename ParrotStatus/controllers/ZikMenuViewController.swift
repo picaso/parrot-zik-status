@@ -1,10 +1,14 @@
 import Cocoa
 import FlatUIColors
-
-class ZikMenuViewController: NSViewController, NSPopoverDelegate {
+protocol PopoverController: NSPopoverDelegate {}
+class ZikMenuViewController: NSViewController, PopoverController {
 
     @IBOutlet weak var header: NSView!
     @IBOutlet weak var footer: NSView!
+
+    @IBOutlet weak var deviceName: NSTextField!
+    @IBOutlet weak var swVersion: NSTextField!
+    @IBOutlet weak var percentage: NSTextField!
 
     var deviceState: DeviceState! = nil
     let notificationCenter = NSNotificationCenter.defaultCenter()
@@ -14,6 +18,7 @@ class ZikMenuViewController: NSViewController, NSPopoverDelegate {
 
     }
     override func viewWillAppear() {
+        preferredContentSize = view.fittingSize
         makeViewPretty()
         notificationCenter
             .addObserver(
@@ -37,7 +42,9 @@ class ZikMenuViewController: NSViewController, NSPopoverDelegate {
 
     @objc private func refreshView() {
         dispatch_async(dispatch_get_main_queue()) {
-
+            self.swVersion.stringValue = "Version: \(self.deviceState.version)"
+            self.percentage.stringValue = "\(self.deviceState.batteryLevel)%"
+            self.deviceName.stringValue = self.deviceState.name
         }
     }
 }

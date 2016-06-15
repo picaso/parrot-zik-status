@@ -27,6 +27,7 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
             if communication(message: message) {
                 let communication = extractResponsePackage(from: message)
                 if let handle = handlers[communication.type] {
+                    print(communication.package!.xmlString)
                     handle(communication.package!)
                 }
             } else if initialization(message: message) {
@@ -34,6 +35,7 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
                 api.getAsyncApplicationVersion()
                 api.getAsyncNoiseCancellationStatus()
                 api.getAsyncBatteryInfo()
+                api.getAsyncFriendlyName()
             }
     }
 

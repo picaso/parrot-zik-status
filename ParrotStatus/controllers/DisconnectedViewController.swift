@@ -2,7 +2,7 @@ import Cocoa
 import FlatUIColors
 
 
-class DisconnectedViewController: NSViewController, NSPopoverDelegate {
+class DisconnectedViewController: NSViewController, PopoverController {
 
     @IBOutlet weak var header: NSView!
     @IBOutlet weak var footer: NSView!
@@ -12,6 +12,7 @@ class DisconnectedViewController: NSViewController, NSPopoverDelegate {
     }
 
     override func viewWillAppear() {
+        preferredContentSize = view.fittingSize
         makeViewPretty()
     }
 

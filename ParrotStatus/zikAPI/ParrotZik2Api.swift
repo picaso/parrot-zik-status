@@ -27,7 +27,11 @@ class ParrotZik2Api {
     }
 
     func getAsyncBatteryInfo() -> Bool {
-        return  sendRequest(get(ParrotZikEndpoints.BatteryInfo))
+        return sendRequest(get(ParrotZikEndpoints.BatteryInfo))
+    }
+
+    func getAsyncFriendlyName() -> Bool {
+        return sendRequest(get(ParrotZikEndpoints.FriendlyName))
     }
 
     func sendRequest(request: String) -> Bool {

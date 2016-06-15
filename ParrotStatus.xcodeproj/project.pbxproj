@@ -10,7 +10,6 @@
 		015B42217C9A1AF054B9B6F0 /* Pods_ParrotStatusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E205BDFEC980F693102E00E3 /* Pods_ParrotStatusTests.framework */; };
 		2F04D5551D10CA2100423046 /* DisconnectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F04D5541D10CA2100423046 /* DisconnectedViewController.swift */; };
 		2F04D5581D10F39A00423046 /* NSViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F04D5571D10F39A00423046 /* NSViewExtensions.swift */; };
-		2F04D55D1D11005600423046 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F04D55C1D11005600423046 /* FontAwesome.otf */; };
 		2F0A2CBD1D0EA08B0091616A /* SoftwareVersionAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */; };
 		2F0A2CE01D0EA1100091616A /* NoiseCancellationStatusAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */; };
 		2F0A2CE71D0EA1130091616A /* BatteryInfoAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */; };
@@ -47,7 +46,6 @@
 		1DB61BD46668A229D9CBD8A6 /* Pods_ParrotStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParrotStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F04D5541D10CA2100423046 /* DisconnectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisconnectedViewController.swift; sourceTree = "<group>"; };
 		2F04D5571D10F39A00423046 /* NSViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSViewExtensions.swift; sourceTree = "<group>"; };
-		2F04D55C1D11005600423046 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.otf; path = fonts/FontAwesome.otf; sourceTree = "<group>"; };
 		2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SoftwareVersionAnswer.xml; sourceTree = "<group>"; };
 		2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NoiseCancellationStatusAnswer.xml; sourceTree = "<group>"; };
 		2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BatteryInfoAnswer.xml; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 		3FC718975113FB093459FD16 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				2F04D55C1D11005600423046 /* FontAwesome.otf */,
 				3FC71BD4DAE16E0059B9EAD2 /* Info.plist */,
 			);
 			path = resources;
@@ -334,7 +331,6 @@
 			files = (
 				2FB287A91C9A3BFD00C4A53E /* Assets.xcassets in Resources */,
 				2FB287AC1C9A3BFD00C4A53E /* Main.storyboard in Resources */,
-				2F04D55D1D11005600423046 /* FontAwesome.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

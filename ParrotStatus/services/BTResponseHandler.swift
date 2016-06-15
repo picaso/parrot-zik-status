@@ -15,6 +15,7 @@ class ZikResponseHandler: BTResponseHandlerInterface {
         handlers[ParrotZikEndpoints.ApplicationVersion] = softwareVersion
         handlers[ParrotZikEndpoints.BatteryInfo] = batteryInfo
         handlers[ParrotZikEndpoints.NoiseCancellationStatus] = noiseCancellationStatus
+        handlers[ParrotZikEndpoints.FriendlyName] = friendlyName
     }
 
     func handle(document: AEXMLDocument) {
@@ -25,23 +26,23 @@ class ZikResponseHandler: BTResponseHandlerInterface {
         }
     }
 
+    private func friendlyName (document: AEXMLDocument) {
+        deviceState.name = document.root["bluetooth"].attributes["friendlyname"]!
+    }
+
     private func softwareVersion(document: AEXMLDocument) {
         deviceState.version = document.root["software"].attributes["sip6"]!
-        NSLog(deviceState.version)
     }
 
     private func batteryInfo(document: AEXMLDocument) {
         let batteryInfo = document.root["system"]["battery"]
         deviceState.batteryLevel = batteryInfo.attributes["percent"]!
         deviceState.batteryStatus = batteryInfo.attributes["state"]!
-        NSLog(deviceState.batteryLevel)
-        NSLog(deviceState.batteryStatus)
     }
 
     private func noiseCancellationStatus(document: AEXMLDocument) {
         let noiseCancellationInfo = document
             .root["audio"]["noise_cancellation"].attributes["enabled"]!
         deviceState.noiseCancellationEnabled = NSString(string: noiseCancellationInfo).boolValue
-        NSLog(deviceState.noiseCancellationEnabled.description)
     }
 }
