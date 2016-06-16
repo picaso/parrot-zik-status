@@ -52,9 +52,9 @@ class ZikMenuViewController: NSViewController, PopoverController {
     private func updateBatteryStatus() {
         if deviceState.batteryStatus == "in_use" {
             switch Int(self.deviceState.batteryLevel)! {
-            case 5..<25:
+            case 5..<20:
                 self.batteryStatus.image = NSImage(named: "battery1")
-            case 25..<51:
+            case 20..<51:
                 self.batteryStatus.image = NSImage(named: "battery2")
             case 51..<90:
                 self.batteryStatus.image = NSImage(named: "battery3")

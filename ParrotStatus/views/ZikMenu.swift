@@ -32,17 +32,23 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
                 object: nil
         )
 
-        popover = createPopover(zikDisconnectedViewController!)
+        popover = createPopover(with: zikDisconnectedViewController!)
 
     }
 
-    private func createPopover(controller: PopoverController) -> NSPopover {
+    private func createPopover(with controller: PopoverController) -> NSPopover {
         let popover = NSPopover()
         popover.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
         popover.delegate = controller
         popover.animates = false
         popover.contentViewController = controller as? NSViewController
         return popover
+    }
+
+    private func update(popover popover: NSPopover, with controller: PopoverController ) {
+        let _controller = controller as? NSViewController
+        popover.contentViewController = _controller
+        popover.contentSize = _controller!.view.frame.size
     }
 
     func showMenu() {
@@ -54,11 +60,19 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
     }
 
     private dynamic func disconnected() {
-        popover = createPopover(zikDisconnectedViewController!)
+        if popover.shown {
+            update(popover: popover, with: zikDisconnectedViewController!)
+        } else {
+            popover = createPopover(with: zikDisconnectedViewController!)
+        }
     }
 
     private dynamic func connected() {
-        popover = createPopover(zikConnectedViewController!)
+        if popover.shown {
+            update(popover: popover, with: zikConnectedViewController!)
+        } else {
+            popover = createPopover(with: zikConnectedViewController!)
+        }
     }
 
     @objc private func togglePopOverView(sender: AnyObject) {

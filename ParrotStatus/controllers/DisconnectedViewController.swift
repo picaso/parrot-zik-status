@@ -22,4 +22,7 @@ class DisconnectedViewController: NSViewController, PopoverController {
         view.backgroundColor = FlatUIColors.wetAsphaltColor()
     }
 
+    @IBAction func exit(sender: AnyObject) {
+        NSApplication.sharedApplication().terminate(self)
+    }
 }
