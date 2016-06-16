@@ -40,6 +40,7 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
         let popover = NSPopover()
         popover.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
         popover.delegate = controller
+        popover.animates = false
         popover.contentViewController = controller as? NSViewController
         return popover
     }

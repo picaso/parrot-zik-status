@@ -7,6 +7,8 @@ class DeviceState {
     private var _batteryStatus: String = Empty
     private var _noiseCancellationEnabled: Bool = false
     private var _deviceName: String = Empty
+    private var _noiseControlEnabled: Bool = false
+    private var _equalizerEnabled: Bool = false
 
     var name: String {
         get { return _deviceName }
@@ -31,6 +33,16 @@ class DeviceState {
     var noiseCancellationEnabled: Bool {
         get { return _noiseCancellationEnabled }
         set { _noiseCancellationEnabled = newValue }
+    }
+
+    var noiseControlEnabled: Bool {
+        get { return _noiseControlEnabled }
+        set { _noiseControlEnabled = newValue }
+    }
+
+    var equalizerEnabled: Bool {
+        get { return _equalizerEnabled }
+        set { _equalizerEnabled = newValue }
     }
 
 }

@@ -16,6 +16,8 @@ class ZikResponseHandler: BTResponseHandlerInterface {
         handlers[ParrotZikEndpoints.BatteryInfo] = batteryInfo
         handlers[ParrotZikEndpoints.NoiseCancellationStatus] = noiseCancellationStatus
         handlers[ParrotZikEndpoints.FriendlyName] = friendlyName
+        handlers[ParrotZikEndpoints.NoiseControltatus] = noiseControlStatus
+        handlers[ParrotZikEndpoints.EqualizerStatus] = equalizerStatus
     }
 
     func handle(document: AEXMLDocument) {
@@ -45,4 +47,16 @@ class ZikResponseHandler: BTResponseHandlerInterface {
             .root["audio"]["noise_cancellation"].attributes["enabled"]!
         deviceState.noiseCancellationEnabled = NSString(string: noiseCancellationInfo).boolValue
     }
+    private func noiseControlStatus(document: AEXMLDocument) {
+        let noiseControlStatus = document
+            .root["audio"]["noise_control"].attributes["enabled"]!
+        deviceState.noiseControlEnabled = NSString(string: noiseControlStatus).boolValue
+    }
+
+    private func equalizerStatus(document: AEXMLDocument) {
+        let equalizerStatus = document
+            .root["audio"]["equalizer"].attributes["enabled"]!
+        deviceState.equalizerEnabled = NSString(string: equalizerStatus).boolValue
+    }
+
 }

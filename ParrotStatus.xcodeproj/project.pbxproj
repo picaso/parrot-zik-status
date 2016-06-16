@@ -13,6 +13,7 @@
 		2F0A2CBD1D0EA08B0091616A /* SoftwareVersionAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */; };
 		2F0A2CE01D0EA1100091616A /* NoiseCancellationStatusAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */; };
 		2F0A2CE71D0EA1130091616A /* BatteryInfoAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */; };
+		2F662D241D12325800DF531E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F662D231D12325800DF531E /* StringExtensions.swift */; };
 		2F74730D1D0F74CE0050B0A4 /* ZikMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */; };
 		2F74730F1D0FB0960050B0A4 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74730E1D0FB0960050B0A4 /* ApplicationContext.swift */; };
 		2FB287A51C9A3BFD00C4A53E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 		2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SoftwareVersionAnswer.xml; sourceTree = "<group>"; };
 		2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NoiseCancellationStatusAnswer.xml; sourceTree = "<group>"; };
 		2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BatteryInfoAnswer.xml; sourceTree = "<group>"; };
+		2F662D231D12325800DF531E /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZikMenuViewController.swift; sourceTree = "<group>"; };
 		2F74730E1D0FB0960050B0A4 /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		2FB287A11C9A3BFD00C4A53E /* ParrotStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParrotStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				2F04D5571D10F39A00423046 /* NSViewExtensions.swift */,
+				2F662D231D12325800DF531E /* StringExtensions.swift */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				3FC71BC9F449E9C9A021FBCB /* ParrotRequestProtocol.swift in Sources */,
 				3FC710CB503C4402089FC5C6 /* ParrotZikEndpoints.swift in Sources */,
 				3FC71DE661D5A6D3354A9663 /* ParrotZik2Api.swift in Sources */,
+				2F662D241D12325800DF531E /* StringExtensions.swift in Sources */,
 				2F04D5581D10F39A00423046 /* NSViewExtensions.swift in Sources */,
 				2F04D5551D10CA2100423046 /* DisconnectedViewController.swift in Sources */,
 				2F74730D1D0F74CE0050B0A4 /* ZikMenuViewController.swift in Sources */,

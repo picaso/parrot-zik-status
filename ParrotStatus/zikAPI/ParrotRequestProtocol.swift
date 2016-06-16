@@ -15,7 +15,7 @@ class ParrotRequestProtocols {
         return generateRequest("GET \(request)")
     }
 
-    static func setRequest(request: String, args: String) -> [UInt8] {
+    static func setRequest(request: String, args: Bool) -> [UInt8] {
         return generateRequest("SET \(request)?arg=\(args)")
     }
 }

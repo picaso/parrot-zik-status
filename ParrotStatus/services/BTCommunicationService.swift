@@ -1,6 +1,11 @@
 import IOBluetooth
 import AEXML
-protocol BTCommunicationServiceInterface {}
+
+protocol BTCommunicationServiceInterface {
+    func getAsyncBatteryInfo() -> Bool
+    func toggleAsyncNoiseCancellation(arg: Bool) -> Bool
+    func toggleAsyncEqualizerStatus(arg: Bool) -> Bool
+}
 
 class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMMChannelDelegate {
 
@@ -10,6 +15,7 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
 
     typealias function = AEXMLDocument -> Void
     private var handlers = [String: function]()
+    private var getBatteryUpdateTimer: NSTimer?
 
     init(api: ParrotZik2Api, zikResponseHandler: BTResponseHandlerInterface) {
         self.api = api
@@ -26,8 +32,8 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
 
             if communication(message: message) {
                 let communication = extractResponsePackage(from: message)
+                print(communication.package!.xmlString)
                 if let handle = handlers[communication.type] {
-                    print(communication.package!.xmlString)
                     handle(communication.package!)
                 }
             } else if initialization(message: message) {
@@ -36,6 +42,8 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
                 api.getAsyncNoiseCancellationStatus()
                 api.getAsyncBatteryInfo()
                 api.getAsyncFriendlyName()
+                api.getAsyncNoiseControlStatus()
+                api.getAsyncEqualizerStatus()
             }
     }
 
@@ -44,7 +52,32 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
             NSLog("connection completed, Initializing...")
             let response = api.initializeDevice(rfcommChannel)
             assert(response, "Error Initializing bluetooth device")
+            getBatteryUpdateTimer = NSTimer
+                .scheduledTimerWithTimeInterval(
+                    60.0,
+                    target: self,
+                    selector: #selector(getAsyncBatteryInfo),
+                    userInfo: nil,
+                    repeats: true)
             NSLog("\(rfcommChannel.getDevice().name) was successfully Initialized")
+    }
+
+    @objc func rfcommChannelClosed(rfcommChannel: IOBluetoothRFCOMMChannel!) {
+        getBatteryUpdateTimer = nil
+    }
+
+    @objc func getAsyncBatteryInfo() -> Bool {
+        return api.getAsyncBatteryInfo()
+    }
+
+    func toggleAsyncNoiseCancellation(arg: Bool) -> Bool {
+        return api.toggleAsyncNoiseCancellation(arg) &&
+            api.getAsyncNoiseCancellationStatus()
+    }
+
+    func toggleAsyncEqualizerStatus(arg: Bool) -> Bool {
+        return api.toggleAsyncEqualizerStatus(arg) &&
+            api.getAsyncEqualizerStatus()
     }
 
     private func extractResponsePackage(from message: NSData)

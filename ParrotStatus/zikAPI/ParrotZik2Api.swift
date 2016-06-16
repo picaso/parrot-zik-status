@@ -18,8 +18,20 @@ class ParrotZik2Api {
         return sendRequest(get(ParrotZikEndpoints.NoiseCancellationStatus))
     }
 
-    func toggleAsyncNoiseCancellation(arg: String) -> Bool {
+    func toggleAsyncNoiseCancellation(arg: Bool) -> Bool {
         return sendRequest(set(ParrotZikEndpoints.SetNoiseCancellationStatus, args: arg))
+    }
+
+    func getAsyncNoiseControlStatus() -> Bool {
+        return sendRequest(get(ParrotZikEndpoints.NoiseControltatus))
+    }
+
+    func getAsyncEqualizerStatus() -> Bool {
+        return sendRequest(get(ParrotZikEndpoints.EqualizerStatus))
+    }
+
+    func toggleAsyncEqualizerStatus(arg: Bool) -> Bool {
+        return sendRequest(set(ParrotZikEndpoints.SetEqualizerStatus, args: arg))
     }
 
     func getAsyncApplicationVersion() -> Bool {
