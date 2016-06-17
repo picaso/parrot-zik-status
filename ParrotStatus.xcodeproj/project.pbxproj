@@ -18,6 +18,7 @@
 		2F74730D1D0F74CE0050B0A4 /* ZikMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */; };
 		2F74730F1D0FB0960050B0A4 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74730E1D0FB0960050B0A4 /* ApplicationContext.swift */; };
 		2F779B2F1D13C9B80090F724 /* BTCommunicationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F779B2E1D13C9B80090F724 /* BTCommunicationServiceTest.swift */; };
+		2F779B311D13DF180090F724 /* NoiseControlStatusAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F779B301D13DF180090F724 /* NoiseControlStatusAnswer.xml */; };
 		2FB287A51C9A3BFD00C4A53E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */; };
 		2FB287A91C9A3BFD00C4A53E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */; };
 		2FB287AC1C9A3BFD00C4A53E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZikMenuViewController.swift; sourceTree = "<group>"; };
 		2F74730E1D0FB0960050B0A4 /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		2F779B2E1D13C9B80090F724 /* BTCommunicationServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCommunicationServiceTest.swift; sourceTree = "<group>"; };
+		2F779B301D13DF180090F724 /* NoiseControlStatusAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NoiseControlStatusAnswer.xml; sourceTree = "<group>"; };
 		2FB287A11C9A3BFD00C4A53E /* ParrotStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParrotStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */,
 				2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */,
 				2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */,
+				2F779B301D13DF180090F724 /* NoiseControlStatusAnswer.xml */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F779B311D13DF180090F724 /* NoiseControlStatusAnswer.xml in Resources */,
 				2F0A2CBD1D0EA08B0091616A /* SoftwareVersionAnswer.xml in Resources */,
 				2F0A2CE01D0EA1100091616A /* NoiseCancellationStatusAnswer.xml in Resources */,
 				2F0A2CE71D0EA1130091616A /* BatteryInfoAnswer.xml in Resources */,

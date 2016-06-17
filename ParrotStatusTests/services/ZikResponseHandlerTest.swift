@@ -17,6 +17,7 @@ class ZikResponseHandlerTest: QuickSpec {
     override func spec() {
         var deviceState: DeviceState!
         var handler: ZikResponseHandler!
+
         beforeEach {
             deviceState = DeviceState()
             handler = ZikResponseHandler(deviceState: deviceState)
@@ -44,6 +45,13 @@ class ZikResponseHandlerTest: QuickSpec {
                 expect(deviceState.noiseCancellationEnabled).to(beFalse())
                 handler.handle(answer!)
                 expect(deviceState.noiseCancellationEnabled).to(beTrue())
+            }
+
+            it ("should mutate deviceState noise control status") {
+                let answer = self.loadXml("NoiseControlStatusAnswer")
+                expect(deviceState.noiseControlEnabled).to(beFalse())
+                handler.handle(answer!)
+                expect(deviceState.noiseControlEnabled).to(beTrue())
             }
         }
     }
