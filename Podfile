@@ -16,4 +16,5 @@ target 'ParrotStatusTests' do
     pod 'AEXML'
     pod 'Quick'
     pod 'Nimble'
+    pod 'Swinject'
 end

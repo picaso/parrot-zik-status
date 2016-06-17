@@ -9,7 +9,7 @@ class ZikResponseHandler: BTResponseHandlerInterface {
     var handlers = [String: function]()
 
     private var deviceState: DeviceState!
-
+    init() {}
     init(deviceState: DeviceState) {
         self.deviceState = deviceState
         handlers[ParrotZikEndpoints.ApplicationVersion] = softwareVersion
@@ -47,6 +47,7 @@ class ZikResponseHandler: BTResponseHandlerInterface {
             .root["audio"]["noise_cancellation"].attributes["enabled"]!
         deviceState.noiseCancellationEnabled = NSString(string: noiseCancellationInfo).boolValue
     }
+
     private func noiseControlStatus(document: AEXMLDocument) {
         let noiseControlStatus = document
             .root["audio"]["noise_control"].attributes["enabled"]!

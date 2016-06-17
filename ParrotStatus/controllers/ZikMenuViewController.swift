@@ -26,6 +26,7 @@ class ZikMenuViewController: NSViewController, PopoverController {
         super.viewDidLoad()
 
     }
+
     override func viewWillAppear() {
         preferredContentSize = view.fittingSize
         makeViewPretty()
@@ -42,11 +43,6 @@ class ZikMenuViewController: NSViewController, PopoverController {
         header.backgroundColor = FlatUIColors.midnightBlueColor()
         footer.backgroundColor = FlatUIColors.midnightBlueColor()
         view.backgroundColor = FlatUIColors.wetAsphaltColor()
-    }
-
-    override var representedObject: AnyObject? {
-        didSet {
-        }
     }
 
     private func updateBatteryStatus() {

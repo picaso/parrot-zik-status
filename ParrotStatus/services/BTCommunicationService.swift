@@ -30,13 +30,13 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
         length dataLength: Int) {
             let message: NSData = NSData(bytes: dataPointer, length: dataLength)
 
-            if communication(message: message) {
+            if isCommunication(message: message) {
                 let communication = extractResponsePackage(from: message)
                 print(communication.package!.xmlString)
                 if let handle = handlers[communication.type] {
                     handle(communication.package!)
                 }
-            } else if initialization(message: message) {
+            } else if isInitialization(message: message) {
 
                 api.getAsyncApplicationVersion()
                 api.getAsyncNoiseCancellationStatus()
@@ -92,12 +92,12 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
             return ("error", nil)
     }
 
-    private func initialization(message receivedMessage: NSData) -> Bool {
+    private func isInitialization(message receivedMessage: NSData) -> Bool {
         var message = [UInt8(0), UInt8(3), UInt8(2)]
         return receivedMessage == NSData(bytes: &message, length: message.count)
     }
 
-    private func communication(message receivedMessage: NSData) -> Bool {
+    private func isCommunication(message receivedMessage: NSData) -> Bool {
         var messageLen: UInt16 = 0
         receivedMessage.getBytes(&messageLen, range: NSRange(location: 0, length: 2))
         var magic: UInt8 = 0

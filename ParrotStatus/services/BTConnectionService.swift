@@ -58,5 +58,4 @@ class BTConnectionService: BTConnectionServiceInterface {
         NSLog("Error opening connection with Headset")
         return false
     }
-
 }

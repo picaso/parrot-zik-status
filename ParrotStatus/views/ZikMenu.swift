@@ -17,6 +17,7 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
         .instantiateControllerWithIdentifier("zikConnected") as? ZikMenuViewController
     let zikDisconnectedViewController = mainStoryBoard
         .instantiateControllerWithIdentifier("zikDisconnected") as? DisconnectedViewController
+
     override init () {
         super.init()
         notificationCenter
