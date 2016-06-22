@@ -24,6 +24,9 @@ class ZikMenuViewController: NSViewController, PopoverController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSApplication
+            .sharedApplication()
+            .activateIgnoringOtherApps(true)
 
     }
 

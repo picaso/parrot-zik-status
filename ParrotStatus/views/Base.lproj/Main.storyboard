@@ -246,22 +246,45 @@
                                             <action selector="exit:" target="P47-iK-zPo" id="bhj-Hr-MI4"/>
                                         </connections>
                                     </button>
-                                    <button fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8W-2i-1sc">
-                                        <rect key="frame" x="226" y="9" width="18" height="18"/>
+                                    <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-7g-bFa">
+                                        <rect key="frame" x="215" y="6" width="30" height="24"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
-                                                    <ciColor key="inputColor0" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1"/>
-                                                    <ciColor key="inputColor1" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1"/>
+                                                    <ciColor key="inputColor0" red="0.90588235855102539" green="0.92549020051956177" blue="0.93333333730697632" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="0.90588235855102539" green="0.92549020051956177" blue="0.93333333730697632" alpha="1"/>
                                                     <null key="inputImage"/>
                                                 </configuration>
                                             </ciFilter>
                                         </contentFilters>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="settings" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="hMn-xl-lFU">
+                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="ocN-Pt-p2S" id="THh-Hn-xbu">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
+                                            <font key="font" metaFont="menu"/>
+                                            <menu key="menu" id="i6p-op-RRp">
+                                                <items>
+                                                    <menuItem image="settings" hidden="YES" id="ocN-Pt-p2S">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="About Parrot Status" id="mqO-ou-Ce0" userLabel="About Parrot Status">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="orderFrontStandardAboutPanel:" target="QtR-Ra-IAh" id="zSt-Mj-CXd"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Acknowledgements" id="8lS-em-s0h">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="VNc-8S-9eO"/>
+                                                    <menuItem title="Quit Parrot Status" id="zDb-ti-Jzi">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="terminate:" target="QtR-Ra-IAh" id="JTM-36-wOk"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </popUpButtonCell>
+                                    </popUpButton>
                                 </subviews>
                             </customView>
                             <customView identifier="NoiseCancellation" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GbA-t0-28I" userLabel="option" colorLabel="IBBuiltInLabel-Red">
@@ -492,22 +515,45 @@
                                             <action selector="exit:" target="T4n-Pn-y67" id="nnn-U3-SiH"/>
                                         </connections>
                                     </button>
-                                    <button fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rz2-4e-pIz">
-                                        <rect key="frame" x="226" y="9" width="18" height="18"/>
+                                    <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwn-lj-6NP">
+                                        <rect key="frame" x="216" y="6" width="30" height="24"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
-                                                    <ciColor key="inputColor0" red="0.90588235855102539" green="0.92549020051956177" blue="0.93333333730697632" alpha="1"/>
-                                                    <ciColor key="inputColor1" red="0.90588235855102539" green="0.92549020051956177" blue="0.93333333730697632" alpha="1"/>
+                                                    <ciColor key="inputColor0" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1"/>
                                                     <null key="inputImage"/>
                                                 </configuration>
                                             </ciFilter>
                                         </contentFilters>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="settings" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="6mZ-Nc-Ceb">
+                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="47s-yK-BNZ" id="nbQ-iW-JL0">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
+                                            <font key="font" metaFont="menu"/>
+                                            <menu key="menu" id="Ta4-6u-jRR">
+                                                <items>
+                                                    <menuItem image="settings" hidden="YES" id="47s-yK-BNZ">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="About Parrot Status" id="j9j-MX-g9J" userLabel="About Parrot Status">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="orderFrontStandardAboutPanel:" target="zXI-fL-jZa" id="4NH-pa-kp9"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Acknowledgements" id="ZXv-me-gJY">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="8vx-L1-V7q"/>
+                                                    <menuItem title="Quit Parrot Status" id="6Xn-Qu-Aq0">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="terminate:" target="zXI-fL-jZa" id="V0B-aO-LQv"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </popUpButtonCell>
+                                    </popUpButton>
                                 </subviews>
                             </customView>
                         </subviews>
@@ -518,7 +564,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="24" y="-485.5"/>
+            <point key="canvasLocation" x="20" y="-485.5"/>
         </scene>
     </scenes>
     <resources>

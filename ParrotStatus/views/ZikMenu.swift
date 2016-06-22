@@ -89,11 +89,10 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
             .addGlobalMonitorForEventsMatchingMask([
                 NSEventMask.LeftMouseDownMask,
                 NSEventMask.RightMouseDownMask], handler: { [weak self] event in
-            self?.closePopover(nil)
+            self?.closePopover(event)
             })
 
         if let button = statusItem.button {
-            NSApplication.sharedApplication().activateIgnoringOtherApps(true)
             popover
                 .showRelativeToRect(button.bounds, ofView: button, preferredEdge: NSRectEdge.MinY)
         }

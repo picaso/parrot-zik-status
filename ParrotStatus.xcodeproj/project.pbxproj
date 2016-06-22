@@ -14,7 +14,6 @@
 		2F0A2CE01D0EA1100091616A /* NoiseCancellationStatusAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */; };
 		2F0A2CE71D0EA1130091616A /* BatteryInfoAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */; };
 		2F662D241D12325800DF531E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F662D231D12325800DF531E /* StringExtensions.swift */; };
-		2F662D281D13569F00DF531E /* SettingsMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F662D271D13569F00DF531E /* SettingsMenu.xib */; };
 		2F74730D1D0F74CE0050B0A4 /* ZikMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */; };
 		2F74730F1D0FB0960050B0A4 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74730E1D0FB0960050B0A4 /* ApplicationContext.swift */; };
 		2F779B2F1D13C9B80090F724 /* BTCommunicationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F779B2E1D13C9B80090F724 /* BTCommunicationServiceTest.swift */; };
@@ -22,6 +21,7 @@
 		2FB287A51C9A3BFD00C4A53E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */; };
 		2FB287A91C9A3BFD00C4A53E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */; };
 		2FB287AC1C9A3BFD00C4A53E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */; };
+		2FB467761D151B6E004F73FC /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB467751D151B6E004F73FC /* SettingsMenu.swift */; };
 		3FC7102663FAE6E939B82B3E /* BTCommunicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC71D4D3FDF5796E37CEE55 /* BTCommunicationService.swift */; };
 		3FC710CB503C4402089FC5C6 /* ParrotZikEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7113FB1F7998882EF81C7 /* ParrotZikEndpoints.swift */; };
 		3FC711D396482D259D1F67D5 /* ZikMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7121330F15EBF6BC13E0A /* ZikMenu.swift */; };
@@ -54,7 +54,6 @@
 		2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NoiseCancellationStatusAnswer.xml; sourceTree = "<group>"; };
 		2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BatteryInfoAnswer.xml; sourceTree = "<group>"; };
 		2F662D231D12325800DF531E /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		2F662D271D13569F00DF531E /* SettingsMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsMenu.xib; sourceTree = "<group>"; };
 		2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZikMenuViewController.swift; sourceTree = "<group>"; };
 		2F74730E1D0FB0960050B0A4 /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		2F779B2E1D13C9B80090F724 /* BTCommunicationServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCommunicationServiceTest.swift; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		2FB287AB1C9A3BFD00C4A53E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FB287B21C9A3BFD00C4A53E /* ParrotStatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParrotStatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB287B81C9A3BFD00C4A53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB467751D151B6E004F73FC /* SettingsMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
 		2FF544341D1006AD00E1B040 /* parrot-bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "parrot-bridging-header.h"; sourceTree = "<group>"; };
 		3FC710512DB7F6DBBBCC7894 /* BTResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTResponseHandler.swift; sourceTree = "<group>"; };
 		3FC710F1C056A192B314F837 /* BTConnectionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTConnectionService.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 			children = (
 				3FC7121330F15EBF6BC13E0A /* ZikMenu.swift */,
 				2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */,
-				2F662D271D13569F00DF531E /* SettingsMenu.xib */,
+				2FB467751D151B6E004F73FC /* SettingsMenu.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -350,7 +350,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FB287A91C9A3BFD00C4A53E /* Assets.xcassets in Resources */,
-				2F662D281D13569F00DF531E /* SettingsMenu.xib in Resources */,
 				2FB287AC1C9A3BFD00C4A53E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +485,7 @@
 				3FC71EDC9C6EB259D95933A2 /* BTConnectionService.swift in Sources */,
 				3FC7102663FAE6E939B82B3E /* BTCommunicationService.swift in Sources */,
 				2F74730F1D0FB0960050B0A4 /* ApplicationContext.swift in Sources */,
+				2FB467761D151B6E004F73FC /* SettingsMenu.swift in Sources */,
 				3FC71C5C73C7B60EE0E6A39D /* BTResponseHandler.swift in Sources */,
 				3FC71BC9F449E9C9A021FBCB /* ParrotRequestProtocol.swift in Sources */,
 				3FC710CB503C4402089FC5C6 /* ParrotZikEndpoints.swift in Sources */,

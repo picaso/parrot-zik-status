@@ -17,7 +17,7 @@ command_test() {
     echo "Running pod install..."
     install_pods
     echo "Running xcodebuild clean test..."
-    xcodebuild -scheme "Parrot status" -workspace ParrotStatus.xcworkspace  clean test
+    xcodebuild -scheme "All Tests" -workspace ParrotStatus.xcworkspace clean build test
 }
 
 command_setup() {
