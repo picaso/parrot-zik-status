@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11129.15"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -171,9 +171,11 @@
                         <subviews>
                             <customView identifier="HeaderConnected" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MPC-27-Wau" userLabel="Header" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="253" width="264" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUJ-Zp-JFp">
                                         <rect key="frame" x="149" y="23" width="97" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Connected" id="toZ-L3-bNK">
                                             <font key="font" size="14" name="Futura-Medium"/>
                                             <color key="textColor" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -182,6 +184,7 @@
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQh-nr-EFb">
                                         <rect key="frame" x="150" y="5" width="103" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version: 2.09" id="NU5-CM-Fu0">
                                             <font key="font" size="13" name="Futura-Medium"/>
                                             <color key="textColor" red="0.29696338189999999" green="0.33432404910000002" blue="0.46432291669999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -190,6 +193,7 @@
                                     </textField>
                                     <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-Ns-CUe">
                                         <rect key="frame" x="223" y="25" width="16" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -203,6 +207,7 @@
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9uf-4h-vCO">
                                         <rect key="frame" x="13" y="12" width="46" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="100%" id="ipm-fA-aPJ">
                                             <font key="font" size="14" name="Futura-Medium"/>
                                             <color key="textColor" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -211,15 +216,18 @@
                                     </textField>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBT-ZJ-N7Y">
                                         <rect key="frame" x="61" y="10" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageAlignment="left" imageScaling="proportionallyDown" image="batteryCharging" id="IxH-2w-5eZ"/>
                                     </imageView>
                                 </subviews>
                             </customView>
                             <customView identifier="FooterConnected" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qNi-PW-435" userLabel="Footer" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="0.0" width="264" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VcC-BJ-7xy">
                                         <rect key="frame" x="15" y="2" width="103" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Device Name" id="Zpt-Og-7CQ">
                                             <font key="font" size="15" name="Futura-Medium"/>
                                             <color key="textColor" red="0.29696338189999999" green="0.33432404910000002" blue="0.46432291669999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -228,6 +236,7 @@
                                     </textField>
                                     <button toolTip="Quit Parrot Status" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8aP-5M-vXw">
                                         <rect key="frame" x="194" y="9" width="18" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -248,6 +257,7 @@
                                     </button>
                                     <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-7g-bFa">
                                         <rect key="frame" x="215" y="6" width="30" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -257,7 +267,7 @@
                                                 </configuration>
                                             </ciFilter>
                                         </contentFilters>
-                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="ocN-Pt-p2S" id="THh-Hn-xbu">
+                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" id="THh-Hn-xbu">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="i6p-op-RRp">
@@ -289,9 +299,11 @@
                             </customView>
                             <customView identifier="NoiseCancellation" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GbA-t0-28I" userLabel="option" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="209" width="264" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vkv-bp-RW2" customClass="ITSwitch">
                                         <rect key="frame" x="181" y="3" width="44" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <backgroundFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -313,10 +325,12 @@
                                     </customView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f3h-px-biD">
                                         <rect key="frame" x="15" y="5" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="noise-cancelation" id="Dzb-X1-LtE"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kzy-dL-5LS">
                                         <rect key="frame" x="45" y="6" width="125" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Noise Cancellation" id="adk-a2-hW2">
                                             <font key="font" size="14" name="Futura-Medium"/>
                                             <color key="textColor" red="0.90588235294117647" green="0.92549019607843142" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
@@ -325,6 +339,7 @@
                                     </textField>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhF-Ec-Jy7">
                                         <rect key="frame" x="232" y="5" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -340,9 +355,11 @@
                             </customView>
                             <customView identifier="Equalizer" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iNU-9A-xcX" userLabel="option" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="175" width="264" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h9i-5R-mbc" customClass="ITSwitch">
                                         <rect key="frame" x="181" y="3" width="44" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <backgroundFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -364,6 +381,7 @@
                                     </customView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SL8-Ue-TiG">
                                         <rect key="frame" x="15" y="5" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -377,6 +395,7 @@
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQF-Xs-4fX">
                                         <rect key="frame" x="45" y="6" width="87" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Equalizer" id="G15-Za-5jZ">
                                             <font key="font" size="14" name="Futura-Medium"/>
                                             <color key="textColor" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -387,9 +406,11 @@
                             </customView>
                             <customView identifier="ConcertHall" hidden="YES" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mj4-n3-AyB" userLabel="option" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="140" width="264" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QlB-lt-4Fv" customClass="ITSwitch">
                                         <rect key="frame" x="181" y="3" width="44" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <backgroundFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -408,6 +429,7 @@
                                     </customView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2A-UM-b03">
                                         <rect key="frame" x="46" y="6" width="90" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Concert Hall" id="Phw-kA-rVN">
                                             <font key="font" size="14" name="Futura-Medium"/>
                                             <color key="textColor" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -416,10 +438,12 @@
                                     </textField>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WpA-TR-Vax">
                                         <rect key="frame" x="15" y="5" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="concert-hall" id="DPf-jE-A3p"/>
                                     </imageView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvb-VH-yez">
                                         <rect key="frame" x="232" y="5" width="24" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -461,9 +485,11 @@
                         <subviews>
                             <customView identifier="HeaderDisconnected" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O6C-RT-CyW" userLabel="Header" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="110" width="264" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eD-Ut-gVr">
                                         <rect key="frame" x="137" y="16" width="16" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -477,6 +503,7 @@
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qjc-Ug-fjd">
                                         <rect key="frame" x="18" y="12" width="113" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Disconnected" id="DAR-h6-sYY">
                                             <font key="font" size="18" name="Futura-Medium"/>
                                             <color key="textColor" red="0.67843137254901964" green="0.70588235294117652" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
@@ -487,6 +514,7 @@
                             </customView>
                             <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AER-SY-Gfm">
                                 <rect key="frame" x="18" y="39" width="175" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Pair and connect your Zik headPhone to your computer" id="0dr-Je-ASc">
                                     <font key="font" size="13" name="Futura-Medium"/>
                                     <color key="textColor" red="0.67843137249999996" green="0.70588235290000001" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -495,9 +523,11 @@
                             </textField>
                             <customView identifier="FooterDisconnected" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kFS-FY-aWt" userLabel="Footer" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="0.0" width="264" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUS-j5-UXd">
                                         <rect key="frame" x="194" y="9" width="18" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -517,6 +547,7 @@
                                     </button>
                                     <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwn-lj-6NP">
                                         <rect key="frame" x="216" y="6" width="30" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -526,7 +557,7 @@
                                                 </configuration>
                                             </ciFilter>
                                         </contentFilters>
-                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="47s-yK-BNZ" id="nbQ-iW-JL0">
+                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" id="nbQ-iW-JL0">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="Ta4-6u-jRR">

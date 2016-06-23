@@ -313,14 +313,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = urbanhill;
 				TargetAttributes = {
 					2FB287A01C9A3BFD00C4A53E = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 					};
 					2FB287B11C9A3BFD00C4A53E = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 2FB287A01C9A3BFD00C4A53E;
 					};
 				};
@@ -615,6 +617,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 157A45AE87C38D5711CC58C4 /* Pods-ParrotStatus.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ParrotStatus/resources/Info.plist;
@@ -622,6 +625,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-status";
 				PRODUCT_NAME = ParrotStatus;
 				SWIFT_OBJC_BRIDGING_HEADER = "ParrotStatus/parrot-bridging-header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -629,6 +633,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 507EC4DFA842FEC00BC5D70C /* Pods-ParrotStatus.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_TESTABILITY = YES;
@@ -637,6 +642,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-status";
 				PRODUCT_NAME = ParrotStatus;
 				SWIFT_OBJC_BRIDGING_HEADER = "ParrotStatus/parrot-bridging-header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -644,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B37E7D9612B337A8121257B /* Pods-ParrotStatusTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ParrotStatusTests/resources/Info.plist;
@@ -651,6 +659,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-statusTests";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)Tests";
 				PRODUCT_NAME = ParrotStatusTests;
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParrotStatus.app/Contents/MacOS/ParrotStatus";
 			};
 			name = Debug;
@@ -659,6 +668,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 066711D2111939AF9EA36E92 /* Pods-ParrotStatusTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ParrotStatusTests/resources/Info.plist;
@@ -666,6 +676,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-statusTests";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)Tests";
 				PRODUCT_NAME = ParrotStatusTests;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParrotStatus.app/Contents/MacOS/ParrotStatus";
 			};
 			name = Release;

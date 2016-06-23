@@ -22,14 +22,4 @@ class DisconnectedViewController: NSViewController, PopoverController, NSMenuDel
         footer.backgroundColor = FlatUIColors.midnightBlueColor()
         view.backgroundColor = FlatUIColors.wetAsphaltColor()
     }
-
-    @IBAction func settings(sender: NSButton) {
-
-
-    }
-    @IBOutlet var hh: NSPopUpButton!
-
-    @IBAction func exit(sender: AnyObject) {
-        NSApplication.sharedApplication().terminate(self)
-    }
 }
