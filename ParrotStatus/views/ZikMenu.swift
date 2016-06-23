@@ -87,8 +87,8 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
     func showPopover(sender: AnyObject?) {
         detector = NSEvent
             .addGlobalMonitorForEventsMatchingMask([
-                NSEventMask.LeftMouseDown,
-                NSEventMask.RightMouseDown], handler: { [weak self] event in
+                NSEventMask.LeftMouseDownMask,
+                NSEventMask.RightMouseDownMask], handler: { [weak self] event in
             self?.closePopover(event)
             })
 

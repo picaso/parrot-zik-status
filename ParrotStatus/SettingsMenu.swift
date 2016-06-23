@@ -6,7 +6,7 @@ class SetingsMenu: NSMenu {
         super.init(title: aTitle)
     }
 
-    required init(coder decoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
