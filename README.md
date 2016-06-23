@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/badge/licence-MIT-lightgrey.svg)](https://raw.githubusercontent.com/picaso/parrot-zik-status/master/Podfile/LICENSE)
+[![License](https://img.shields.io/badge/licence-MIT-lightgrey.svg)](https://raw.githubusercontent.com/picaso/parrot-zik-status/master/LICENSE)
 ![swift](https://img.shields.io/badge/swift-2.2-orange.svg)
 
 Welcome to Parrot Status!
