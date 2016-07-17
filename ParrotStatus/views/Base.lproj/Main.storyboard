@@ -243,7 +243,7 @@
                                         </buttonCell>
                                         <accessibility description="Quit Parrot Status"/>
                                         <connections>
-                                            <action selector="exit:" target="P47-iK-zPo" id="bhj-Hr-MI4"/>
+                                            <action selector="terminate:" target="QtR-Ra-IAh" id="fm4-Rf-lg9"/>
                                         </connections>
                                     </button>
                                     <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-7g-bFa">
@@ -257,7 +257,7 @@
                                                 </configuration>
                                             </ciFilter>
                                         </contentFilters>
-                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="ocN-Pt-p2S" id="THh-Hn-xbu">
+                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" id="THh-Hn-xbu">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="i6p-op-RRp">
@@ -512,7 +512,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="exit:" target="T4n-Pn-y67" id="nnn-U3-SiH"/>
+                                            <action selector="terminate:" target="zXI-fL-jZa" id="m1b-C2-AkI"/>
                                         </connections>
                                     </button>
                                     <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwn-lj-6NP">

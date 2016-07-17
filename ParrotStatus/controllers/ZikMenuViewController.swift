@@ -86,8 +86,4 @@ class ZikMenuViewController: NSViewController, PopoverController {
         service?.toggleAsyncEqualizerStatus(sender.checked)
     }
 
-
-    @IBAction func exit(sender: AnyObject) {
-        NSApplication.sharedApplication().terminate(self)
-    }
 }
