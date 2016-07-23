@@ -1,8 +1,11 @@
 language: swift
 osx_image: xcode7.3
-xcode_workspace: ./ParrotStatus.xcworkspace
-xcode_scheme: "Parrot status"
-script: xcodebuild -workspace ParrotStatus.xcworkspace -scheme "Parrot status" test
+branches:
+  only:
+    - master
+xcode_workspace: ParrotStatus.xcworkspace
+xcode_scheme: "Tests"
+script: xctool -workspace ParrotStatus.xcworkspace -scheme "Tests" test
 xcode_sdk: macosx10.11
 before_install:
   - brew update
