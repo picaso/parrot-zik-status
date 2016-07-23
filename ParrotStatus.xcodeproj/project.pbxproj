@@ -627,6 +627,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ParrotStatus/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-status";
 				PRODUCT_NAME = ParrotStatus;
 				SWIFT_OBJC_BRIDGING_HEADER = "ParrotStatus/Parrot-bridging-header.h";
@@ -642,6 +643,7 @@
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = ParrotStatus/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-status";
 				PRODUCT_NAME = ParrotStatus;
 				SWIFT_OBJC_BRIDGING_HEADER = "ParrotStatus/Parrot-bridging-header.h";

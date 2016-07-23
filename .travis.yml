@@ -1,7 +1,7 @@
 language: swift
 osx_image: xcode7.3
 xcode_workspace: ./ParrotStatus.xcworkspace
-xcode_scheme: "Parrot Status"
+xcode_scheme: "Parrot status"
 script: xctool -workspace ParrotStatus.xcworkspace -scheme "Parrot status" test
 before_install:
   - brew update
@@ -11,5 +11,5 @@ before_install:
   - pod repo remove master
   - pod setup
 cache: cocoapods
-install: 
+install:
     - pod install
