@@ -6,6 +6,5 @@ script: xctool -workspace ParrotStatus.xcworkspace -scheme "Parrot Status" test
 before_install:
   - brew update
   - brew outdated xctool || brew upgrade xctool
-  - brew install  swiftlint
   - gem install activesupport -v  '= 4.2.6'
   - gem install cocoapods -v '1.0.1'
