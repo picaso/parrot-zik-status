@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<answer path="/api/system/head_detection/enabled/get">
+    <system>
+        <head_detection enabled="true" />
+    </system>
+</answer>

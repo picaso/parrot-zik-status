@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
@@ -247,7 +247,7 @@
                                         </connections>
                                     </button>
                                     <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-7g-bFa">
-                                        <rect key="frame" x="215" y="6" width="30" height="24"/>
+                                        <rect key="frame" x="216" y="6" width="30" height="24"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -313,6 +313,15 @@
                                     </customView>
                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f3h-px-biD">
                                         <rect key="frame" x="15" y="5" width="24" height="24"/>
+                                        <contentFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.67843137249999996" green="0.70588235290000001" blue="0.72549019609999998" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="0.91764705879999997" green="0.3411764706" blue="0.30980392159999998" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </contentFilters>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="noise-cancelation" id="Dzb-X1-LtE"/>
                                     </imageView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kzy-dL-5LS">
@@ -323,7 +332,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhF-Ec-Jy7">
+                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhF-Ec-Jy7">
                                         <rect key="frame" x="232" y="5" width="24" height="24"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
@@ -367,7 +376,7 @@
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
-                                                    <ciColor key="inputColor0" red="0.14901960780000001" green="0.50980392159999999" blue="0.83529411760000005" alpha="1"/>
+                                                    <ciColor key="inputColor0" red="0.67843137249999996" green="0.70588235290000001" blue="0.72549019609999998" alpha="1"/>
                                                     <ciColor key="inputColor1" red="0.14901960780000001" green="0.50980392159999999" blue="0.83529411760000005" alpha="1"/>
                                                     <null key="inputImage"/>
                                                 </configuration>
@@ -385,10 +394,10 @@
                                     </textField>
                                 </subviews>
                             </customView>
-                            <customView identifier="ConcertHall" hidden="YES" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mj4-n3-AyB" userLabel="option" colorLabel="IBBuiltInLabel-Red">
+                            <customView identifier="ConcertHall" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xV-cV-eM7" userLabel="option" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="140" width="264" height="36"/>
                                 <subviews>
-                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QlB-lt-4Fv" customClass="ITSwitch">
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZaK-ze-dUn" customClass="ITSwitch">
                                         <rect key="frame" x="181" y="3" width="44" height="27"/>
                                         <backgroundFilters>
                                             <ciFilter name="CIFalseColor">
@@ -405,21 +414,20 @@
                                                 <color key="value" red="0.08235294118" green="0.69803921570000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="concertHallSwitch:" target="P47-iK-zPo" id="AcR-Fr-pBc"/>
+                                        </connections>
                                     </customView>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2A-UM-b03">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="upW-lv-VC3">
                                         <rect key="frame" x="46" y="6" width="90" height="25"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Concert Hall" id="Phw-kA-rVN">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Concert Hall" id="y8o-eN-OYt">
                                             <font key="font" size="14" name="Futura-Medium"/>
                                             <color key="textColor" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WpA-TR-Vax">
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdE-8c-6GY">
                                         <rect key="frame" x="15" y="5" width="24" height="24"/>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="concert-hall" id="DPf-jE-A3p"/>
-                                    </imageView>
-                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvb-VH-yez">
-                                        <rect key="frame" x="232" y="5" width="24" height="24"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -429,7 +437,109 @@
                                                 </configuration>
                                             </ciFilter>
                                         </contentFilters>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="menu" id="NVV-ma-1Uw"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="concert-hall" id="Kjt-sc-8My"/>
+                                    </imageView>
+                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6OV-mZ-SAn">
+                                        <rect key="frame" x="232" y="5" width="24" height="24"/>
+                                        <contentFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.67843139171600342" green="0.70588237047195435" blue="0.72549021244049072" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="0.67843139171600342" green="0.70588237047195435" blue="0.72549021244049072" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </contentFilters>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="menu" id="BSy-rG-Rmc"/>
+                                    </imageView>
+                                </subviews>
+                            </customView>
+                            <customView identifier="FlightMode" autoresizesSubviews="NO" toolTip="This will disconnect the Headphone from your computer" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZK-Zw-XVy" userLabel="option" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="44" width="264" height="36"/>
+                                <subviews>
+                                    <customView canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dCy-TM-Ux1" customClass="ITSwitch">
+                                        <rect key="frame" x="181" y="3" width="44" height="27"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                <color key="value" red="0.08235294118" green="0.69803921570000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="flightModeSwitch:" target="P47-iK-zPo" id="POs-iS-MwQ"/>
+                                        </connections>
+                                    </customView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ds0-Fg-Bea">
+                                        <rect key="frame" x="46" y="6" width="103" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Flight Mode" id="5RI-Xt-25X">
+                                            <font key="font" size="14" name="Futura-Medium"/>
+                                            <color key="textColor" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r3u-go-0R8">
+                                        <rect key="frame" x="15" y="5" width="24" height="24"/>
+                                        <contentFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.91764705879999997" green="0.3411764706" blue="0.30980392159999998" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="0.91764705879999997" green="0.3411764706" blue="0.30980392159999998" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </contentFilters>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="flight" id="3yk-uj-TRa"/>
+                                    </imageView>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sht-N7-64t">
+                                        <rect key="frame" x="233" y="5" width="24" height="24"/>
+                                        <contentFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.28010517099999999" green="0.40215717829999997" blue="0.54869791670000001" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="0.28010517099999999" green="0.40215717829999997" blue="0.54869791670000001" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </contentFilters>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="info" id="dbC-82-dR2"/>
+                                    </imageView>
+                                </subviews>
+                            </customView>
+                            <customView identifier="HeadDetection" autoresizesSubviews="NO" toolTip="Detects If you have your head phones on or off" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mj4-n3-AyB" userLabel="option" colorLabel="IBBuiltInLabel-Red">
+                                <rect key="frame" x="0.0" y="79" width="264" height="36"/>
+                                <subviews>
+                                    <customView canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QlB-lt-4Fv" customClass="ITSwitch">
+                                        <rect key="frame" x="181" y="3" width="44" height="27"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="checked" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                                <color key="value" red="0.08235294118" green="0.69803921570000005" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="headDetectionSwitch:" target="P47-iK-zPo" id="Czo-wa-doo"/>
+                                        </connections>
+                                    </customView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X2A-UM-b03">
+                                        <rect key="frame" x="46" y="6" width="103" height="25"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Head Detection" id="Phw-kA-rVN">
+                                            <font key="font" size="14" name="Futura-Medium"/>
+                                            <color key="textColor" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WpA-TR-Vax">
+                                        <rect key="frame" x="15" y="5" width="24" height="24"/>
+                                        <contentFilters>
+                                            <ciFilter name="CIFalseColor">
+                                                <configuration>
+                                                    <ciColor key="inputColor0" red="0.14901960780000001" green="0.50980392159999999" blue="0.83529411760000005" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="0.14901960780000001" green="0.50980392159999999" blue="0.83529411760000005" alpha="1"/>
+                                                    <null key="inputImage"/>
+                                                </configuration>
+                                            </ciFilter>
+                                        </contentFilters>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="head-detection" id="DPf-jE-A3p"/>
                                     </imageView>
                                 </subviews>
                             </customView>
@@ -437,9 +547,12 @@
                     </customView>
                     <connections>
                         <outlet property="batteryStatus" destination="jBT-ZJ-N7Y" id="TqN-v6-XZW"/>
+                        <outlet property="concertHallStatus" destination="ZaK-ze-dUn" id="O6P-zb-Cgc"/>
                         <outlet property="deviceName" destination="VcC-BJ-7xy" id="aqe-UZ-lDy"/>
                         <outlet property="equalizerStatus" destination="h9i-5R-mbc" id="i04-U5-akc"/>
+                        <outlet property="flightMode" destination="dCy-TM-Ux1" id="3Fi-hi-YA5"/>
                         <outlet property="footer" destination="qNi-PW-435" id="a9n-th-d5X"/>
+                        <outlet property="headDetectionStatus" destination="QlB-lt-4Fv" id="UVQ-gI-DNS"/>
                         <outlet property="header" destination="MPC-27-Wau" id="fkB-vm-86W"/>
                         <outlet property="noiseControlStatus" destination="Vkv-bp-RW2" id="CBH-CY-iH1"/>
                         <outlet property="percentage" destination="9uf-4h-vCO" id="Ye9-iP-lnK"/>
@@ -571,9 +684,12 @@
         <image name="NSStatusAvailable" width="16" height="16"/>
         <image name="batteryCharging" width="409.60000610351562" height="409.60000610351562"/>
         <image name="concert-hall" width="409.60000610351562" height="409.60000610351562"/>
-        <image name="equalizer" width="47.201023101806641" height="47.201023101806641"/>
+        <image name="equalizer" width="51.775279998779297" height="51.775279998779297"/>
+        <image name="flight" width="42.666667938232422" height="42.666667938232422"/>
+        <image name="head-detection" width="392.17022705078125" height="392.17022705078125"/>
+        <image name="info" width="18.90461540222168" height="18.90461540222168"/>
         <image name="menu" width="368.6400146484375" height="368.6400146484375"/>
-        <image name="noise-cancelation" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="noise-cancelation" width="25.600000381469727" height="25.600000381469727"/>
         <image name="power" width="380" height="380"/>
         <image name="settings" width="215.57894897460938" height="215.57894897460938"/>
     </resources>

@@ -1,4 +1,5 @@
 import AEXML
+import Darwin
 
 protocol BTResponseHandlerInterface {
     func handle(document: AEXMLDocument)
@@ -18,6 +19,10 @@ class ZikResponseHandler: BTResponseHandlerInterface {
         handlers[ParrotZikEndpoints.FriendlyName] = friendlyName
         handlers[ParrotZikEndpoints.NoiseControltatus] = noiseControlStatus
         handlers[ParrotZikEndpoints.EqualizerStatus] = equalizerStatus
+        handlers[ParrotZikEndpoints.ConcertHallStatus] = concertHallStatus
+        handlers[ParrotZikEndpoints.HeadDetectionStatus] = headDetectionStatus
+        handlers[ParrotZikEndpoints.FlightModeStatus] = flightModeStatus
+        handlers[ParrotZikEndpoints.FlightModeEnable] = exitParrot
     }
 
     func handle(document: AEXMLDocument) {
@@ -58,6 +63,28 @@ class ZikResponseHandler: BTResponseHandlerInterface {
         let equalizerStatus = document
             .root["audio"]["equalizer"].attributes["enabled"]!
         deviceState.equalizerEnabled = NSString(string: equalizerStatus).boolValue
+    }
+
+    private func concertHallStatus(document: AEXMLDocument) {
+        let concertHallStatus = document
+            .root["audio"]["sound_effect"].attributes["enabled"]!
+        deviceState.concertHallEnabled = NSString(string: concertHallStatus).boolValue
+    }
+
+    private func headDetectionStatus(document: AEXMLDocument) {
+        let headDetectionStatus = document
+            .root["system"]["head_detection"].attributes["enabled"]!
+        deviceState.headDetectionEnabled = NSString(string: headDetectionStatus).boolValue
+    }
+
+    private func exitParrot(document: AEXMLDocument) {
+        exit(0)
+    }
+
+    private func flightModeStatus(document: AEXMLDocument) {
+        let flightModeStatus = document
+            .root["flight_mode"].attributes["enabled"]!
+        deviceState.flightModeEnabled = NSString(string: flightModeStatus).boolValue
     }
 
 }

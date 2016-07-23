@@ -14,6 +14,9 @@ class ParrotZikApiMock: ParrotZik2Api {
     var getAsyncFriendlyNameWasCalled = false
     var getAsyncNoiseControlStatusWasCalled = false
     var getAsyncEqualizerStatusWasCalled = false
+    var getAsyncFlightModeStatusWasCalled = false
+    var getAsyncConcertHallStatusWasCalled = false
+    var getAsyncheadDetectionStatusWasCalled = false
 
     func reset() {
         getAsyncApplicationVersionWasCalled = false
@@ -30,7 +33,8 @@ class ParrotZikApiMock: ParrotZik2Api {
         getAsyncBatteryInfoWasCalled &&
         getAsyncFriendlyNameWasCalled &&
         getAsyncNoiseControlStatusWasCalled &&
-        getAsyncEqualizerStatusWasCalled
+        getAsyncEqualizerStatusWasCalled &&
+        getAsyncFlightModeStatusWasCalled
     }
 
     override func getAsyncApplicationVersion() -> Bool {
@@ -62,6 +66,22 @@ class ParrotZikApiMock: ParrotZik2Api {
         getAsyncEqualizerStatusWasCalled = true
         return true
     }
+
+    override func getAsyncFlightModeStatus() -> Bool {
+        getAsyncFlightModeStatusWasCalled = true
+        return true
+    }
+
+    override func getAsyncConcertHallStatus() -> Bool {
+        getAsyncConcertHallStatusWasCalled = true
+        return true
+    }
+
+    override func getAsyncheadDetectionStatus() -> Bool {
+        getAsyncheadDetectionStatusWasCalled = true
+        return true
+    }
+
 }
 
 class ZikResponseHandlerMock: ZikResponseHandler {}

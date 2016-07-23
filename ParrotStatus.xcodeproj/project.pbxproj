@@ -12,6 +12,9 @@
 		2F0A2CBD1D0EA08B0091616A /* SoftwareVersionAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */; };
 		2F0A2CE01D0EA1100091616A /* NoiseCancellationStatusAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */; };
 		2F0A2CE71D0EA1130091616A /* BatteryInfoAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */; };
+		2F21AA261D430D7C009EEFC1 /* FlightModeStatusAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F21AA231D430D7C009EEFC1 /* FlightModeStatusAnswer.xml */; };
+		2F21AA271D430D7C009EEFC1 /* ConcertHallStatusAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F21AA241D430D7C009EEFC1 /* ConcertHallStatusAnswer.xml */; };
+		2F21AA281D430D7C009EEFC1 /* HeadDetectionStatusAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F21AA251D430D7C009EEFC1 /* HeadDetectionStatusAnswer.xml */; };
 		2F74730D1D0F74CE0050B0A4 /* ZikMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */; };
 		2F74730F1D0FB0960050B0A4 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74730E1D0FB0960050B0A4 /* ApplicationContext.swift */; };
 		2F771ECE1D1C973F004E4ECA /* NSViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F771ECC1D1C973F004E4ECA /* NSViewExtensions.swift */; };
@@ -48,6 +51,9 @@
 		157A45AE87C38D5711CC58C4 /* Pods-ParrotStatus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParrotStatus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus.debug.xcconfig"; sourceTree = "<group>"; };
 		1DB61BD46668A229D9CBD8A6 /* Pods_ParrotStatus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParrotStatus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F04D5541D10CA2100423046 /* DisconnectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisconnectedViewController.swift; sourceTree = "<group>"; };
+		2F21AA231D430D7C009EEFC1 /* FlightModeStatusAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = FlightModeStatusAnswer.xml; sourceTree = "<group>"; };
+		2F21AA241D430D7C009EEFC1 /* ConcertHallStatusAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = ConcertHallStatusAnswer.xml; sourceTree = "<group>"; };
+		2F21AA251D430D7C009EEFC1 /* HeadDetectionStatusAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = HeadDetectionStatusAnswer.xml; sourceTree = "<group>"; };
 		2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SoftwareVersionAnswer.xml; sourceTree = "<group>"; };
 		2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NoiseCancellationStatusAnswer.xml; sourceTree = "<group>"; };
 		2F3683411D0E91A800E55E87 /* BatteryInfoAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = BatteryInfoAnswer.xml; sourceTree = "<group>"; };
@@ -111,6 +117,9 @@
 		2F3682811D0E8C6300E55E87 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				2F21AA231D430D7C009EEFC1 /* FlightModeStatusAnswer.xml */,
+				2F21AA241D430D7C009EEFC1 /* ConcertHallStatusAnswer.xml */,
+				2F21AA251D430D7C009EEFC1 /* HeadDetectionStatusAnswer.xml */,
 				2FB287B81C9A3BFD00C4A53E /* Info.plist */,
 				2F3683281D0E911F00E55E87 /* SoftwareVersionAnswer.xml */,
 				2F3683381D0E917E00E55E87 /* NoiseCancellationStatusAnswer.xml */,
@@ -356,7 +365,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F779B311D13DF180090F724 /* NoiseControlStatusAnswer.xml in Resources */,
+				2F21AA271D430D7C009EEFC1 /* ConcertHallStatusAnswer.xml in Resources */,
 				2F0A2CBD1D0EA08B0091616A /* SoftwareVersionAnswer.xml in Resources */,
+				2F21AA281D430D7C009EEFC1 /* HeadDetectionStatusAnswer.xml in Resources */,
+				2F21AA261D430D7C009EEFC1 /* FlightModeStatusAnswer.xml in Resources */,
 				2F0A2CE01D0EA1100091616A /* NoiseCancellationStatusAnswer.xml in Resources */,
 				2F0A2CE71D0EA1130091616A /* BatteryInfoAnswer.xml in Resources */,
 			);

@@ -53,6 +53,27 @@ class ZikResponseHandlerTest: QuickSpec {
                 handler.handle(answer!)
                 expect(deviceState.noiseControlEnabled).to(beTrue())
             }
+
+            it("should mutate deviceState to reflect Concert hall status") {
+                let answer = self.loadXml("ConcertHallStatusAnswer")
+                expect(deviceState.concertHallEnabled).to(beFalse())
+                handler.handle(answer!)
+                expect(deviceState.concertHallEnabled).to(beTrue())
+            }
+
+            it("should mutate deviceState to reflect Head Detection status") {
+                let answer = self.loadXml("HeadDetectionStatusAnswer")
+                expect(deviceState.headDetectionEnabled).to(beFalse())
+                handler.handle(answer!)
+                expect(deviceState.headDetectionEnabled).to(beTrue())
+            }
+
+            it("should mutate deviceState to reflect Flight mode status") {
+                let answer = self.loadXml("FlightModeStatusAnswer")
+                expect(deviceState.flightModeEnabled).to(beFalse())
+                handler.handle(answer!)
+                expect(deviceState.flightModeEnabled).to(beTrue())
+            }
         }
     }
 }

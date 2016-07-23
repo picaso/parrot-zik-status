@@ -9,6 +9,13 @@ struct ParrotZikEndpoints {
     static let SetEqualizerStatus = "/api/audio/equalizer/enabled/set"
     static let NoiseControltatus = "/api/audio/noise_control/enabled/get"
     static let SetNoiseControlStatus = "/api/audio/noise_control/enabled/set"
+    static let ConcertHallStatus = "/api/audio/sound_effect/enabled/get"
+    static let SetConcertHallStatus = "/api/audio/sound_effect/enabled/set"
+    static let FlightModeStatus = "/api/flight_mode/get"
+    static let FlightModeEnable = "/api/flight_mode/enable"
+    static let FlightModeDisable = "/api/flight_mode/disable"
+    static let HeadDetectionStatus = "/api/system/head_detection/enabled/get"
+    static let SetHeadModeDetectionStatus = "/api/system/head_detection/enabled/set"
 
 }
 

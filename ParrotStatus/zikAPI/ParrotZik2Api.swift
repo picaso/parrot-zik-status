@@ -7,6 +7,7 @@ class ParrotZik2Api {
 
     private var _rfCommChannel: IOBluetoothRFCOMMChannel?
 
+    //MARK: Properties
     var rfcommChannel: IOBluetoothRFCOMMChannel {
         get { return _rfCommChannel! }
         set { _rfCommChannel = newValue }
@@ -14,6 +15,7 @@ class ParrotZik2Api {
 
     init() {}
 
+    //MARK: Audio properties
     func getAsyncNoiseCancellationStatus() -> Bool {
         return sendRequest(get(ParrotZikEndpoints.NoiseCancellationStatus))
     }
@@ -34,6 +36,38 @@ class ParrotZik2Api {
         return sendRequest(set(ParrotZikEndpoints.SetEqualizerStatus, args: arg))
     }
 
+    func getAsyncConcertHallStatus() -> Bool {
+        return sendRequest(get(ParrotZikEndpoints.ConcertHallStatus))
+    }
+
+    func toggleAsyncConcerHallStatus(arg: Bool) -> Bool {
+        return sendRequest(set(ParrotZikEndpoints.SetConcertHallStatus, args: arg))
+    }
+
+    //MARK: Non Audo properties
+    func getAsyncFlightModeStatus() -> Bool {
+        return sendRequest(get(ParrotZikEndpoints.FlightModeStatus))
+    }
+
+    func enableAsyncFlightMode() -> Bool {
+        return sendRequest(get(ParrotZikEndpoints.FlightModeEnable))
+    }
+
+    func disableAsyncFlightMode() -> Bool {
+        return sendRequest(get(ParrotZikEndpoints.FlightModeDisable))
+    }
+
+    func getAsyncheadDetectionStatus() -> Bool {
+        return sendRequest(get(ParrotZikEndpoints.HeadDetectionStatus))
+    }
+
+    func toggleAsyncHeadDetection(arg: Bool) -> Bool {
+        return sendRequest(set(ParrotZikEndpoints.SetHeadModeDetectionStatus, args: arg))
+    }
+
+
+
+    //MARK: Read Only Zik properties
     func getAsyncApplicationVersion() -> Bool {
         return sendRequest(get(ParrotZikEndpoints.ApplicationVersion))
     }
@@ -45,6 +79,8 @@ class ParrotZik2Api {
     func getAsyncFriendlyName() -> Bool {
         return sendRequest(get(ParrotZikEndpoints.FriendlyName))
     }
+
+    //MARK: Helper Functions
 
     func sendRequest(request: String) -> Bool {
         return sendRequest(get(request))

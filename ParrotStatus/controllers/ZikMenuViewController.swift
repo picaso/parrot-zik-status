@@ -15,6 +15,9 @@ class ZikMenuViewController: NSViewController, PopoverController {
 
     @IBOutlet weak var noiseControlStatus: ITSwitch!
     @IBOutlet weak var equalizerStatus: ITSwitch!
+    @IBOutlet weak var concertHallStatus: ITSwitch!
+    @IBOutlet weak var headDetectionStatus: ITSwitch!
+    @IBOutlet weak var flightMode: ITSwitch!
 
     var service: BTCommunicationServiceInterface?
 
@@ -72,9 +75,15 @@ class ZikMenuViewController: NSViewController, PopoverController {
             self.updateBatteryStatus()
             self.noiseControlStatus.checked = self.deviceState.noiseCancellationEnabled
             self.equalizerStatus.checked = self.deviceState.equalizerEnabled
+            self.concertHallStatus.checked = self.deviceState.concertHallEnabled
+
+
             self.swVersion.stringValue = "Version: \(self.deviceState.version)"
             self.percentage.stringValue = "\(self.deviceState.batteryLevel)%"
             self.deviceName.stringValue = self.deviceState.name
+
+            self.headDetectionStatus.checked = self.deviceState.headDetectionEnabled
+            self.flightMode.checked = self.deviceState.flightModeEnabled
         }
     }
 
@@ -84,6 +93,19 @@ class ZikMenuViewController: NSViewController, PopoverController {
 
     @IBAction func equalizerSwitch(sender: ITSwitch) {
         service?.toggleAsyncEqualizerStatus(sender.checked)
+    }
+
+    @IBAction func concertHallSwitch(sender: ITSwitch) {
+        service?.toggleAsyncConcertHall(sender.checked)
+
+    }
+
+    @IBAction func headDetectionSwitch(sender: ITSwitch) {
+        service?.toggleAsyncHeadDetection(sender.checked)
+    }
+
+    @IBAction func flightModeSwitch(sender: ITSwitch) {
+        service?.toggleAsyncFlightMode(sender.checked)
     }
 
 }

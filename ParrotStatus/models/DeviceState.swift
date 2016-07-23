@@ -9,6 +9,10 @@ class DeviceState {
     private var _deviceName: String = Empty
     private var _noiseControlEnabled: Bool = false
     private var _equalizerEnabled: Bool = false
+    private var _concertHallEnabled: Bool = false
+    private var _headModeDetection: Bool = false
+    private var _flightModeEnabled: Bool = false
+
 
     var name: String {
         get { return _deviceName }
@@ -43,6 +47,21 @@ class DeviceState {
     var equalizerEnabled: Bool {
         get { return _equalizerEnabled }
         set { _equalizerEnabled = newValue }
+    }
+
+    var concertHallEnabled: Bool {
+        get { return _concertHallEnabled }
+        set { _concertHallEnabled = newValue }
+    }
+
+    var headDetectionEnabled: Bool {
+        get { return _headModeDetection }
+        set { _headModeDetection = newValue }
+    }
+
+    var flightModeEnabled: Bool {
+        get { return _flightModeEnabled }
+        set { _flightModeEnabled = newValue }
     }
 
 }

@@ -5,6 +5,9 @@ protocol BTCommunicationServiceInterface {
     func getAsyncBatteryInfo() -> Bool
     func toggleAsyncNoiseCancellation(arg: Bool) -> Bool
     func toggleAsyncEqualizerStatus(arg: Bool) -> Bool
+    func toggleAsyncConcertHall(arg: Bool) -> Bool
+    func toggleAsyncHeadDetection(arg: Bool) -> Bool
+    func toggleAsyncFlightMode(arg: Bool) -> Bool
 }
 
 class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMMChannelDelegate {
@@ -44,6 +47,10 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
                 api.getAsyncFriendlyName()
                 api.getAsyncNoiseControlStatus()
                 api.getAsyncEqualizerStatus()
+                api.getAsyncFlightModeStatus()
+                api.disableAsyncFlightMode()
+                api.getAsyncConcertHallStatus()
+                api.getAsyncheadDetectionStatus()
             }
     }
 
@@ -54,7 +61,7 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
             assert(response, "Error Initializing bluetooth device")
             getBatteryUpdateTimer = NSTimer
                 .scheduledTimerWithTimeInterval(
-                    60.0,
+                    180.0,
                     target: self,
                     selector: #selector(getAsyncBatteryInfo),
                     userInfo: nil,
@@ -79,6 +86,22 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
         return api.toggleAsyncEqualizerStatus(arg) &&
             api.getAsyncEqualizerStatus()
     }
+
+    func toggleAsyncConcertHall(arg: Bool) -> Bool {
+        return api.toggleAsyncConcerHallStatus(arg) &&
+            api.getAsyncConcertHallStatus()
+    }
+
+    func toggleAsyncHeadDetection(arg: Bool) -> Bool {
+        return api.toggleAsyncHeadDetection(arg) &&
+            api.getAsyncheadDetectionStatus()
+    }
+
+    func toggleAsyncFlightMode(arg: Bool) -> Bool {
+        print(arg)
+        return arg ? api.enableAsyncFlightMode() : api.disableAsyncFlightMode()
+    }
+
 
     private func extractResponsePackage(from message: NSData)
         -> (type: String, package: AEXMLDocument?) {
