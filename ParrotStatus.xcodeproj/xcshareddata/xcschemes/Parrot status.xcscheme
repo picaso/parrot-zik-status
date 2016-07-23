@@ -38,16 +38,6 @@
                ReferencedContainer = "container:ParrotStatus.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2FB287BC1C9A3BFD00C4A53E"
-               BuildableName = "ParrotStatus.xctest"
-               BlueprintName = "ParrotStatusUITests"
-               ReferencedContainer = "container:ParrotStatus.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
