@@ -3,12 +3,20 @@ import IOBluetooth
 
 protocol ZikMemuInterface {
     func showMenu()
+    func menuStatusItem() -> NSStatusItem
 }
 
 class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
     private let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
+
     private var popover = NSPopover()
     private static let mainStoryBoard = NSStoryboard(name: "Main", bundle: nil)
+
+    private let disconnectedImage = NSImage(named: "icon-disconnected")
+    private let connectedImage = NSImage(named: "icon-connected")
+
+
+
     var detector: AnyObject?
 
     let notificationCenter = NSNotificationCenter.defaultCenter()
@@ -20,6 +28,8 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
 
     override init () {
         super.init()
+        disconnectedImage?.template = true
+        connectedImage?.template = true
         notificationCenter
             .addObserver(
                 self, selector: #selector(connected),
@@ -54,13 +64,20 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
 
     func showMenu() {
         if let button = statusItem.button {
-            button.image = NSImage(named: "playStatus")
+            button.image = disconnectedImage
             button.action = #selector(ZikMenu.togglePopOverView(_:))
             button.target = self
         }
     }
 
+    func menuStatusItem() -> NSStatusItem {
+        return statusItem
+    }
+
     private dynamic func disconnected() {
+        if let button = statusItem.button {
+            button.image = disconnectedImage
+        }
         if popover.shown {
             update(popover: popover, with: zikDisconnectedViewController!)
         } else {
@@ -69,6 +86,9 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
     }
 
     private dynamic func connected() {
+        if let button = statusItem.button {
+            button.image = connectedImage
+        }
         if popover.shown {
             update(popover: popover, with: zikConnectedViewController!)
         } else {
@@ -93,8 +113,11 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
             })
 
         if let button = statusItem.button {
-            popover
-                .showRelativeToRect(button.bounds, ofView: button, preferredEdge: NSRectEdge.MinY)
+            popover.showRelativeToRect(
+                button.bounds,
+                ofView: button,
+                preferredEdge: NSRectEdge.MinY
+            )
         }
     }
 
@@ -106,7 +129,6 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
     }
 
     func togglePopover(sender: AnyObject?) {
-        print("fucker")
         if popover.shown {
             closePopover(sender)
         } else {

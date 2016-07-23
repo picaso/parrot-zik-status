@@ -20,9 +20,8 @@ class ZikMenuViewController: NSViewController, PopoverController {
     @IBOutlet weak var flightMode: ITSwitch!
 
     var service: BTCommunicationServiceInterface?
-
-
     var deviceState: DeviceState! = nil
+
     let notificationCenter = NSNotificationCenter.defaultCenter()
 
     override func viewDidLoad() {
@@ -67,6 +66,7 @@ class ZikMenuViewController: NSViewController, PopoverController {
             }
         } else {
             self.batteryStatus.image = NSImage(named: "batteryCharging")
+
         }
     }
 
@@ -86,6 +86,7 @@ class ZikMenuViewController: NSViewController, PopoverController {
             self.flightMode.checked = self.deviceState.flightModeEnabled
         }
     }
+
 
     @IBAction func noiseControlSwitch(sender: ITSwitch) {
         service?.toggleAsyncNoiseCancellation(sender.checked)

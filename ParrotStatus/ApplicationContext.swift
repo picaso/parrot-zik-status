@@ -5,7 +5,7 @@ extension SwinjectStoryboard {
 
         defaultContainer.registerForStoryboard(ZikMenuViewController.self) { r, controller in
             controller.deviceState = r.resolve(DeviceState.self)
-            controller.service = r.resolve(BTCommunicationServiceInterface)
+            controller.service = r.resolve(BTCommunicationServiceInterface.self)
         }
 
         defaultContainer.registerForStoryboard(DisconnectedViewController.self) {
