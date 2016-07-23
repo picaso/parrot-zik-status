@@ -8,3 +8,5 @@ before_install:
   - brew outdated xctool || brew upgrade xctool
   - gem install activesupport -v  '= 4.2.6'
   - gem install cocoapods -v '1.0.1'
+  - pod repo remove master
+  - pod setup
