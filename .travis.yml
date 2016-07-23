@@ -10,6 +10,6 @@ before_install:
   - gem install cocoapods -v '1.0.1'
   - pod repo remove master
   - pod setup
-
+cache: cocoapods
 install: 
     - pod install
