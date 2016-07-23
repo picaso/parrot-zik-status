@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/picaso/parrot-zik-status.svg?branch=master)](https://travis-ci.org/picaso/parrot-zik-status)
 [![License](https://img.shields.io/badge/licence-MIT-lightgrey.svg)](https://raw.githubusercontent.com/picaso/parrot-zik-status/master/LICENSE)
 ![swift](https://img.shields.io/badge/swift-2.2-orange.svg)
 
