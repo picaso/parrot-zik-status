@@ -2,6 +2,11 @@
 [![License](https://img.shields.io/badge/licence-MIT-lightgrey.svg)](https://raw.githubusercontent.com/picaso/parrot-zik-status/master/LICENSE)
 ![swift](https://img.shields.io/badge/swift-2.2-orange.svg)
 
+
+<a href="http://picaso.github.io/parrot-zik-status/">
+  <img src="http://picaso.github.io/parrot-zik-status/images/pzik-256.png" alt="Drawing" style="width: 128px;"/>
+</a>
+
 Welcome to Parrot Status!
 ===================
 
@@ -13,7 +18,9 @@ This all started out when my iPhone got broken and I had a flight to catch. I fo
 
 ScreenShot
 =============
-<img src="https://cloud.githubusercontent.com/assets/1143950/17079781/1555141a-50cf-11e6-82e6-7ec2294414f1.png" alt="Drawing" style="width: 400px;"/>
+<a href = "http://picaso.github.io/parrot-zik-status/images/screenshot.png">
+  <img src="http://picaso.github.io/parrot-zik-status/images/screenshot.png" alt="Drawing" style="width: 400px;"/>
+</a>
 
 License
 =======

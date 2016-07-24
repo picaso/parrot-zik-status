@@ -5,6 +5,7 @@ class DisconnectedViewController: NSViewController, PopoverController, NSMenuDel
 
     @IBOutlet weak var header: NSView!
     @IBOutlet weak var footer: NSView!
+    var about: AboutProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +21,9 @@ class DisconnectedViewController: NSViewController, PopoverController, NSMenuDel
         header.backgroundColor = FlatUIColors.midnightBlueColor()
         footer.backgroundColor = FlatUIColors.midnightBlueColor()
         view.backgroundColor = FlatUIColors.wetAsphaltColor()
+    }
+
+    @IBAction func about(sender: AnyObject) {
+        about?.show()
     }
 }

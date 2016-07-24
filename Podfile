@@ -10,6 +10,8 @@ target 'ParrotStatus' do
     pod 'FlatUIColors'
     pod 'ITSwitch'
     pod 'AEXML'
+    pod 'TRexAboutWindowController', '~> 1.4'
+    pod 'LetsMove'
 end
 
 target 'ParrotStatusTests' do

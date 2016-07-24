@@ -20,7 +20,7 @@
                                         <menuItem title="About ParrotStatus" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                                <action selector="about:" target="Voe-Tx-rLC" id="Enu-rZ-nhb"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
@@ -268,11 +268,8 @@
                                                     <menuItem title="About Parrot Status" id="mqO-ou-Ce0" userLabel="About Parrot Status">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
-                                                            <action selector="orderFrontStandardAboutPanel:" target="QtR-Ra-IAh" id="zSt-Mj-CXd"/>
+                                                            <action selector="about:" target="P47-iK-zPo" id="8oV-eK-Ujf"/>
                                                         </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Acknowledgements" id="8lS-em-s0h">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
                                                     </menuItem>
                                                     <menuItem isSeparatorItem="YES" id="VNc-8S-9eO"/>
                                                     <menuItem title="Quit Parrot Status" id="zDb-ti-Jzi">
@@ -639,7 +636,7 @@
                                                 </configuration>
                                             </ciFilter>
                                         </contentFilters>
-                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="47s-yK-BNZ" id="nbQ-iW-JL0">
+                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" id="nbQ-iW-JL0">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="Ta4-6u-jRR">
@@ -650,11 +647,8 @@
                                                     <menuItem title="About Parrot Status" id="j9j-MX-g9J" userLabel="About Parrot Status">
                                                         <modifierMask key="keyEquivalentModifierMask"/>
                                                         <connections>
-                                                            <action selector="orderFrontStandardAboutPanel:" target="zXI-fL-jZa" id="4NH-pa-kp9"/>
+                                                            <action selector="about:" target="T4n-Pn-y67" id="kCr-Bq-5Hb"/>
                                                         </connections>
-                                                    </menuItem>
-                                                    <menuItem title="Acknowledgements" id="ZXv-me-gJY">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
                                                     </menuItem>
                                                     <menuItem isSeparatorItem="YES" id="8vx-L1-V7q"/>
                                                     <menuItem title="Quit Parrot Status" id="6Xn-Qu-Aq0">

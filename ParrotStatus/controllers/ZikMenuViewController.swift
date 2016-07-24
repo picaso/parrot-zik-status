@@ -21,6 +21,7 @@ class ZikMenuViewController: NSViewController, PopoverController {
 
     var service: BTCommunicationServiceInterface?
     var deviceState: DeviceState! = nil
+    var about: AboutProtocol?
 
     let notificationCenter = NSNotificationCenter.defaultCenter()
 
@@ -109,4 +110,7 @@ class ZikMenuViewController: NSViewController, PopoverController {
         service?.toggleAsyncFlightMode(sender.checked)
     }
 
+    @IBAction func about(sender: AnyObject) {
+        about?.show()
+    }
 }
