@@ -30,3 +30,8 @@ This software is distributed under **MIT** Licence.
 **Parrot and Parrot Zik are registered trademarks.**
 
 We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with Parrot S.A, or any of its subsidiaries or its affiliates. The official Parrot web site is available at www.parrot.com.
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/picaso/parrot-zik-status/badge.svg?style=beer-square)](https://beerpay.io/picaso/parrot-zik-status)  [![Beerpay](https://beerpay.io/picaso/parrot-zik-status/make-wish.svg?style=flat-square)](https://beerpay.io/picaso/parrot-zik-status?focus=wish)
