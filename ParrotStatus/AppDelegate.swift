@@ -20,7 +20,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationWillFinishLaunching(notification: NSNotification) {
-        PFMoveToApplicationsFolderIfNecessary()
+        if let _ = NSClassFromString("XCTest") {
+            //Do nothing
+        } else {
+            PFMoveToApplicationsFolderIfNecessary()
+        }
     }
 
     @IBAction func about(sender: AnyObject) {

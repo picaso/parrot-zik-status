@@ -1,10 +1,12 @@
+
 [![Build Status](https://travis-ci.org/picaso/parrot-zik-status.svg?branch=master)](https://travis-ci.org/picaso/parrot-zik-status)
 [![License](https://img.shields.io/badge/licence-MIT-lightgrey.svg)](https://raw.githubusercontent.com/picaso/parrot-zik-status/master/LICENSE)
 ![swift](https://img.shields.io/badge/swift-2.2-orange.svg)
-
+[![Beerpay](https://beerpay.io/picaso/parrot-zik-status/badge.svg?style=flat-square)](https://beerpay.io/picaso/parrot-zik-status)
+[![Beerpay](https://beerpay.io/picaso/parrot-zik-status/make-wish.svg)](https://beerpay.io/picaso/parrot-zik-status)
 
 <a href="http://picaso.github.io/parrot-zik-status/">
-  <img src="http://picaso.github.io/parrot-zik-status/images/pzik-256.png" alt="Drawing" style="width: 128px;"/>
+  <img src="http://picaso.github.io/parrot-zik-status/images/pzik-256.png" alt="Drawing" width="128px"/>
 </a>
 
 Welcome to Parrot Status!
