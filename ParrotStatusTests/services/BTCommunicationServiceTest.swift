@@ -100,6 +100,7 @@ class BTCommunicationServiceTest: QuickSpec {
         beforeEach {
             serviceUnderTest = BTCommunicationService(api: parrotZikApiMock,
                 zikResponseHandler: zikResponseHandlerMock)
+            parrotZikApiMock.reset()
         }
 
         describe("Parrot status communication service") {

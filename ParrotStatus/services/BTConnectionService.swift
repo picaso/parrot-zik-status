@@ -12,13 +12,13 @@ class BTConnectionService: BTConnectionServiceInterface {
     init(service: BTCommunicationServiceInterface) {
         self.communcationService = service
         IOBluetoothDevice
-            .registerForConnectNotifications(self, selector: #selector(connected(_:fromDevice:)))
+            .registerForConnectNotifications(self, selector: #selector(connected))
     }
 
     private dynamic func connected(_: IOBluetoothUserNotification, fromDevice: IOBluetoothDevice) {
         if let deviceService = searchForBluetoothService(fromDevice) {
             fromDevice.registerForDisconnectNotification(
-                self, selector: #selector(disconnected(_:fromDevice:))
+                self, selector: #selector(disconnected)
             )
             assert(openConnectionChannel(with: deviceService), "Error Opening connection")
             NSLog("\(fromDevice.name) is Open")
@@ -35,9 +35,9 @@ class BTConnectionService: BTConnectionServiceInterface {
 
     private func searchForBluetoothService(fromDevice: IOBluetoothDevice)
         -> IOBluetoothSDPServiceRecord? {
-          return fromDevice.services.filter({ service in
-            filterByServiceNameFor({service as? IOBluetoothSDPServiceRecord}())
-            }).first as? IOBluetoothSDPServiceRecord
+          return fromDevice.services.filter {
+            service in filterByServiceNameFor({service as? IOBluetoothSDPServiceRecord}())
+            }.first as? IOBluetoothSDPServiceRecord
     }
 
     private func filterByServiceNameFor(serviceRecord: IOBluetoothSDPServiceRecord?) -> Bool {
