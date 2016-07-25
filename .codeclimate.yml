@@ -5,7 +5,10 @@ engines:
   tailor:
     enabled: true
 ratings:
-  paths: []
+  paths:
+    - ParrotStatus/**
+    - ParrotStatusTests/**
+    - "**.swift"
 exclude_paths:
   - Pods/
   - .idea/
