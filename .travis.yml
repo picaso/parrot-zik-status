@@ -5,12 +5,12 @@ branches:
     - master
 xcode_workspace: ParrotStatus.xcworkspace
 xcode_scheme: "Tests"
-script: xcodebuild -workspace ParrotStatus.xcworkspace -scheme "Tests" build test 
+script: xcodebuild -workspace ParrotStatus.xcworkspace -scheme "Tests" clean test | xcpretty --test -t  
 xcode_sdk: macosx10.11
 before_install:
   - brew update
-  - brew outdated xctool || brew upgrade xctool
   - gem install activesupport -v  '= 4.2.6'
+  - gem install xcpretty
   - gem install cocoapods -v '1.0.1'
   - pod repo remove master
   - pod setup
