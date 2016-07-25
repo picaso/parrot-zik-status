@@ -26,7 +26,7 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
     let zikDisconnectedViewController = mainStoryBoard
         .instantiateControllerWithIdentifier("zikDisconnected") as? DisconnectedViewController
 
-    override init () {
+    override init() {
         super.init()
         disconnectedImage?.template = true
         connectedImage?.template = true
@@ -56,10 +56,10 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
         return popover
     }
 
-    private func update(popover popover: NSPopover, with controller: PopoverController ) {
-        let _controller = controller as? NSViewController
-        popover.contentViewController = _controller
-        popover.contentSize = _controller!.view.frame.size
+    private func update(popover popover: NSPopover, with controller: PopoverController) {
+        let viewController = controller as? NSViewController
+        popover.contentViewController = viewController
+        popover.contentSize = viewController!.view.frame.size
     }
 
     func showMenu() {
@@ -135,4 +135,5 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
             showPopover(sender)
         }
     }
+
 }

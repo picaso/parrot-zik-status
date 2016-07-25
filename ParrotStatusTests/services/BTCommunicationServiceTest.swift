@@ -27,7 +27,7 @@ class ParrotZikApiMock: ParrotZik2Api {
         getAsyncEqualizerStatusWasCalled = false
     }
 
-    func allApiWereCalled () -> Bool {
+    func allApiWereCalled() -> Bool {
         return getAsyncApplicationVersionWasCalled &&
         getAsyncNoiseCancellationStatusWasCalled &&
         getAsyncBatteryInfoWasCalled &&
@@ -87,6 +87,7 @@ class ParrotZikApiMock: ParrotZik2Api {
 class ZikResponseHandlerMock: ZikResponseHandler {}
 
 class BTCommunicationServiceTest: QuickSpec {
+
     override func spec() {
         var parrotZikApiMock = ParrotZikApiMock()
         var zikResponseHandlerMock = ZikResponseHandlerMock()
@@ -110,4 +111,5 @@ class BTCommunicationServiceTest: QuickSpec {
             }
         }
     }
+
 }

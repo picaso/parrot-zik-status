@@ -5,17 +5,21 @@ class ParrotZik2Api {
     private let set = ParrotRequestProtocols.setRequest
     typealias Request = [UInt8]
 
-    private var _rfCommChannel: IOBluetoothRFCOMMChannel?
+    private var apiRfCommChannel: IOBluetoothRFCOMMChannel?
 
-    //MARK: Properties
+    // MARK: Properties
     var rfcommChannel: IOBluetoothRFCOMMChannel {
-        get { return _rfCommChannel! }
-        set { _rfCommChannel = newValue }
+        get {
+            return apiRfCommChannel!
+        }
+        set {
+            apiRfCommChannel = newValue
+        }
     }
 
     init() {}
 
-    //MARK: Audio properties
+    // MARK: Audio properties
     func getAsyncNoiseCancellationStatus() -> Bool {
         return sendRequest(get(ParrotZikEndpoints.NoiseCancellationStatus))
     }
@@ -44,7 +48,7 @@ class ParrotZik2Api {
         return sendRequest(set(ParrotZikEndpoints.SetConcertHallStatus, args: arg))
     }
 
-    //MARK: Non Audo properties
+    // MARK: Non Audo properties
     func getAsyncFlightModeStatus() -> Bool {
         return sendRequest(get(ParrotZikEndpoints.FlightModeStatus))
     }
@@ -67,7 +71,7 @@ class ParrotZik2Api {
 
 
 
-    //MARK: Read Only Zik properties
+    // MARK: Read Only Zik properties
     func getAsyncApplicationVersion() -> Bool {
         return sendRequest(get(ParrotZikEndpoints.ApplicationVersion))
     }
@@ -80,19 +84,18 @@ class ParrotZik2Api {
         return sendRequest(get(ParrotZikEndpoints.FriendlyName))
     }
 
-    //MARK: Helper Functions
-
+    // MARK: Helper Functions
     func sendRequest(request: String) -> Bool {
         return sendRequest(get(request))
     }
 
     func initializeDevice(rfCommChannel: IOBluetoothRFCOMMChannel) -> Bool {
-        self._rfCommChannel = rfCommChannel
+        self.apiRfCommChannel = rfCommChannel
         return sendRequest(createInitMessage())
     }
 
     private func sendRequest(request: Request) -> Bool {
-        let status = _rfCommChannel?
+        let status = apiRfCommChannel?
             .writeAsync(
                 UnsafeMutablePointer(request),
                 length: UInt16(request.count),

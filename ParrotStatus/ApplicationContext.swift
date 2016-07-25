@@ -1,6 +1,7 @@
 import Swinject
 
 extension SwinjectStoryboard {
+
     class func setup() {
 
         defaultContainer.registerForStoryboard(ZikMenuViewController.self) { r, controller in
@@ -39,4 +40,5 @@ extension SwinjectStoryboard {
             BTConnectionService(service: r.resolve(BTCommunicationServiceInterface)!)
             }.inObjectScope(.Container)
     }
+
 }

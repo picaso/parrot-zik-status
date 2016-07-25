@@ -33,7 +33,7 @@ class ZikResponseHandler: BTResponseHandlerInterface {
         }
     }
 
-    private func friendlyName (document: AEXMLDocument) {
+    private func friendlyName(document: AEXMLDocument) {
         deviceState.name = document.root["bluetooth"].attributes["friendlyname"]!
     }
 

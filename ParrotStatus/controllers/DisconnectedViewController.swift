@@ -26,4 +26,5 @@ class DisconnectedViewController: NSViewController, PopoverController, NSMenuDel
     @IBAction func about(sender: AnyObject) {
         about?.show()
     }
+
 }

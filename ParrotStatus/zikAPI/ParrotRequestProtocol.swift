@@ -1,4 +1,5 @@
 class ParrotRequestProtocols {
+
     private static func createReuestHeader(request: String) -> [UInt8] {
         var header = [UInt8(0)]
         header.append(UInt8(request.characters.count) + 3)
@@ -18,4 +19,5 @@ class ParrotRequestProtocols {
     static func setRequest(request: String, args: Bool) -> [UInt8] {
         return generateRequest("SET \(request)?arg=\(args)")
     }
+
 }

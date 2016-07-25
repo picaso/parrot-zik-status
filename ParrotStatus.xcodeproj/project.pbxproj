@@ -287,9 +287,9 @@
 				2FB2879D1C9A3BFD00C4A53E /* Sources */,
 				2FB2879E1C9A3BFD00C4A53E /* Frameworks */,
 				2FB2879F1C9A3BFD00C4A53E /* Resources */,
-				2F79A1341D0DE88B006D6DC0 /* SwiftLint */,
 				2445577EC3FAC52D149CC797 /* [CP] Embed Pods Frameworks */,
 				644C11273BA4BE1723B54EE2 /* [CP] Copy Pods Resources */,
+				EF67DBF8981671F0EC004C69 /* Tailor */,
 			);
 			buildRules = (
 			);
@@ -418,20 +418,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ParrotStatus/Pods-ParrotStatus-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2F79A1341D0DE88B006D6DC0 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
 		488F18A98A7ECD62368CDCBB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -491,6 +477,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		EF67DBF8981671F0EC004C69 /* Tailor */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Tailor;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if hash tailor 2>/dev/null; then\n  tailor\nelse\n  echo \"warning: Please install Tailor from https://tailor.sh\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
