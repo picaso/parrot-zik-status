@@ -4,7 +4,7 @@ import FlatUIColors
 class DisconnectedViewController: NSViewController, PopoverController, NSMenuDelegate {
 
     @IBOutlet weak var header: NSView!
-    @IBOutlet weak var footer: NSView!
+    @IBOutlet weak var footer: Footer!
     var about: AboutProtocol?
 
     override func viewDidLoad() {
@@ -14,6 +14,7 @@ class DisconnectedViewController: NSViewController, PopoverController, NSMenuDel
 
     override func viewWillAppear() {
         preferredContentSize = view.fittingSize
+        footer.deviceName.hidden = true
         makeViewPretty()
     }
 

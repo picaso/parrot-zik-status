@@ -15,8 +15,6 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
     private let disconnectedImage = NSImage(named: "icon-disconnected")
     private let connectedImage = NSImage(named: "icon-connected")
 
-
-
     var detector: AnyObject?
 
     let notificationCenter = NSNotificationCenter.defaultCenter()

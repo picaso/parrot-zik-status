@@ -74,6 +74,20 @@ class ZikResponseHandlerTest: QuickSpec {
                 handler.handle(answer!)
                 expect(deviceState.flightModeEnabled).to(beTrue())
             }
+
+            it("should mutate deviceState to reflect Equalizer status") {
+                let answer = self.loadXml("EqualizerStatusAnswer")
+                expect(deviceState.equalizerEnabled).to(beFalse())
+                handler.handle(answer!)
+                expect(deviceState.equalizerEnabled).to(beTrue())
+            }
+
+            it("should mutate deviceState to reflect Device name") {
+                let answer = self.loadXml("DeviceNameAnswer")
+                expect(deviceState.name).to(equal(String()))
+                handler.handle(answer!)
+                expect(deviceState.name).to(equal("Picaso"))
+            }
         }
     }
 

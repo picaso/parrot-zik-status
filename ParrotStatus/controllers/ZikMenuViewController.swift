@@ -6,9 +6,8 @@ protocol PopoverController: NSPopoverDelegate {}
 class ZikMenuViewController: NSViewController, PopoverController {
 
     @IBOutlet weak var header: NSView!
-    @IBOutlet weak var footer: NSView!
+    @IBOutlet weak var footer: Footer!
 
-    @IBOutlet weak var deviceName: NSTextField!
     @IBOutlet weak var swVersion: NSTextField!
     @IBOutlet weak var percentage: NSTextField!
     @IBOutlet weak var batteryStatus: NSImageView!
@@ -27,10 +26,7 @@ class ZikMenuViewController: NSViewController, PopoverController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSApplication
-            .sharedApplication()
-            .activateIgnoringOtherApps(true)
-
+        NSApplication.sharedApplication().activateIgnoringOtherApps(true)
     }
 
     override func viewWillAppear() {
@@ -67,7 +63,6 @@ class ZikMenuViewController: NSViewController, PopoverController {
             }
         } else {
             self.batteryStatus.image = NSImage(named: "batteryCharging")
-
         }
     }
 
@@ -78,10 +73,9 @@ class ZikMenuViewController: NSViewController, PopoverController {
             self.equalizerStatus.checked = self.deviceState.equalizerEnabled
             self.concertHallStatus.checked = self.deviceState.concertHallEnabled
 
-
             self.swVersion.stringValue = "Version: \(self.deviceState.version)"
             self.percentage.stringValue = "\(self.deviceState.batteryLevel)%"
-            self.deviceName.stringValue = self.deviceState.name
+            self.footer.deviceName.stringValue = self.deviceState.name
 
             self.headDetectionStatus.checked = self.deviceState.headDetectionEnabled
             self.flightMode.checked = self.deviceState.flightModeEnabled
@@ -99,7 +93,6 @@ class ZikMenuViewController: NSViewController, PopoverController {
 
     @IBAction func concertHallSwitch(sender: ITSwitch) {
         service?.toggleAsyncConcertHall(sender.checked)
-
     }
 
     @IBAction func headDetectionSwitch(sender: ITSwitch) {

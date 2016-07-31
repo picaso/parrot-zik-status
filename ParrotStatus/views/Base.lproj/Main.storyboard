@@ -189,7 +189,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhW-Ns-CUe">
-                                        <rect key="frame" x="223" y="25" width="16" height="16"/>
+                                        <rect key="frame" x="222" y="25" width="16" height="16"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -215,74 +215,8 @@
                                     </imageView>
                                 </subviews>
                             </customView>
-                            <customView identifier="FooterConnected" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qNi-PW-435" userLabel="Footer" colorLabel="IBBuiltInLabel-Red">
+                            <customView identifier="FooterConnected" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qNi-PW-435" userLabel="Footer" customClass="Footer" customModule="ParrotStatus" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="0.0" width="264" height="36"/>
-                                <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VcC-BJ-7xy">
-                                        <rect key="frame" x="15" y="2" width="103" height="32"/>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Device Name" id="Zpt-Og-7CQ">
-                                            <font key="font" size="15" name="Futura-Medium"/>
-                                            <color key="textColor" red="0.29696338189999999" green="0.33432404910000002" blue="0.46432291669999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <button toolTip="Quit Parrot Status" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8aP-5M-vXw">
-                                        <rect key="frame" x="194" y="9" width="18" height="18"/>
-                                        <contentFilters>
-                                            <ciFilter name="CIFalseColor">
-                                                <configuration>
-                                                    <ciColor key="inputColor0" red="0.67843137249999996" green="0.14117647059999999" blue="0.1058823529" alpha="1"/>
-                                                    <ciColor key="inputColor1" red="0.67843137249999996" green="0.14117647059999999" blue="0.1058823529" alpha="1"/>
-                                                    <null key="inputImage"/>
-                                                </configuration>
-                                            </ciFilter>
-                                        </contentFilters>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="power" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="f5F-7v-Oad">
-                                            <behavior key="behavior" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <accessibility description="Quit Parrot Status"/>
-                                        <connections>
-                                            <action selector="terminate:" target="QtR-Ra-IAh" id="fm4-Rf-lg9"/>
-                                        </connections>
-                                    </button>
-                                    <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHN-7g-bFa">
-                                        <rect key="frame" x="216" y="6" width="30" height="24"/>
-                                        <contentFilters>
-                                            <ciFilter name="CIFalseColor">
-                                                <configuration>
-                                                    <ciColor key="inputColor0" red="0.90588235855102539" green="0.92549020051956177" blue="0.93333333730697632" alpha="1"/>
-                                                    <ciColor key="inputColor1" red="0.90588235855102539" green="0.92549020051956177" blue="0.93333333730697632" alpha="1"/>
-                                                    <null key="inputImage"/>
-                                                </configuration>
-                                            </ciFilter>
-                                        </contentFilters>
-                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" id="THh-Hn-xbu">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="menu"/>
-                                            <menu key="menu" id="i6p-op-RRp">
-                                                <items>
-                                                    <menuItem image="settings" hidden="YES" id="ocN-Pt-p2S">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                    </menuItem>
-                                                    <menuItem title="About Parrot Status" id="mqO-ou-Ce0" userLabel="About Parrot Status">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="about:" target="P47-iK-zPo" id="8oV-eK-Ujf"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem isSeparatorItem="YES" id="VNc-8S-9eO"/>
-                                                    <menuItem title="Quit Parrot Status" id="zDb-ti-Jzi">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="terminate:" target="QtR-Ra-IAh" id="JTM-36-wOk"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                </items>
-                                            </menu>
-                                        </popUpButtonCell>
-                                    </popUpButton>
-                                </subviews>
                             </customView>
                             <customView identifier="NoiseCancellation" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GbA-t0-28I" userLabel="option" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="209" width="264" height="36"/>
@@ -530,7 +464,7 @@
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
-                                                    <ciColor key="inputColor0" red="0.14901960780000001" green="0.50980392159999999" blue="0.83529411760000005" alpha="1"/>
+                                                    <ciColor key="inputColor0" red="0.69568020109999995" green="0.67380344869999997" blue="0.32742023469999998" alpha="1"/>
                                                     <ciColor key="inputColor1" red="0.14901960780000001" green="0.50980392159999999" blue="0.83529411760000005" alpha="1"/>
                                                     <null key="inputImage"/>
                                                 </configuration>
@@ -545,7 +479,6 @@
                     <connections>
                         <outlet property="batteryStatus" destination="jBT-ZJ-N7Y" id="TqN-v6-XZW"/>
                         <outlet property="concertHallStatus" destination="ZaK-ze-dUn" id="O6P-zb-Cgc"/>
-                        <outlet property="deviceName" destination="VcC-BJ-7xy" id="aqe-UZ-lDy"/>
                         <outlet property="equalizerStatus" destination="h9i-5R-mbc" id="i04-U5-akc"/>
                         <outlet property="flightMode" destination="dCy-TM-Ux1" id="3Fi-hi-YA5"/>
                         <outlet property="footer" destination="qNi-PW-435" id="a9n-th-d5X"/>
@@ -558,7 +491,7 @@
                 </viewController>
                 <customObject id="QtR-Ra-IAh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-289" y="-415"/>
+            <point key="canvasLocation" x="196" y="-491"/>
         </scene>
         <!--ZikDisconnected-->
         <scene sceneID="1kn-yL-TQR">
@@ -573,7 +506,7 @@
                                 <rect key="frame" x="0.0" y="110" width="264" height="49"/>
                                 <subviews>
                                     <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eD-Ut-gVr">
-                                        <rect key="frame" x="137" y="16" width="16" height="16"/>
+                                        <rect key="frame" x="130" y="16" width="16" height="16"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -603,65 +536,8 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <customView identifier="FooterDisconnected" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kFS-FY-aWt" userLabel="Footer" colorLabel="IBBuiltInLabel-Red">
+                            <customView identifier="FooterDisconnected" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kFS-FY-aWt" userLabel="Footer" customClass="Footer" customModule="ParrotStatus" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red">
                                 <rect key="frame" x="0.0" y="0.0" width="264" height="36"/>
-                                <subviews>
-                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pUS-j5-UXd">
-                                        <rect key="frame" x="194" y="9" width="18" height="18"/>
-                                        <contentFilters>
-                                            <ciFilter name="CIFalseColor">
-                                                <configuration>
-                                                    <ciColor key="inputColor0" red="0.67843139171600342" green="0.14117647707462311" blue="0.10588235408067703" alpha="1"/>
-                                                    <ciColor key="inputColor1" red="0.67843139171600342" green="0.14117647707462311" blue="0.10588235408067703" alpha="1"/>
-                                                    <null key="inputImage"/>
-                                                </configuration>
-                                            </ciFilter>
-                                        </contentFilters>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="power" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="Xgd-Cz-oQg">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="terminate:" target="zXI-fL-jZa" id="m1b-C2-AkI"/>
-                                        </connections>
-                                    </button>
-                                    <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwn-lj-6NP">
-                                        <rect key="frame" x="216" y="6" width="30" height="24"/>
-                                        <contentFilters>
-                                            <ciFilter name="CIFalseColor">
-                                                <configuration>
-                                                    <ciColor key="inputColor0" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1"/>
-                                                    <ciColor key="inputColor1" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1"/>
-                                                    <null key="inputImage"/>
-                                                </configuration>
-                                            </ciFilter>
-                                        </contentFilters>
-                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" id="nbQ-iW-JL0">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="menu"/>
-                                            <menu key="menu" id="Ta4-6u-jRR">
-                                                <items>
-                                                    <menuItem image="settings" hidden="YES" id="47s-yK-BNZ">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                    </menuItem>
-                                                    <menuItem title="About Parrot Status" id="j9j-MX-g9J" userLabel="About Parrot Status">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="about:" target="T4n-Pn-y67" id="kCr-Bq-5Hb"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                    <menuItem isSeparatorItem="YES" id="8vx-L1-V7q"/>
-                                                    <menuItem title="Quit Parrot Status" id="6Xn-Qu-Aq0">
-                                                        <modifierMask key="keyEquivalentModifierMask"/>
-                                                        <connections>
-                                                            <action selector="terminate:" target="zXI-fL-jZa" id="V0B-aO-LQv"/>
-                                                        </connections>
-                                                    </menuItem>
-                                                </items>
-                                            </menu>
-                                        </popUpButtonCell>
-                                    </popUpButton>
-                                </subviews>
                             </customView>
                         </subviews>
                     </customView>
@@ -671,7 +547,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="20" y="-485.5"/>
+            <point key="canvasLocation" x="-303" y="-485.5"/>
         </scene>
     </scenes>
     <resources>
@@ -684,7 +560,5 @@
         <image name="info" width="18.90461540222168" height="18.90461540222168"/>
         <image name="menu" width="368.6400146484375" height="368.6400146484375"/>
         <image name="noise-cancelation" width="25.600000381469727" height="25.600000381469727"/>
-        <image name="power" width="380" height="380"/>
-        <image name="settings" width="215.57894897460938" height="215.57894897460938"/>
     </resources>
 </document>
