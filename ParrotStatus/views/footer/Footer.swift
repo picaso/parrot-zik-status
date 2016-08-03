@@ -4,13 +4,13 @@ class Footer: NSView {
 
     @IBOutlet var footer: NSView!
     @IBOutlet weak var deviceName: NSTextField!
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         NSBundle.mainBundle().loadNibNamed("Footer", owner: self, topLevelObjects: nil)
         self.addSubview(footer)
     }
-    
+
     func dialogOKCancel(question: String, text: String) -> Bool {
         let myPopup: NSAlert = NSAlert()
         myPopup.messageText = question
@@ -24,11 +24,13 @@ class Footer: NSView {
         }
         return false
     }
-    
+
     @IBAction func shutDown(view: NSView) {
         let answer = dialogOKCancel("Do you really want to quit ?", text: "")
-        if(answer) {
+        if answer {
             exit(0)
         }
     }
+
+
 }

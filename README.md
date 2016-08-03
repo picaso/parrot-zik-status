@@ -4,6 +4,8 @@
 ![swift](https://img.shields.io/badge/swift-2.2-orange.svg)
 [![Beerpay](https://beerpay.io/picaso/parrot-zik-status/badge.svg?style=flat-square)](https://beerpay.io/picaso/parrot-zik-status)
 [![Beerpay](https://beerpay.io/picaso/parrot-zik-status/make-wish.svg)](https://beerpay.io/picaso/parrot-zik-status)
+[![Code Climate](https://codeclimate.com/github/picaso/parrot-zik-status/badges/gpa.svg)](https://codeclimate.com/github/picaso/parrot-zik-status)
+[![Issue Count](https://codeclimate.com/github/picaso/parrot-zik-status/badges/issue_count.svg)](https://codeclimate.com/github/picaso/parrot-zik-status)
 
 <a href="http://picaso.github.io/parrot-zik-status/">
   <img src="http://picaso.github.io/parrot-zik-status/images/pzik-256.png" alt="Drawing" width="128px"/>
