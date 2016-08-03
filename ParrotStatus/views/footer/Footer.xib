@@ -42,7 +42,7 @@
                     </buttonCell>
                     <accessibility description="Quit Parrot Status"/>
                     <connections>
-                        <action selector="terminate:" target="-1" id="H3j-1m-sXZ"/>
+                        <action selector="shutDown:" target="-2" id="rU7-TT-xhV"/>
                     </connections>
                 </button>
                 <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nrm-gQ-dE8">
