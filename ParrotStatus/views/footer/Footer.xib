@@ -25,7 +25,7 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <button toolTip="Quit Parrot Status" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fI6-cw-atg">
+                <button toolTip="Quit Parrot Status" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fI6-cw-atg" customClass="ButtonEffects" customModule="ParrotStatus" customModuleProvider="target">
                     <rect key="frame" x="189" y="9" width="18" height="18"/>
                     <contentFilters>
                         <ciFilter name="CIFalseColor">
@@ -45,7 +45,7 @@
                         <action selector="shutDown:" target="-2" id="rU7-TT-xhV"/>
                     </connections>
                 </button>
-                <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nrm-gQ-dE8">
+                <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nrm-gQ-dE8" customClass="PopUpButtonEffects" customModule="ParrotStatus" customModuleProvider="target">
                     <rect key="frame" x="216" y="6" width="30" height="24"/>
                     <contentFilters>
                         <ciFilter name="CIFalseColor">

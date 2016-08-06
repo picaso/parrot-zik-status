@@ -60,9 +60,13 @@ class ZikMenuViewController: NSViewController, PopoverController {
                 self.batteryStatus.image = NSImage(named: "battery4")
             default:
                 self.batteryStatus.image = NSImage(named: "batteryDead")
+                Notification.show(
+                    "Headphone battery is about to die",
+                    informativeText: "Please connect to an outlet to charge")
             }
         } else {
             self.batteryStatus.image = NSImage(named: "batteryCharging")
+
         }
     }
 

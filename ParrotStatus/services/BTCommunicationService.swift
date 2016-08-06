@@ -51,6 +51,7 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
                 api.disableAsyncFlightMode()
                 api.getAsyncConcertHallStatus()
                 api.getAsyncheadDetectionStatus()
+                api.getAsyncNoiseControlLevelStatus()
             }
     }
 
@@ -96,6 +97,8 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
         return api.toggleAsyncHeadDetection(arg) &&
             api.getAsyncheadDetectionStatus()
     }
+
+//    func setNoiseControl
 
     func toggleAsyncFlightMode(arg: Bool) -> Bool {
         print(arg)

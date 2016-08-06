@@ -10,6 +10,11 @@ extension SwinjectStoryboard {
             controller.about = r.resolve(AboutProtocol.self)
         }
 
+        defaultContainer.registerForStoryboard(NoiseController.self) { r, controller in
+            controller.deviceState = r.resolve(DeviceState.self)
+            controller.service = r.resolve(BTCommunicationServiceInterface.self)
+        }
+
         defaultContainer.registerForStoryboard(DisconnectedViewController.self) {r, controller in
             controller.about = r.resolve(AboutProtocol.self)
         }

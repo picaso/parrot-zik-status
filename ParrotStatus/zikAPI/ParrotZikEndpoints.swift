@@ -7,8 +7,12 @@ struct ParrotZikEndpoints {
     static let FriendlyName = "/api/bluetooth/friendlyname/get"
     static let EqualizerStatus = "/api/audio/equalizer/enabled/get"
     static let SetEqualizerStatus = "/api/audio/equalizer/enabled/set"
+
     static let NoiseControltatus = "/api/audio/noise_control/enabled/get"
     static let SetNoiseControlStatus = "/api/audio/noise_control/enabled/set"
+    static let NoiseControlLevelStatus = "/api/audio/noise_control/get"
+    static let SetNoiseControlLevelStatus = "/api/audio/noise_control/set"
+
     static let ConcertHallStatus = "/api/audio/sound_effect/enabled/get"
     static let SetConcertHallStatus = "/api/audio/sound_effect/enabled/set"
     static let FlightModeStatus = "/api/flight_mode/get"

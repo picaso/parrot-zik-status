@@ -222,7 +222,7 @@
                                 <rect key="frame" x="0.0" y="209" width="264" height="36"/>
                                 <subviews>
                                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vkv-bp-RW2" customClass="ITSwitch">
-                                        <rect key="frame" x="181" y="3" width="44" height="27"/>
+                                        <rect key="frame" x="181" y="4" width="44" height="27"/>
                                         <backgroundFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
@@ -263,19 +263,25 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhF-Ec-Jy7">
-                                        <rect key="frame" x="232" y="5" width="24" height="24"/>
+                                    <button hidden="YES" fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zs7-f9-SxM" customClass="ButtonEffects" customModule="ParrotStatus" customModuleProvider="target">
+                                        <rect key="frame" x="233" y="7" width="20" height="20"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
-                                                    <ciColor key="inputColor0" red="0.67843137249999996" green="0.70588235290000001" blue="0.72549019609999998" alpha="1"/>
-                                                    <ciColor key="inputColor1" red="0.67843137249999996" green="0.70588235290000001" blue="0.72549019609999998" alpha="1"/>
+                                                    <ciColor key="inputColor0" red="0.91764705879999997" green="0.3411764706" blue="0.30980392159999998" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="1" green="1" blue="1" alpha="1"/>
                                                     <null key="inputImage"/>
                                                 </configuration>
                                             </ciFilter>
                                         </contentFilters>
-                                        <imageCell key="cell" enabled="NO" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="menu" id="XDk-mz-Qg3"/>
-                                    </imageView>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="more" imagePosition="overlaps" alignment="center" state="on" allowsMixedState="YES" transparent="YES" imageScaling="proportionallyUpOrDown" inset="2" id="4c2-lL-MyR">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <segue destination="L9Y-TB-3WO" kind="popover" popoverAnchorView="Zs7-f9-SxM" popoverBehavior="semitransient" preferredEdge="maxX" id="Mxo-tJ-oXe"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </customView>
                             <customView identifier="Equalizer" autoresizesSubviews="NO" canDrawConcurrently="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iNU-9A-xcX" userLabel="option" colorLabel="IBBuiltInLabel-Red">
@@ -369,19 +375,6 @@
                                             </ciFilter>
                                         </contentFilters>
                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="concert-hall" id="Kjt-sc-8My"/>
-                                    </imageView>
-                                    <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6OV-mZ-SAn">
-                                        <rect key="frame" x="232" y="5" width="24" height="24"/>
-                                        <contentFilters>
-                                            <ciFilter name="CIFalseColor">
-                                                <configuration>
-                                                    <ciColor key="inputColor0" red="0.67843139171600342" green="0.70588237047195435" blue="0.72549021244049072" alpha="1"/>
-                                                    <ciColor key="inputColor1" red="0.67843139171600342" green="0.70588237047195435" blue="0.72549021244049072" alpha="1"/>
-                                                    <null key="inputImage"/>
-                                                </configuration>
-                                            </ciFilter>
-                                        </contentFilters>
-                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="menu" id="BSy-rG-Rmc"/>
                                     </imageView>
                                 </subviews>
                             </customView>
@@ -493,6 +486,66 @@
             </objects>
             <point key="canvasLocation" x="196" y="-491"/>
         </scene>
+        <!--NoiseController-->
+        <scene sceneID="2Ps-Q4-5oP">
+            <objects>
+                <viewController id="L9Y-TB-3WO" userLabel="NoiseController" customClass="NoiseController" customModule="ParrotStatus" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="nDj-JR-OUK">
+                        <rect key="frame" x="0.0" y="0.0" width="304" height="67"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nia-M4-5op">
+                                <rect key="frame" x="12" y="27" width="164" height="25"/>
+                                <shadow key="shadow">
+                                    <color key="color" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </shadow>
+                                <contentFilters>
+                                    <ciFilter name="CIFalseColor">
+                                        <configuration>
+                                            <ciColor key="inputColor0" red="0.93333333330000001" green="0.73333333329999995" blue="0.0" alpha="1"/>
+                                            <ciColor key="inputColor1" red="0.93333333330000001" green="0.73333333329999995" blue="0.0" alpha="1"/>
+                                            <null key="inputImage"/>
+                                        </configuration>
+                                    </ciFilter>
+                                </contentFilters>
+                                <sliderCell key="cell" continuous="YES" alignment="left" minValue="1" maxValue="5" doubleValue="4" tickMarkPosition="above" numberOfTickMarks="5" allowsTickMarkValuesOnly="YES" sliderType="linear" id="9Xq-ag-W35"/>
+                                <connections>
+                                    <action selector="noiseControl:" target="L9Y-TB-3WO" id="Fd9-id-wGP"/>
+                                </connections>
+                            </slider>
+                            <customView identifier="info" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxd-yH-SWI">
+                                <rect key="frame" x="186" y="0.0" width="118" height="68"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GZz-Oh-Fc7">
+                                        <rect key="frame" x="-2" y="22" width="122" height="25"/>
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="STATUS" id="75l-TG-Yop">
+                                            <font key="font" size="14" name="Futura-Medium"/>
+                                            <color key="textColor" red="0.90588235289999997" green="0.92549019610000005" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mh9-Sx-Xrc">
+                                <rect key="frame" x="50" y="3" width="101" height="25"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Noise Control " id="7ag-XR-f4n">
+                                    <font key="font" size="13" name="Futura-Medium"/>
+                                    <color key="textColor" red="0.29696338189999999" green="0.33432404910000002" blue="0.46432291669999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="info" destination="rxd-yH-SWI" id="djQ-tw-TnT"/>
+                        <outlet property="slider" destination="nia-M4-5op" id="iV0-Eg-5Md"/>
+                        <outlet property="status" destination="GZz-Oh-Fc7" id="Kxx-dr-5G3"/>
+                    </connections>
+                </viewController>
+                <customObject id="qLg-A1-Zhn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="595" y="-617.5"/>
+        </scene>
         <!--ZikDisconnected-->
         <scene sceneID="1kn-yL-TQR">
             <objects>
@@ -558,7 +611,7 @@
         <image name="flight" width="42.666667938232422" height="42.666667938232422"/>
         <image name="head-detection" width="392.17022705078125" height="392.17022705078125"/>
         <image name="info" width="18.90461540222168" height="18.90461540222168"/>
-        <image name="menu" width="368.6400146484375" height="368.6400146484375"/>
+        <image name="more" width="168.32876586914062" height="168.32876586914062"/>
         <image name="noise-cancelation" width="25.600000381469727" height="25.600000381469727"/>
     </resources>
 </document>

@@ -27,6 +27,10 @@
 		2FB287A51C9A3BFD00C4A53E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */; };
 		2FB287A91C9A3BFD00C4A53E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287A81C9A3BFD00C4A53E /* Assets.xcassets */; };
 		2FB287AC1C9A3BFD00C4A53E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */; };
+		2FB6DC7E1D559CE6007BBE07 /* ButtonEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6DC7D1D559CE6007BBE07 /* ButtonEffects.swift */; };
+		2FB6DC801D55BC0B007BBE07 /* NoiseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6DC7F1D55BC0B007BBE07 /* NoiseController.swift */; };
+		2FB6DC821D56790F007BBE07 /* NoiseControlState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6DC811D56790F007BBE07 /* NoiseControlState.swift */; };
+		2FB6DC841D5683EC007BBE07 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6DC831D5683EC007BBE07 /* Notification.swift */; };
 		2FC9CC5F1D4D84D4007EBED0 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC9CC5E1D4D84D4007EBED0 /* Footer.swift */; };
 		2FC9CC611D4D850C007EBED0 /* Footer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC9CC601D4D850C007EBED0 /* Footer.xib */; };
 		2FC9CC631D4DAC93007EBED0 /* DeviceNameAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2FC9CC621D4DAC93007EBED0 /* DeviceNameAnswer.xml */; };
@@ -79,6 +83,10 @@
 		2FB287AB1C9A3BFD00C4A53E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2FB287B21C9A3BFD00C4A53E /* ParrotStatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParrotStatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB287B81C9A3BFD00C4A53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB6DC7D1D559CE6007BBE07 /* ButtonEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonEffects.swift; path = views/ButtonEffects.swift; sourceTree = "<group>"; };
+		2FB6DC7F1D55BC0B007BBE07 /* NoiseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoiseController.swift; sourceTree = "<group>"; };
+		2FB6DC811D56790F007BBE07 /* NoiseControlState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoiseControlState.swift; sourceTree = "<group>"; };
+		2FB6DC831D5683EC007BBE07 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		2FC9CC5E1D4D84D4007EBED0 /* Footer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Footer.swift; path = views/footer/Footer.swift; sourceTree = "<group>"; };
 		2FC9CC601D4D850C007EBED0 /* Footer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Footer.xib; path = views/footer/Footer.xib; sourceTree = "<group>"; };
 		2FC9CC621D4DAC93007EBED0 /* DeviceNameAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DeviceNameAnswer.xml; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 				2FC9CC5D1D4D84A3007EBED0 /* footer */,
 				3FC7121330F15EBF6BC13E0A /* ZikMenu.swift */,
 				2FB287AA1C9A3BFD00C4A53E /* Main.storyboard */,
+				2FB6DC7D1D559CE6007BBE07 /* ButtonEffects.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -152,6 +161,7 @@
 				2F771ECC1D1C973F004E4ECA /* NSViewExtensions.swift */,
 				2F771ECD1D1C973F004E4ECA /* StringExtensions.swift */,
 				2F6F054F1D444A27002CB556 /* About.swift */,
+				2FB6DC831D5683EC007BBE07 /* Notification.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -226,6 +236,7 @@
 			children = (
 				2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */,
 				2F04D5541D10CA2100423046 /* DisconnectedViewController.swift */,
+				2FB6DC7F1D55BC0B007BBE07 /* NoiseController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -244,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				3FC7187853617CA4FD75203B /* DeviceState.swift */,
+				2FB6DC811D56790F007BBE07 /* NoiseControlState.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -525,6 +537,7 @@
 				2FB287A51C9A3BFD00C4A53E /* AppDelegate.swift in Sources */,
 				3FC711D396482D259D1F67D5 /* ZikMenu.swift in Sources */,
 				3FC71D7B0336AA9C80F5FC09 /* DeviceState.swift in Sources */,
+				2FB6DC821D56790F007BBE07 /* NoiseControlState.swift in Sources */,
 				3FC71EDC9C6EB259D95933A2 /* BTConnectionService.swift in Sources */,
 				3FC7102663FAE6E939B82B3E /* BTCommunicationService.swift in Sources */,
 				2F74730F1D0FB0960050B0A4 /* ApplicationContext.swift in Sources */,
@@ -532,11 +545,14 @@
 				3FC71C5C73C7B60EE0E6A39D /* BTResponseHandler.swift in Sources */,
 				3FC71BC9F449E9C9A021FBCB /* ParrotRequestProtocol.swift in Sources */,
 				3FC710CB503C4402089FC5C6 /* ParrotZikEndpoints.swift in Sources */,
+				2FB6DC7E1D559CE6007BBE07 /* ButtonEffects.swift in Sources */,
 				3FC71DE661D5A6D3354A9663 /* ParrotZik2Api.swift in Sources */,
 				2F6F05501D444A27002CB556 /* About.swift in Sources */,
 				2F771ECF1D1C973F004E4ECA /* StringExtensions.swift in Sources */,
 				2F771ECE1D1C973F004E4ECA /* NSViewExtensions.swift in Sources */,
+				2FB6DC841D5683EC007BBE07 /* Notification.swift in Sources */,
 				2F04D5551D10CA2100423046 /* DisconnectedViewController.swift in Sources */,
+				2FB6DC801D55BC0B007BBE07 /* NoiseController.swift in Sources */,
 				2F74730D1D0F74CE0050B0A4 /* ZikMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

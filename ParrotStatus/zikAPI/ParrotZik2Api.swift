@@ -48,6 +48,12 @@ class ParrotZik2Api {
         return sendRequest(set(ParrotZikEndpoints.SetConcertHallStatus, args: arg))
     }
 
+    func getAsyncNoiseControlLevelStatus() -> Bool {
+        return sendRequest(get(ParrotZikEndpoints.NoiseControlLevelStatus))
+    }
+
+
+
     // MARK: Non Audo properties
     func getAsyncFlightModeStatus() -> Bool {
         return sendRequest(get(ParrotZikEndpoints.FlightModeStatus))
