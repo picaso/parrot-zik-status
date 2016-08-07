@@ -1,4 +1,4 @@
-struct NoiseControlState {
+struct NoiseControlState: Equatable {
     private static let max: Int = 2
     private static let normal: Int = 1
 
@@ -33,4 +33,8 @@ struct NoiseControlState {
         return "\(mode)&value=\(level)"
     }
 
+}
+
+func == (lhs: NoiseControlState, rhs: NoiseControlState) -> Bool {
+    return lhs.urlParameter() == rhs.urlParameter()
 }

@@ -1,0 +1,5 @@
+<answer path="/api/audio/noise_control/get">
+    <audio>
+        <noise_control value="1" type="aoc" />
+    </audio>
+</answer>

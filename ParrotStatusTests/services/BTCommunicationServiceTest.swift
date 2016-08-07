@@ -17,15 +17,7 @@ class ParrotZikApiMock: ParrotZik2Api {
     var getAsyncFlightModeStatusWasCalled = false
     var getAsyncConcertHallStatusWasCalled = false
     var getAsyncheadDetectionStatusWasCalled = false
-
-    func reset() {
-        getAsyncApplicationVersionWasCalled = false
-        getAsyncNoiseCancellationStatusWasCalled = false
-        getAsyncBatteryInfoWasCalled = false
-        getAsyncFriendlyNameWasCalled = false
-        getAsyncNoiseControlStatusWasCalled = false
-        getAsyncEqualizerStatusWasCalled = false
-    }
+    var getAsyncNoiseControlLevelStatusWasCalled = false
 
     func allApiWereCalled() -> Bool {
         return getAsyncApplicationVersionWasCalled &&
@@ -34,7 +26,8 @@ class ParrotZikApiMock: ParrotZik2Api {
         getAsyncFriendlyNameWasCalled &&
         getAsyncNoiseControlStatusWasCalled &&
         getAsyncEqualizerStatusWasCalled &&
-        getAsyncFlightModeStatusWasCalled
+        getAsyncFlightModeStatusWasCalled &&
+        getAsyncNoiseControlLevelStatusWasCalled
     }
 
     override func getAsyncApplicationVersion() -> Bool {
@@ -82,6 +75,12 @@ class ParrotZikApiMock: ParrotZik2Api {
         return true
     }
 
+    override func getAsyncNoiseControlLevelStatus() -> Bool {
+        getAsyncNoiseControlLevelStatusWasCalled = true
+        return true
+    }
+
+
 }
 
 class ZikResponseHandlerMock: ZikResponseHandler {}
@@ -98,9 +97,9 @@ class BTCommunicationServiceTest: QuickSpec {
         }
 
         beforeEach {
+            parrotZikApiMock = ParrotZikApiMock()
             serviceUnderTest = BTCommunicationService(api: parrotZikApiMock,
                 zikResponseHandler: zikResponseHandlerMock)
-            parrotZikApiMock.reset()
         }
 
         describe("Parrot status communication service") {
@@ -110,6 +109,7 @@ class BTCommunicationServiceTest: QuickSpec {
                     .rfcommChannelData(IOBluetoothRFCOMMChannel(), data: &data, length: 3)
                 expect(parrotZikApiMock.allApiWereCalled()).to(beTrue())
             }
+
         }
     }
 
