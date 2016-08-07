@@ -24,8 +24,5 @@ class DisconnectedViewController: NSViewController, PopoverController, NSMenuDel
         view.backgroundColor = FlatUIColors.wetAsphaltColor()
     }
 
-    @IBAction func about(sender: AnyObject) {
-        about?.show()
-    }
 
 }

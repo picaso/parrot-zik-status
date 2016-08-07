@@ -3,7 +3,6 @@ import Swinject
 import TRexAboutWindowController
 import LetsMove
 
-
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 

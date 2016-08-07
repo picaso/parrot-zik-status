@@ -107,8 +107,4 @@ class ZikMenuViewController: NSViewController, PopoverController {
         service?.toggleAsyncFlightMode(sender.checked)
     }
 
-    @IBAction func about(sender: AnyObject) {
-        about?.show()
-    }
-
 }

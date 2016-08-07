@@ -8,11 +8,27 @@ class NoiseController: NSViewController {
 
     var service: BTCommunicationServiceInterface?
     var deviceState: DeviceState! = nil
+    let notificationCenter = NSNotificationCenter.defaultCenter()
+
+    let sliderMap: [String: Int32] = [
+        NoiseControlState.cancellingMax().urlParameter(): 5,
+        NoiseControlState.cancellingOff().urlParameter(): 3,
+        NoiseControlState.cancellingNormal().urlParameter(): 4,
+        NoiseControlState.streetNormal().urlParameter(): 2,
+        NoiseControlState.streetMax().urlParameter(): 1,
+    ]
 
     override func viewWillAppear() {
         self.makeViewPretty()
         slider.integerValue = 2
-        noiseControl(slider)
+
+        notificationCenter
+            .addObserver(
+                self, selector: #selector(refreshView),
+                name: "refreshDataState",
+                object: nil
+        )
+        refreshView()
     }
 
     private func makeViewPretty() {
@@ -20,22 +36,53 @@ class NoiseController: NSViewController {
         info.backgroundColor = FlatUIColors.alizarinColor()
     }
 
-    @IBAction func noiseControl(sender: NSSlider) {
-        NSLog("\(sender.integerValue)")
-        switch sender.integerValue {
-        case 3:
-            self.status.stringValue = "OFF"
-        case 4:
-            self.status.stringValue = "NORMAL"
-        case 5:
-            self.status.stringValue = "MAX"
-        case 2:
-            self.status.stringValue = "STREET"
-        case 1:
-            self.status.stringValue = "STREET MAX"
-        default:
-            self.status.stringValue = "OFF"
+    @objc private func refreshView() {
+        dispatch_async(dispatch_get_main_queue()) {
+            let noiseState = self.deviceState.noiseControlLevelState.urlParameter()
+            self.slider.intValue = self.sliderMap[noiseState]!
+            self.performAction(self.slider)
         }
     }
 
-}
+
+    @IBAction func noiseControl(sender: NSSlider) {
+        performAction(sender, updateUIOnly: false)
+    }
+
+    private func performAction(slider: NSSlider, updateUIOnly: Bool = true) {
+
+        switch slider.integerValue {
+        case 3:
+            self.status.stringValue = "OFF"
+            if !updateUIOnly {
+                service?.setNoiseControlLevel(NoiseControlState.cancellingOff())
+            }
+        case 4:
+            self.status.stringValue = "NORMAL"
+            if !updateUIOnly {
+                service?.setNoiseControlLevel(NoiseControlState.cancellingNormal())
+            }
+        case 5:
+            self.status.stringValue = "MAX"
+            if !updateUIOnly {
+                service?.setNoiseControlLevel(NoiseControlState.cancellingMax())
+            }
+        case 2:
+            self.status.stringValue = "STREET"
+            if !updateUIOnly {
+                service?.setNoiseControlLevel(NoiseControlState.streetNormal())
+            }
+        case 1:
+            self.status.stringValue = "STREET MAX"
+            if !updateUIOnly {
+                service?.setNoiseControlLevel(NoiseControlState.streetMax())
+            }
+        default:
+            self.status.stringValue = "OFF"
+            if !updateUIOnly {
+                service?.setNoiseControlLevel(NoiseControlState.cancellingOff())
+            }
+        }
+    }
+
+ }

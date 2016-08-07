@@ -23,6 +23,7 @@ class ZikResponseHandler: BTResponseHandlerInterface {
         handlers[ParrotZikEndpoints.HeadDetectionStatus] = headDetectionStatus
         handlers[ParrotZikEndpoints.FlightModeStatus] = flightModeStatus
         handlers[ParrotZikEndpoints.FlightModeEnable] = exitParrot
+        handlers[ParrotZikEndpoints.NoiseControlLevelStatus] = noiseControlLevelStatus
     }
 
     func handle(document: AEXMLDocument) {
@@ -75,6 +76,15 @@ class ZikResponseHandler: BTResponseHandlerInterface {
         let headDetectionStatus = document
             .root["system"]["head_detection"].attributes["enabled"]!
         deviceState.headDetectionEnabled = NSString(string: headDetectionStatus).boolValue
+    }
+
+    private func noiseControlLevelStatus(document: AEXMLDocument) {
+        let level = document
+            .root["audio"]["noise_control"].attributes["value"]!
+        let mode = document
+            .root["audio"]["noise_control"].attributes["type"]!
+        deviceState.noiseControlLevelState = NoiseControlState(level: Int(level)!, mode: mode)
+
     }
 
     private func exitParrot(document: AEXMLDocument) {

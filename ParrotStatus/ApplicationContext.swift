@@ -15,10 +15,6 @@ extension SwinjectStoryboard {
             controller.service = r.resolve(BTCommunicationServiceInterface.self)
         }
 
-        defaultContainer.registerForStoryboard(DisconnectedViewController.self) {r, controller in
-            controller.about = r.resolve(AboutProtocol.self)
-        }
-
         defaultContainer.register(ZikMemuInterface.self) { r in ZikMenu()
             }.inObjectScope(.Container)
 

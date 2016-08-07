@@ -1,10 +1,11 @@
 struct NoiseControlState {
     private static let max: Int = 2
-    private static let normal: Int = 2
+    private static let normal: Int = 1
+
 
     private static let streetMode: String = "aoc"
     private static let cancellingMode: String = "anc"
-
+    private static let off: String = "off"
     var level: Int = 0
     var mode: String = String()
 
@@ -22,6 +23,14 @@ struct NoiseControlState {
 
     static func cancellingNormal() -> NoiseControlState {
         return NoiseControlState(level: normal, mode: cancellingMode)
+    }
+
+    static func cancellingOff() -> NoiseControlState {
+        return NoiseControlState(level: normal, mode: off)
+    }
+
+    func urlParameter() -> String {
+        return "\(mode)&value=\(level)"
     }
 
 }

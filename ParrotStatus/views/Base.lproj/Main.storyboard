@@ -263,7 +263,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <button hidden="YES" fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zs7-f9-SxM" customClass="ButtonEffects" customModule="ParrotStatus" customModuleProvider="target">
+                                    <button fixedFrame="YES" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zs7-f9-SxM" customClass="ButtonEffects" customModule="ParrotStatus" customModuleProvider="target">
                                         <rect key="frame" x="233" y="7" width="20" height="20"/>
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
@@ -274,12 +274,12 @@
                                                 </configuration>
                                             </ciFilter>
                                         </contentFilters>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="more" imagePosition="overlaps" alignment="center" state="on" allowsMixedState="YES" transparent="YES" imageScaling="proportionallyUpOrDown" inset="2" id="4c2-lL-MyR">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="more" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="4c2-lL-MyR">
+                                            <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <segue destination="L9Y-TB-3WO" kind="popover" popoverAnchorView="Zs7-f9-SxM" popoverBehavior="semitransient" preferredEdge="maxX" id="Mxo-tJ-oXe"/>
+                                            <segue destination="L9Y-TB-3WO" kind="popover" popoverAnchorView="Zs7-f9-SxM" popoverBehavior="t" preferredEdge="maxX" id="Mxo-tJ-oXe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -489,7 +489,7 @@
         <!--NoiseController-->
         <scene sceneID="2Ps-Q4-5oP">
             <objects>
-                <viewController id="L9Y-TB-3WO" userLabel="NoiseController" customClass="NoiseController" customModule="ParrotStatus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Noise Control" showSeguePresentationStyle="single" id="L9Y-TB-3WO" userLabel="NoiseController" customClass="NoiseController" customModule="ParrotStatus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="nDj-JR-OUK">
                         <rect key="frame" x="0.0" y="0.0" width="304" height="67"/>
                         <autoresizingMask key="autoresizingMask"/>

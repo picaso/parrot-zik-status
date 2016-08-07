@@ -11,7 +11,8 @@ class About: AboutProtocol {
 
     init() {
         self.aboutWindowController = TRexAboutWindowController(windowNibName: "PFAboutWindow")
-        self.aboutWindowController.appURL = NSURL(string: "https://github.com/T-Rex-Editor/")!
+        self.aboutWindowController.appURL =
+            NSURL(string: "https://picaso.github.io/parrot-zik-status/")!
         self.aboutWindowController.appName = "Parrot Status"
         let font: NSFont? = NSFont(name: "HelveticaNeue", size: 11.0)
         let color: NSColor? = NSColor.tertiaryLabelColor()

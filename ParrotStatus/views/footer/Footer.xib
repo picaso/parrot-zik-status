@@ -56,7 +56,7 @@
                             </configuration>
                         </ciFilter>
                     </contentFilters>
-                    <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="Z7r-Z5-Olp" id="gOR-BP-CbV">
+                    <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="hiu-X2-HDi" id="gOR-BP-CbV">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="menu"/>
                         <menu key="menu" id="db3-cI-wcc">
@@ -66,6 +66,9 @@
                                 </menuItem>
                                 <menuItem title="About Parrot Status" id="hiu-X2-HDi" userLabel="About Parrot Status">
                                     <modifierMask key="keyEquivalentModifierMask"/>
+                                    <connections>
+                                        <action selector="about:" target="-2" id="XZ8-0i-CWY"/>
+                                    </connections>
                                 </menuItem>
                                 <menuItem isSeparatorItem="YES" id="xxp-S1-ITT"/>
                                 <menuItem title="Quit Parrot Status" id="5F8-pB-FRm">

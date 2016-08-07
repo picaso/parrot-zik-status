@@ -1,14 +1,17 @@
-import Cocoa
+import Swinject
 
 class Footer: NSView {
 
     @IBOutlet var footer: NSView!
     @IBOutlet weak var deviceName: NSTextField!
+    let container = SwinjectStoryboard.defaultContainer
+    var about: AboutProtocol?
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         NSBundle.mainBundle().loadNibNamed("Footer", owner: self, topLevelObjects: nil)
         self.addSubview(footer)
+        about = container.resolve(AboutProtocol)
     }
 
     func dialogOKCancel(question: String, text: String) -> Bool {
@@ -32,5 +35,8 @@ class Footer: NSView {
         }
     }
 
+    @IBAction func about(sender: AnyObject) {
+        about?.show()
+    }
 
 }

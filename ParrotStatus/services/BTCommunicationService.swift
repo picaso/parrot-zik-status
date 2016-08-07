@@ -8,6 +8,7 @@ protocol BTCommunicationServiceInterface {
     func toggleAsyncConcertHall(arg: Bool) -> Bool
     func toggleAsyncHeadDetection(arg: Bool) -> Bool
     func toggleAsyncFlightMode(arg: Bool) -> Bool
+    func setNoiseControlLevel(arg: NoiseControlState) -> Bool
 }
 
 class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMMChannelDelegate {
@@ -80,7 +81,8 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
 
     func toggleAsyncNoiseCancellation(arg: Bool) -> Bool {
         return api.toggleAsyncNoiseCancellation(arg) &&
-            api.getAsyncNoiseCancellationStatus()
+            api.getAsyncNoiseCancellationStatus() &&
+            api.getAsyncNoiseControlLevelStatus()
     }
 
     func toggleAsyncEqualizerStatus(arg: Bool) -> Bool {
@@ -98,7 +100,11 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
             api.getAsyncheadDetectionStatus()
     }
 
-//    func setNoiseControl
+    func setNoiseControlLevel(arg: NoiseControlState) -> Bool {
+        return api.setAsyncNoiseControlLevelStatus(arg.urlParameter()) &&
+            api.getAsyncNoiseControlLevelStatus() &&
+            api.getAsyncNoiseCancellationStatus()
+    }
 
     func toggleAsyncFlightMode(arg: Bool) -> Bool {
         print(arg)
