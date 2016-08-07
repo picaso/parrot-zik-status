@@ -1,4 +1,6 @@
 import Swinject
+import AppKit
+
 
 class Footer: NSView {
 
@@ -21,7 +23,9 @@ class Footer: NSView {
         myPopup.alertStyle = NSAlertStyle.WarningAlertStyle
         myPopup.addButtonWithTitle("OK")
         myPopup.addButtonWithTitle("Cancel")
+        self.window?.close()
         let res = myPopup.runModal()
+
         if res == NSAlertFirstButtonReturn {
             return true
         }
@@ -29,7 +33,8 @@ class Footer: NSView {
     }
 
     @IBAction func shutDown(view: NSView) {
-        let answer = dialogOKCancel("Do you really want to quit ?", text: "")
+        let answer = dialogOKCancel("Do you really want to quit ?",
+                                    text: "Your headphone will not disconnect your headphone if connected")
         if answer {
             exit(0)
         }
