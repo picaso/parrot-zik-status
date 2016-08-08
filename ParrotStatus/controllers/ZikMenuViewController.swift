@@ -1,6 +1,7 @@
 import Cocoa
 import FlatUIColors
 import ITSwitch
+import Swinject
 
 protocol PopoverController: NSPopoverDelegate {}
 class ZikMenuViewController: NSViewController, PopoverController {

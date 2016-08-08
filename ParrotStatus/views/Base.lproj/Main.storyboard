@@ -267,7 +267,7 @@
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
-                                                    <ciColor key="inputColor0" red="0.91764705879999997" green="0.3411764706" blue="0.30980392159999998" alpha="1"/>
+                                                    <ciColor key="inputColor0" red="0.67843137249999996" green="0.70588235290000001" blue="0.72549019609999998" alpha="1"/>
                                                     <ciColor key="inputColor1" red="1" green="1" blue="1" alpha="1"/>
                                                     <null key="inputImage"/>
                                                 </configuration>
@@ -278,7 +278,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <segue destination="L9Y-TB-3WO" kind="popover" popoverAnchorView="Zs7-f9-SxM" popoverBehavior="t" preferredEdge="maxX" id="Mxo-tJ-oXe"/>
+                                            <segue destination="L9Y-TB-3WO" kind="popover" popoverAnchorView="Zs7-f9-SxM" popoverBehavior="t" preferredEdge="maxX" id="uAl-lA-Y6Z"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -405,8 +405,8 @@
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
-                                                    <ciColor key="inputColor0" red="0.91764705879999997" green="0.3411764706" blue="0.30980392159999998" alpha="1"/>
-                                                    <ciColor key="inputColor1" red="0.91764705879999997" green="0.3411764706" blue="0.30980392159999998" alpha="1"/>
+                                                    <ciColor key="inputColor0" red="0.93333333333333335" green="0.59215686274509804" blue="0.55294117647058827" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="0.93333333333333335" green="0.59215686274509804" blue="0.55294117647058827" alpha="1"/>
                                                     <null key="inputImage"/>
                                                 </configuration>
                                             </ciFilter>
@@ -456,8 +456,8 @@
                                         <contentFilters>
                                             <ciFilter name="CIFalseColor">
                                                 <configuration>
-                                                    <ciColor key="inputColor0" red="0.69568020109999995" green="0.67380344869999997" blue="0.32742023469999998" alpha="1"/>
-                                                    <ciColor key="inputColor1" red="0.14901960780000001" green="0.50980392159999999" blue="0.83529411760000005" alpha="1"/>
+                                                    <ciColor key="inputColor0" red="0.99215686274509807" green="0.87450980392156863" blue="0.57647058823529407" alpha="1"/>
+                                                    <ciColor key="inputColor1" red="0.99215686270000003" green="0.87450980389999999" blue="0.57647058819999997" alpha="1"/>
                                                     <null key="inputImage"/>
                                                 </configuration>
                                             </ciFilter>
@@ -485,10 +485,10 @@
             </objects>
             <point key="canvasLocation" x="196" y="-491"/>
         </scene>
-        <!--NoiseController-->
+        <!--Noise Control-->
         <scene sceneID="2Ps-Q4-5oP">
             <objects>
-                <viewController title="Noise Control" showSeguePresentationStyle="single" id="L9Y-TB-3WO" userLabel="NoiseController" customClass="NoiseController" customModule="ParrotStatus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Noise Control" storyboardIdentifier="noiseController" showSeguePresentationStyle="single" id="L9Y-TB-3WO" customClass="NoiseController" customModule="ParrotStatus" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="nDj-JR-OUK">
                         <rect key="frame" x="0.0" y="0.0" width="304" height="67"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -526,7 +526,7 @@
                                 </subviews>
                             </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mh9-Sx-Xrc">
-                                <rect key="frame" x="50" y="3" width="101" height="25"/>
+                                <rect key="frame" x="50" y="9" width="101" height="18"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Noise Control " id="7ag-XR-f4n">
                                     <font key="font" size="13" name="Futura-Medium"/>
                                     <color key="textColor" red="0.29696338189999999" green="0.33432404910000002" blue="0.46432291669999998" alpha="1" colorSpace="calibratedRGB"/>

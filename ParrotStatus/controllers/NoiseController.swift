@@ -34,6 +34,9 @@ class NoiseController: NSViewController {
     private func makeViewPretty() {
         view.backgroundColor = FlatUIColors.midnightBlueColor()
         info.backgroundColor = FlatUIColors.alizarinColor()
+        self.view.window?.titleVisibility = .Hidden
+        self.view.window?.titlebarAppearsTransparent = true
+        self.view.window?.backgroundColor = FlatUIColors.midnightBlueColor()
     }
 
     @objc private func refreshView() {

@@ -34,7 +34,7 @@ class Footer: NSView {
 
     @IBAction func shutDown(view: NSView) {
         let answer = dialogOKCancel("Do you really want to quit ?",
-                                    text: "Your headphone will not disconnect your headphone if connected")
+                                    text: "Will not disconnect your headphone if connected")
         if answer {
             exit(0)
         }

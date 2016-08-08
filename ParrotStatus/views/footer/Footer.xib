@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
@@ -13,7 +12,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView identifier="FooterConnected" autoresizesSubviews="NO" canDrawConcurrently="YES" id="AYJ-db-f4m" userLabel="Footer" colorLabel="IBBuiltInLabel-Red">
+        <customView identifier="FooterConnected" autoresizesSubviews="NO" wantsLayer="YES" canDrawConcurrently="YES" id="AYJ-db-f4m" userLabel="Footer" colorLabel="IBBuiltInLabel-Red">
             <rect key="frame" x="0.0" y="0.0" width="264" height="36"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
@@ -26,12 +25,12 @@
                     </textFieldCell>
                 </textField>
                 <button toolTip="Quit Parrot Status" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fI6-cw-atg" customClass="ButtonEffects" customModule="ParrotStatus" customModuleProvider="target">
-                    <rect key="frame" x="189" y="9" width="18" height="18"/>
+                    <rect key="frame" x="206" y="9" width="18" height="18"/>
                     <contentFilters>
                         <ciFilter name="CIFalseColor">
                             <configuration>
-                                <ciColor key="inputColor0" red="0.67843139171600342" green="0.14117647707462311" blue="0.10588235408067703" alpha="1"/>
-                                <ciColor key="inputColor1" red="0.67843139171600342" green="0.14117647707462311" blue="0.10588235408067703" alpha="1"/>
+                                <ciColor key="inputColor0" red="0.91764705879999997" green="0.3411764706" blue="0.30980392159999998" alpha="1"/>
+                                <ciColor key="inputColor1" red="0.91764705879999997" green="0.3411764706" blue="0.30980392159999998" alpha="1"/>
                                 <null key="inputImage"/>
                             </configuration>
                         </ciFilter>
@@ -46,11 +45,11 @@
                     </connections>
                 </button>
                 <popUpButton fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nrm-gQ-dE8" customClass="PopUpButtonEffects" customModule="ParrotStatus" customModuleProvider="target">
-                    <rect key="frame" x="216" y="6" width="30" height="24"/>
+                    <rect key="frame" x="229" y="6" width="30" height="24"/>
                     <contentFilters>
                         <ciFilter name="CIFalseColor">
                             <configuration>
-                                <ciColor key="inputColor0" red="0.90588235855102539" green="0.92549020051956177" blue="0.93333333730697632" alpha="1"/>
+                                <ciColor key="inputColor0" red="0.67843137249999996" green="0.70588235290000001" blue="0.72549019609999998" alpha="1"/>
                                 <ciColor key="inputColor1" red="0.90588235855102539" green="0.92549020051956177" blue="0.93333333730697632" alpha="1"/>
                                 <null key="inputImage"/>
                             </configuration>
