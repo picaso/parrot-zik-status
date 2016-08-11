@@ -368,6 +368,7 @@
 				TargetAttributes = {
 					2FB287A01C9A3BFD00C4A53E = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = JVC4GHHPJ8;
 					};
 					2FB287B11C9A3BFD00C4A53E = {
 						CreatedOnToolsVersion = 7.2;
