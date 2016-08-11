@@ -22,6 +22,9 @@ class ZikMenuViewController: NSViewController, PopoverController {
     var service: BTCommunicationServiceInterface?
     var deviceState: DeviceState! = nil
     var about: AboutProtocol?
+    var notification = Notification()
+
+    private var enableNotification = true
 
     let notificationCenter = NSNotificationCenter.defaultCenter()
 
@@ -53,6 +56,7 @@ class ZikMenuViewController: NSViewController, PopoverController {
             switch Int(self.deviceState.batteryLevel)! {
             case 5..<20:
                 self.batteryStatus.image = NSImage(named: "battery1")
+                allowNotification()
             case 20..<51:
                 self.batteryStatus.image = NSImage(named: "battery2")
             case 51..<90:
@@ -61,9 +65,12 @@ class ZikMenuViewController: NSViewController, PopoverController {
                 self.batteryStatus.image = NSImage(named: "battery4")
             default:
                 self.batteryStatus.image = NSImage(named: "batteryDead")
-                Notification.show(
-                    "Headphone battery is about to die",
-                    informativeText: "Please connect to an outlet to charge")
+                if enableNotification {
+                    Notification.show(
+                        "Headphone battery is about to die",
+                        informativeText: "Please connect to an outlet to charge")
+                }
+                enableNotification = false
             }
         } else {
             self.batteryStatus.image = NSImage(named: "batteryCharging")
@@ -84,6 +91,12 @@ class ZikMenuViewController: NSViewController, PopoverController {
 
             self.headDetectionStatus.checked = self.deviceState.headDetectionEnabled
             self.flightMode.checked = self.deviceState.flightModeEnabled
+        }
+    }
+
+    private func allowNotification() {
+        if !enableNotification {
+            enableNotification = true
         }
     }
 

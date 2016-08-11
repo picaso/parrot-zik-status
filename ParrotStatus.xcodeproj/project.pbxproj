@@ -368,7 +368,6 @@
 				TargetAttributes = {
 					2FB287A01C9A3BFD00C4A53E = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = JVC4GHHPJ8;
 					};
 					2FB287B11C9A3BFD00C4A53E = {
 						CreatedOnToolsVersion = 7.2;
@@ -681,6 +680,7 @@
 			baseConfigurationReference = 157A45AE87C38D5711CC58C4 /* Pods-ParrotStatus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ParrotStatus/resources/Info.plist;
@@ -698,6 +698,7 @@
 			baseConfigurationReference = 507EC4DFA842FEC00BC5D70C /* Pods-ParrotStatus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_TESTABILITY = YES;
