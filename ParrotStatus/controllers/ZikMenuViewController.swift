@@ -3,8 +3,8 @@ import FlatUIColors
 import ITSwitch
 import Swinject
 
-protocol PopoverController: NSPopoverDelegate {}
-class ZikMenuViewController: NSViewController, PopoverController {
+
+class ZikMenuViewController: NSViewController {
 
     @IBOutlet weak var header: NSView!
     @IBOutlet weak var footer: Footer!
@@ -47,7 +47,6 @@ class ZikMenuViewController: NSViewController, PopoverController {
 
     private func makeViewPretty() {
         header.backgroundColor = FlatUIColors.midnightBlueColor()
-        footer.backgroundColor = FlatUIColors.midnightBlueColor()
         view.backgroundColor = FlatUIColors.wetAsphaltColor()
     }
 
@@ -74,7 +73,6 @@ class ZikMenuViewController: NSViewController, PopoverController {
             }
         } else {
             self.batteryStatus.image = NSImage(named: "batteryCharging")
-
         }
     }
 
@@ -99,7 +97,6 @@ class ZikMenuViewController: NSViewController, PopoverController {
             enableNotification = true
         }
     }
-
 
     @IBAction func noiseControlSwitch(sender: ITSwitch) {
         service?.toggleAsyncNoiseCancellation(sender.checked)

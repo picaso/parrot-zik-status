@@ -1,5 +1,6 @@
 import Swinject
 import AppKit
+import FlatUIColors
 
 
 class Footer: NSView {
@@ -14,6 +15,7 @@ class Footer: NSView {
         NSBundle.mainBundle().loadNibNamed("Footer", owner: self, topLevelObjects: nil)
         self.addSubview(footer)
         about = container.resolve(AboutProtocol)
+        footer.backgroundColor = FlatUIColors.midnightBlueColor()
     }
 
     func dialogOKCancel(question: String, text: String) -> Bool {

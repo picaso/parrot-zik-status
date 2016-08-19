@@ -80,7 +80,6 @@ class ParrotZikApiMock: ParrotZik2Api {
         return true
     }
 
-
 }
 
 class ZikResponseHandlerMock: ZikResponseHandler {}

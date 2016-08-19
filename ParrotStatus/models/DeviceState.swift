@@ -113,7 +113,4 @@ class DeviceState {
             noiseControlState = newValue
         }
     }
-
-
-
 }

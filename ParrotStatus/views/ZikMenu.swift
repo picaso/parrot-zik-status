@@ -8,20 +8,18 @@ protocol ZikMemuInterface {
 
 class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
     private let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
-
-    private var popover = NSPopover()
-    private static let mainStoryBoard = NSStoryboard(name: "Main", bundle: nil)
-
     private let disconnectedImage = NSImage(named: "icon-disconnected")
     private let connectedImage = NSImage(named: "icon-connected")
 
-    var detector: AnyObject?
+    private static let mainStoryBoard = NSStoryboard(name: "Main", bundle: nil)
 
-    let notificationCenter = NSNotificationCenter.defaultCenter()
+    private var popover = NSPopover()
+    private var detector: AnyObject?
 
-    let zikConnectedViewController = mainStoryBoard
+    private let notificationCenter = NSNotificationCenter.defaultCenter()
+    private let zikConnectedViewController = mainStoryBoard
         .instantiateControllerWithIdentifier("zikConnected") as? ZikMenuViewController
-    let zikDisconnectedViewController = mainStoryBoard
+    private let zikDisconnectedViewController = mainStoryBoard
         .instantiateControllerWithIdentifier("zikDisconnected") as? DisconnectedViewController
 
     override init() {
@@ -40,24 +38,7 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
                 name: "disconnected",
                 object: nil
         )
-
         popover = createPopover(with: zikDisconnectedViewController!)
-
-    }
-
-    private func createPopover(with controller: PopoverController) -> NSPopover {
-        let popover = NSPopover()
-        popover.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
-        popover.delegate = controller
-        popover.animates = false
-        popover.contentViewController = controller as? NSViewController
-        return popover
-    }
-
-    private func update(popover popover: NSPopover, with controller: PopoverController) {
-        let viewController = controller as? NSViewController
-        popover.contentViewController = viewController
-        popover.contentSize = viewController!.view.frame.size
     }
 
     func showMenu() {
@@ -72,25 +53,38 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
         return statusItem
     }
 
+    private func createPopover(with controller: NSViewController) -> NSPopover {
+        let popover = NSPopover()
+        popover.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
+        popover.animates = false
+        popover.contentViewController = controller
+        return popover
+    }
+
+    private func update(popover popover: NSPopover, with controller: NSViewController) {
+        popover.contentViewController = controller
+        popover.contentSize = controller.view.frame.size
+    }
+
     private dynamic func disconnected() {
         if let button = statusItem.button {
             button.image = disconnectedImage
         }
-        if popover.shown {
-            update(popover: popover, with: zikDisconnectedViewController!)
-        } else {
-            popover = createPopover(with: zikDisconnectedViewController!)
-        }
+        switchPopoverViewController(with: zikDisconnectedViewController!)
     }
 
     private dynamic func connected() {
         if let button = statusItem.button {
             button.image = connectedImage
         }
+        switchPopoverViewController(with: zikConnectedViewController!)
+    }
+
+    private func switchPopoverViewController(with viewcontroller: NSViewController) {
         if popover.shown {
-            update(popover: popover, with: zikConnectedViewController!)
+            update(popover: popover, with: viewcontroller)
         } else {
-            popover = createPopover(with: zikConnectedViewController!)
+            popover = createPopover(with: viewcontroller)
         }
     }
 
@@ -102,7 +96,7 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
         }
     }
 
-    func showPopover(sender: AnyObject?) {
+    private func showPopover(sender: AnyObject?) {
         detector = NSEvent
             .addGlobalMonitorForEventsMatchingMask([
                 NSEventMask.LeftMouseDownMask,
@@ -120,19 +114,10 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
         }
     }
 
-    func closePopover(sender: AnyObject?) {
+    private func closePopover(sender: AnyObject?) {
         popover.close()
         if let temp: AnyObject = detector {
             NSEvent.removeMonitor(temp)
-        }
-    }
-
-
-    func togglePopover(sender: AnyObject?) {
-        if popover.shown {
-            closePopover(sender)
-        } else {
-            showPopover(sender)
         }
     }
 

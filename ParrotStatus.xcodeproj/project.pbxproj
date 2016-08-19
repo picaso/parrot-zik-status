@@ -22,7 +22,6 @@
 		2F74730D1D0F74CE0050B0A4 /* ZikMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */; };
 		2F74730F1D0FB0960050B0A4 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F74730E1D0FB0960050B0A4 /* ApplicationContext.swift */; };
 		2F771ECE1D1C973F004E4ECA /* NSViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F771ECC1D1C973F004E4ECA /* NSViewExtensions.swift */; };
-		2F771ECF1D1C973F004E4ECA /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F771ECD1D1C973F004E4ECA /* StringExtensions.swift */; };
 		2F779B2F1D13C9B80090F724 /* BTCommunicationServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F779B2E1D13C9B80090F724 /* BTCommunicationServiceTest.swift */; };
 		2F779B311D13DF180090F724 /* NoiseControlStatusAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2F779B301D13DF180090F724 /* NoiseControlStatusAnswer.xml */; };
 		2FB287A51C9A3BFD00C4A53E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB287A41C9A3BFD00C4A53E /* AppDelegate.swift */; };
@@ -76,7 +75,6 @@
 		2F74730C1D0F74CE0050B0A4 /* ZikMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZikMenuViewController.swift; sourceTree = "<group>"; };
 		2F74730E1D0FB0960050B0A4 /* ApplicationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		2F771ECC1D1C973F004E4ECA /* NSViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSViewExtensions.swift; sourceTree = "<group>"; };
-		2F771ECD1D1C973F004E4ECA /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		2F779B2E1D13C9B80090F724 /* BTCommunicationServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTCommunicationServiceTest.swift; sourceTree = "<group>"; };
 		2F779B301D13DF180090F724 /* NoiseControlStatusAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = NoiseControlStatusAnswer.xml; sourceTree = "<group>"; };
 		2FB287A11C9A3BFD00C4A53E /* ParrotStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParrotStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				2F771ECC1D1C973F004E4ECA /* NSViewExtensions.swift */,
-				2F771ECD1D1C973F004E4ECA /* StringExtensions.swift */,
 				2F6F054F1D444A27002CB556 /* About.swift */,
 				2FB6DC831D5683EC007BBE07 /* Notification.swift */,
 			);
@@ -553,7 +550,6 @@
 				2FB6DC7E1D559CE6007BBE07 /* ButtonEffects.swift in Sources */,
 				3FC71DE661D5A6D3354A9663 /* ParrotZik2Api.swift in Sources */,
 				2F6F05501D444A27002CB556 /* About.swift in Sources */,
-				2F771ECF1D1C973F004E4ECA /* StringExtensions.swift in Sources */,
 				2F771ECE1D1C973F004E4ECA /* NSViewExtensions.swift in Sources */,
 				2FB6DC841D5683EC007BBE07 /* Notification.swift in Sources */,
 				2F04D5551D10CA2100423046 /* DisconnectedViewController.swift in Sources */,

@@ -158,7 +158,7 @@
                     </connections>
                 </application>
             </objects>
-            <point key="canvasLocation" x="-219" y="-665"/>
+            <point key="canvasLocation" x="-345" y="-855"/>
         </scene>
         <!--ZikConnected-->
         <scene sceneID="7kZ-eU-DTi">
@@ -483,7 +483,7 @@
                 </viewController>
                 <customObject id="QtR-Ra-IAh" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="-491"/>
+            <point key="canvasLocation" x="-345" y="-375"/>
         </scene>
         <!--Noise Control-->
         <scene sceneID="2Ps-Q4-5oP">
@@ -543,7 +543,7 @@
                 </viewController>
                 <customObject id="qLg-A1-Zhn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="595" y="-617.5"/>
+            <point key="canvasLocation" x="-51" y="-258.5"/>
         </scene>
         <!--ZikDisconnected-->
         <scene sceneID="1kn-yL-TQR">
@@ -599,7 +599,20 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-303" y="-485.5"/>
+            <point key="canvasLocation" x="-345" y="-678.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V6F-OV-7k5">
+            <objects>
+                <viewController storyboardIdentifier="preferences" id="uFY-uQ-4kC" sceneMemberID="viewController">
+                    <view key="view" id="8Ro-B7-ELH">
+                        <rect key="frame" x="0.0" y="0.0" width="376" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="0Fb-SA-M0R" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42" y="-716"/>
         </scene>
     </scenes>
     <resources>
