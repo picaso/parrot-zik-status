@@ -92,10 +92,10 @@ class ZikResponseHandlerTest: QuickSpec {
             it("should mutate deviceState to reflect NoiseControl Level state") {
                 let answer = self.loadXml("NoiseControlLevelAnswer")
                 expect(deviceState.noiseControlLevelState)
-                    .to(equal(NoiseControlState.cancellingNormal()))
+                    .to(equal(NoiseControlState.cancellingNormal))
                 handler.handle(answer!)
                 expect(deviceState.noiseControlLevelState)
-                    .to(equal(NoiseControlState.streetNormal()))
+                    .to(equal(NoiseControlState.streetNormal))
             }
 
         }

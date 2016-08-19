@@ -11,11 +11,11 @@ class NoiseController: NSViewController {
     let notificationCenter = NSNotificationCenter.defaultCenter()
 
     let sliderMap: [String: Int32] = [
-        NoiseControlState.cancellingMax().urlParameter(): 5,
-        NoiseControlState.cancellingOff().urlParameter(): 3,
-        NoiseControlState.cancellingNormal().urlParameter(): 4,
-        NoiseControlState.streetNormal().urlParameter(): 2,
-        NoiseControlState.streetMax().urlParameter(): 1,
+        NoiseControlState.cancellingMax.urlParameter(): 5,
+        NoiseControlState.cancellingOff.urlParameter(): 3,
+        NoiseControlState.cancellingNormal.urlParameter(): 4,
+        NoiseControlState.streetNormal.urlParameter(): 2,
+        NoiseControlState.streetMax.urlParameter(): 1,
     ]
 
     override func viewWillAppear() {
@@ -58,32 +58,32 @@ class NoiseController: NSViewController {
         case 3:
             self.status.stringValue = "OFF"
             if !updateUIOnly {
-                service?.setNoiseControlLevel(NoiseControlState.cancellingOff())
+                service?.setNoiseControlLevel(NoiseControlState.cancellingOff)
             }
         case 4:
             self.status.stringValue = "NORMAL"
             if !updateUIOnly {
-                service?.setNoiseControlLevel(NoiseControlState.cancellingNormal())
+                service?.setNoiseControlLevel(NoiseControlState.cancellingNormal)
             }
         case 5:
             self.status.stringValue = "MAX"
             if !updateUIOnly {
-                service?.setNoiseControlLevel(NoiseControlState.cancellingMax())
+                service?.setNoiseControlLevel(NoiseControlState.cancellingMax)
             }
         case 2:
             self.status.stringValue = "STREET"
             if !updateUIOnly {
-                service?.setNoiseControlLevel(NoiseControlState.streetNormal())
+                service?.setNoiseControlLevel(NoiseControlState.streetNormal)
             }
         case 1:
             self.status.stringValue = "STREET MAX"
             if !updateUIOnly {
-                service?.setNoiseControlLevel(NoiseControlState.streetMax())
+                service?.setNoiseControlLevel(NoiseControlState.streetMax)
             }
         default:
             self.status.stringValue = "OFF"
             if !updateUIOnly {
-                service?.setNoiseControlLevel(NoiseControlState.cancellingOff())
+                service?.setNoiseControlLevel(NoiseControlState.cancellingOff)
             }
         }
     }

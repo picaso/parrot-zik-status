@@ -12,7 +12,7 @@ class DeviceState {
     private var stateConcertHallEnabled: Bool = false
     private var stateHeadModeDetection: Bool = false
     private var stateFlightModeEnabled: Bool = false
-    private var noiseControlState: NoiseControlState = NoiseControlState.cancellingNormal()
+    private var noiseControlState: NoiseControlState = NoiseControlState.cancellingNormal
 
 
     var name: String {
