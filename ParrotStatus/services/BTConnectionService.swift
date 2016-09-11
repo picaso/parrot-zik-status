@@ -35,9 +35,10 @@ class BTConnectionService: BTConnectionServiceInterface {
 
     private func searchForBluetoothService(fromDevice: IOBluetoothDevice)
         -> IOBluetoothSDPServiceRecord? {
-          return fromDevice.services.filter {
-            service in filterByServiceNameFor({service as? IOBluetoothSDPServiceRecord}())
-            }.first as? IOBluetoothSDPServiceRecord
+        guard let services = fromDevice.services as? [IOBluetoothSDPServiceRecord] else { return nil }
+
+        return services.filter { service in filterByServiceNameFor({ service }())}
+            .first
     }
 
     private func filterByServiceNameFor(serviceRecord: IOBluetoothSDPServiceRecord?) -> Bool {
