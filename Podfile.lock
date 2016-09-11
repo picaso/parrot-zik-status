@@ -3,9 +3,9 @@ PODS:
   - FlatUIColors (0.3.0)
   - ITSwitch (1.0)
   - LetsMove (1.20)
-  - Nimble (4.0.1)
-  - Quick (0.9.2)
-  - Swinject (1.1.2)
+  - Nimble (4.1.0)
+  - Quick (0.9.3)
+  - Swinject (1.1.4)
   - TRexAboutWindowController (1.4)
 
 DEPENDENCIES:
@@ -23,11 +23,11 @@ SPEC CHECKSUMS:
   FlatUIColors: d4a5a0a8c1b61da6383946a1208cc27e440e3922
   ITSwitch: 7ff745d6f2a6910e9194b23e4eab9a843258a478
   LetsMove: 40dda5f7a19bf9976e150ce304fa5765892bef8f
-  Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
-  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
-  Swinject: 3debc5ac926dcd1be00947265a9db7a5f31b272a
+  Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
+  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
+  Swinject: 8863ebff588a8574f1bc9af8a6abed11389865f7
   TRexAboutWindowController: a626e33ec4ec6dcddb15cb568f768570ce1f6cf4
 
 PODFILE CHECKSUM: 9bee94a1f22f6bac249ce472fb8d1f19bb752df2
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.beta.1
