@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
@@ -515,7 +515,7 @@
                             <customView identifier="info" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rxd-yH-SWI">
                                 <rect key="frame" x="186" y="0.0" width="118" height="68"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GZz-Oh-Fc7">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GZz-Oh-Fc7">
                                         <rect key="frame" x="-2" y="22" width="122" height="25"/>
                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="STATUS" id="75l-TG-Yop">
                                             <font key="font" size="14" name="Futura-Medium"/>
@@ -525,9 +525,9 @@
                                     </textField>
                                 </subviews>
                             </customView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mh9-Sx-Xrc">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mh9-Sx-Xrc">
                                 <rect key="frame" x="50" y="9" width="101" height="18"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Noise Control " id="7ag-XR-f4n">
+                                <textFieldCell key="cell" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" alignment="center" title="Noise Control" id="7ag-XR-f4n">
                                     <font key="font" size="13" name="Futura-Medium"/>
                                     <color key="textColor" red="0.29696338189999999" green="0.33432404910000002" blue="0.46432291669999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -580,7 +580,7 @@
                                     </textField>
                                 </subviews>
                             </customView>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AER-SY-Gfm">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AER-SY-Gfm">
                                 <rect key="frame" x="18" y="39" width="175" height="68"/>
                                 <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Pair and connect your Zik headPhone to your computer" id="0dr-Je-ASc">
                                     <font key="font" size="13" name="Futura-Medium"/>
