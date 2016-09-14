@@ -1,10 +1,10 @@
 import IOBluetooth
 
 class ParrotZik2Api {
+
     private let get = ParrotRequestProtocols.getRequest
-    private let set: (String, Bool) -> [UInt8] = ParrotRequestProtocols.setRequest
+    private let set: (String, Bool) -> ZikRequest = ParrotRequestProtocols.setRequest
     private let setString: (String, String) -> [UInt8] = ParrotRequestProtocols.setRequest
-    typealias Request = [UInt8]
 
     private var apiRfCommChannel: IOBluetoothRFCOMMChannel?
 
@@ -105,7 +105,7 @@ class ParrotZik2Api {
         return sendRequest(createInitMessage())
     }
 
-    private func sendRequest(request: Request) -> Bool {
+    private func sendRequest(request: ZikRequest) -> Bool {
         let status = apiRfCommChannel?
             .writeAsync(
                 UnsafeMutablePointer(request),
@@ -115,7 +115,7 @@ class ParrotZik2Api {
         return status == kIOReturnSuccess
     }
 
-    private func createInitMessage() -> Request {
+    private func createInitMessage() -> ZikRequest {
         let message = [UInt8(0), UInt8(3), UInt8(0)]
         return message
     }
