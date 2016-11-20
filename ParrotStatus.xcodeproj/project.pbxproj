@@ -366,9 +366,11 @@
 					2FB287A01C9A3BFD00C4A53E = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = JVC4GHHPJ8;
+						LastSwiftMigration = 0810;
 					};
 					2FB287B11C9A3BFD00C4A53E = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0810;
 						TestTargetID = 2FB287A01C9A3BFD00C4A53E;
 					};
 				};
@@ -632,6 +634,7 @@
 				PRODUCT_NAME = ParrotStatus;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -669,6 +672,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = ParrotStatus;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -686,6 +690,7 @@
 				PRODUCT_NAME = ParrotStatus;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ParrotStatus/Parrot-bridging-header.h";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -704,6 +709,7 @@
 				PRODUCT_NAME = ParrotStatus;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ParrotStatus/Parrot-bridging-header.h";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
@@ -718,6 +724,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-statusTests";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)Tests";
 				PRODUCT_NAME = ParrotStatusTests;
+				SWIFT_VERSION = 3.0.1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParrotStatus.app/Contents/MacOS/ParrotStatus";
 			};
 			name = Debug;
@@ -733,6 +740,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.urbanhill.Parrot-statusTests";
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)Tests";
 				PRODUCT_NAME = ParrotStatusTests;
+				SWIFT_VERSION = 3.0.1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParrotStatus.app/Contents/MacOS/ParrotStatus";
 			};
 			name = Release;

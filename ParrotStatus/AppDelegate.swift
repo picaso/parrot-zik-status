@@ -2,20 +2,23 @@ import Cocoa
 import Swinject
 import TRexAboutWindowController
 import LetsMove
+import SwinjectStoryboard
+
 
 @NSApplicationMain
+
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var about: AboutProtocol?
     let container = SwinjectStoryboard.defaultContainer
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        container.resolve(ZikMemuInterface)?.showMenu()
-        container.resolve(BTConnectionServiceInterface)
-        about = container.resolve(AboutProtocol)
+    private func applicationDidFinishLaunching(_ aNotification: Notification) {
+        container.resolve(ZikMemuInterface.self)?.showMenu()
+        let _ = container.resolve(BTConnectionServiceInterface.self)
+        about = container.resolve(AboutProtocol.self)
     }
 
-    func applicationWillFinishLaunching(notification: NSNotification) {
+    private func applicationWillFinishLaunching(_ notification: Notification) {
         if let _ = NSClassFromString("XCTest") {
             // Do nothing
         } else {
@@ -23,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    @IBAction func about(sender: AnyObject) {
+    @IBAction func about(_ sender: AnyObject) {
         about?.show()
     }
 

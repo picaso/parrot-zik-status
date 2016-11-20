@@ -3,152 +3,152 @@ import AEXML
 
 protocol BTCommunicationServiceInterface {
     func getAsyncBatteryInfo() -> Bool
-    func toggleAsyncNoiseCancellation(arg: Bool) -> Bool
-    func toggleAsyncEqualizerStatus(arg: Bool) -> Bool
-    func toggleAsyncConcertHall(arg: Bool) -> Bool
-    func toggleAsyncHeadDetection(arg: Bool) -> Bool
-    func toggleAsyncFlightMode(arg: Bool) -> Bool
-    func setNoiseControlLevel(arg: NoiseControlState) -> Bool
+    func toggleAsyncNoiseCancellation(_ arg: Bool) -> Bool
+    func toggleAsyncEqualizerStatus(_ arg: Bool) -> Bool
+    func toggleAsyncConcertHall(_ arg: Bool) -> Bool
+    func toggleAsyncHeadDetection(_ arg: Bool) -> Bool
+    func toggleAsyncFlightMode(_ arg: Bool) -> Bool
+    func setNoiseControlLevel(_ arg: NoiseControlState) -> Bool
 }
 
 class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMMChannelDelegate {
-
-    private let rfcommChannel: IOBluetoothRFCOMMChannel? = nil
-    private let api: ParrotZik2Api!
-    private let zikResponseHandler: BTResponseHandlerInterface!
-
-    typealias function = AEXMLDocument -> Void
-    private var handlers = [String: function]()
-    private var getBatteryUpdateTimer: NSTimer?
-
+    
+    fileprivate let rfcommChannel: IOBluetoothRFCOMMChannel? = nil
+    fileprivate let api: ParrotZik2Api!
+    fileprivate let zikResponseHandler: BTResponseHandlerInterface!
+    
+    typealias function = (AEXMLDocument) -> Void
+    fileprivate var handlers = [String: function]()
+    fileprivate var getBatteryUpdateTimer: Timer?
+    
     init(api: ParrotZik2Api, zikResponseHandler: BTResponseHandlerInterface) {
         self.api = api
         self.zikResponseHandler = zikResponseHandler
-
+        
         handlers["answer"] = answerHandler
         handlers["notify"] = notificationHandler
     }
-
-    @objc func rfcommChannelData(rfcommChannel: IOBluetoothRFCOMMChannel!,
-        data dataPointer: UnsafeMutablePointer<Void>,
-        length dataLength: Int) {
-            let message: NSData = NSData(bytes: dataPointer, length: dataLength)
-
-            if isCommunication(message: message) {
-                let communication = extractResponsePackage(from: message)
-                print(communication.package!.xmlString)
-                if let handle = handlers[communication.type] {
-                    handle(communication.package!)
-                }
-            } else if isInitialization(message: message) {
-
-                api.getAsyncApplicationVersion()
-                api.getAsyncNoiseCancellationStatus()
-                api.getAsyncBatteryInfo()
-                api.getAsyncFriendlyName()
-                api.getAsyncNoiseControlStatus()
-                api.getAsyncEqualizerStatus()
-                api.getAsyncFlightModeStatus()
-                api.disableAsyncFlightMode()
-                api.getAsyncConcertHallStatus()
-                api.getAsyncheadDetectionStatus()
-                api.getAsyncNoiseControlLevelStatus()
+    
+    @objc func rfcommChannelData(_ rfcommChannel: IOBluetoothRFCOMMChannel!,
+                                 data dataPointer: UnsafeMutableRawPointer!,
+                                 length dataLength: Int) {
+        let message: Data = Data(bytes: UnsafeRawPointer(dataPointer), count: dataLength)
+        
+        if isCommunication(message: message) {
+            let communication = extractResponsePackage(from: message as NSData)
+            print(communication.package!.xml)
+            if let handle = handlers[communication.type] {
+                handle(communication.package!)
             }
+        } else if isInitialization(message: message) {
+            
+            api.getAsyncApplicationVersion()
+            api.getAsyncNoiseCancellationStatus()
+            api.getAsyncBatteryInfo()
+            api.getAsyncFriendlyName()
+            api.getAsyncNoiseControlStatus()
+            api.getAsyncEqualizerStatus()
+            api.getAsyncFlightModeStatus()
+            api.disableAsyncFlightMode()
+            api.getAsyncConcertHallStatus()
+            api.getAsyncheadDetectionStatus()
+            api.getAsyncNoiseControlLevelStatus()
+        }
     }
-
-     @objc func rfcommChannelOpenComplete(rfcommChannel: IOBluetoothRFCOMMChannel!,
-        status error: IOReturn) {
-            NSLog("connection completed, Initializing...")
-            let response = api.initializeDevice(rfcommChannel)
-            assert(response, "Error Initializing bluetooth device")
-            getBatteryUpdateTimer = NSTimer
-                .scheduledTimerWithTimeInterval(
-                    180.0,
-                    target: self,
-                    selector: #selector(getAsyncBatteryInfo),
-                    userInfo: nil,
-                    repeats: true)
-            NSLog("\(rfcommChannel.getDevice().name) was successfully Initialized")
+    
+    @objc func rfcommChannelOpenComplete(_ rfcommChannel: IOBluetoothRFCOMMChannel!,
+                                         status error: IOReturn) {
+        NSLog("connection completed, Initializing...")
+        let response = api.initializeDevice(rfcommChannel)
+        assert(response, "Error Initializing bluetooth device")
+        getBatteryUpdateTimer = Timer
+            .scheduledTimer(
+                timeInterval: 180.0,
+                target: self,
+                selector: #selector(getAsyncBatteryInfo),
+                userInfo: nil,
+                repeats: true)
+        NSLog("\(rfcommChannel.getDevice().name) was successfully Initialized")
     }
-
-    @objc func rfcommChannelClosed(rfcommChannel: IOBluetoothRFCOMMChannel!) {
+    
+    @objc func rfcommChannelClosed(_ rfcommChannel: IOBluetoothRFCOMMChannel!) {
         getBatteryUpdateTimer = nil
     }
-
+    
     @objc func getAsyncBatteryInfo() -> Bool {
         return api.getAsyncBatteryInfo()
     }
-
-    func toggleAsyncNoiseCancellation(arg: Bool) -> Bool {
+    
+    func toggleAsyncNoiseCancellation(_ arg: Bool) -> Bool {
         return api.toggleAsyncNoiseCancellation(arg) &&
             api.getAsyncNoiseCancellationStatus() &&
             api.getAsyncNoiseControlLevelStatus()
     }
-
-    func toggleAsyncEqualizerStatus(arg: Bool) -> Bool {
+    
+    func toggleAsyncEqualizerStatus(_ arg: Bool) -> Bool {
         return api.toggleAsyncEqualizerStatus(arg) &&
             api.getAsyncEqualizerStatus()
     }
-
-    func toggleAsyncConcertHall(arg: Bool) -> Bool {
+    
+    func toggleAsyncConcertHall(_ arg: Bool) -> Bool {
         return api.toggleAsyncConcerHallStatus(arg) &&
             api.getAsyncConcertHallStatus()
     }
-
-    func toggleAsyncHeadDetection(arg: Bool) -> Bool {
+    
+    func toggleAsyncHeadDetection(_ arg: Bool) -> Bool {
         return api.toggleAsyncHeadDetection(arg) &&
             api.getAsyncheadDetectionStatus()
     }
-
-    func setNoiseControlLevel(arg: NoiseControlState) -> Bool {
+    
+    func setNoiseControlLevel(_ arg: NoiseControlState) -> Bool {
         return api.setAsyncNoiseControlLevelStatus(arg.urlParameter()) &&
             api.getAsyncNoiseControlLevelStatus() &&
             api.getAsyncNoiseCancellationStatus()
     }
-
-    func toggleAsyncFlightMode(arg: Bool) -> Bool {
+    
+    func toggleAsyncFlightMode(_ arg: Bool) -> Bool {
         print(arg)
         return arg ? api.enableAsyncFlightMode() : api.disableAsyncFlightMode()
     }
-
-
-    private func extractResponsePackage(from message: NSData)
+    
+    
+    fileprivate func extractResponsePackage(from message: NSData)
         -> (type: String, package: AEXMLDocument?) {
             if message.length > 7 {
                 let range = NSRange(location: 7, length: message.length - 7)
-                let xmlData = message.subdataWithRange(range)
-                if let data = try? AEXMLDocument(xmlData: xmlData) {
+                let xmlData = message.subdata(with: range)
+                if let data = try? AEXMLDocument(xml: xmlData) {
                     return (data.root.name, data)
                 }
             }
             return ("error", nil)
     }
-
-    private func isInitialization(message receivedMessage: NSData) -> Bool {
-        var message = [UInt8(0), UInt8(3), UInt8(2)]
-        return receivedMessage == NSData(bytes: &message, length: message.count)
+    
+    fileprivate func isInitialization(message receivedMessage: Data) -> Bool {
+        let message = [UInt8(0), UInt8(3), UInt8(2)]
+        return receivedMessage == Data(bytes: UnsafeRawPointer(message), count: message.count)
     }
-
-    private func isCommunication(message receivedMessage: NSData) -> Bool {
+    
+    fileprivate func isCommunication(message receivedMessage: Data) -> Bool {
         var messageLen: UInt16 = 0
-        receivedMessage.getBytes(&messageLen, range: NSRange(location: 0, length: 2))
+        (receivedMessage as NSData).getBytes(&messageLen, range: NSRange(location: 0, length: 2))
         var magic: UInt8 = 0
-        receivedMessage.getBytes(&magic, range: NSRange(location: 2, length: 1))
+        (receivedMessage as NSData).getBytes(&magic, range: NSRange(location: 2, length: 1))
         return String(magic) == "128"
     }
-
-    private func notificationHandler(package: AEXMLDocument?) {
+    
+    fileprivate func notificationHandler(_ package: AEXMLDocument?) {
         if package != nil {
-           api.sendRequest(package!.root.attributes["path"]!)
+            assert(api.sendRequest(package!.root.attributes["path"]!))
         }
     }
-
-    private func answerHandler(package: AEXMLDocument?) {
+    
+    fileprivate func answerHandler(_ package: AEXMLDocument?) {
         if package != nil {
-             zikResponseHandler.handle(package!)
+            zikResponseHandler.handle(package!)
         }
     }
-
-
-
+    
+    
+    
 }

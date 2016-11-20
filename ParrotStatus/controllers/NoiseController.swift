@@ -8,7 +8,7 @@ class NoiseController: NSViewController {
 
     var service: BTCommunicationServiceInterface?
     var deviceState: DeviceState! = nil
-    let notificationCenter = NSNotificationCenter.defaultCenter()
+    let notificationCenter = NotificationCenter.default
 
     let sliderMap: [String: Int32] = [
         NoiseControlState.cancellingMax.urlParameter(): 5,
@@ -25,22 +25,22 @@ class NoiseController: NSViewController {
         notificationCenter
             .addObserver(
                 self, selector: #selector(refreshView),
-                name: "refreshDataState",
+                name: NSNotification.Name(rawValue: "refreshDataState"),
                 object: nil
         )
         refreshView()
     }
 
-    private func makeViewPretty() {
-        view.backgroundColor = FlatUIColors.midnightBlueColor()
-        info.backgroundColor = FlatUIColors.alizarinColor()
-        self.view.window?.titleVisibility = .Hidden
+    fileprivate func makeViewPretty() {
+        view.backgroundColor = FlatUIColors.midnightBlue()
+        info.backgroundColor = FlatUIColors.alizarin()
+        self.view.window?.titleVisibility = .hidden
         self.view.window?.titlebarAppearsTransparent = true
-        self.view.window?.backgroundColor = FlatUIColors.midnightBlueColor()
+        self.view.window?.backgroundColor = FlatUIColors.midnightBlue()
     }
 
-    @objc private func refreshView() {
-        dispatch_async(dispatch_get_main_queue()) {
+    @objc fileprivate func refreshView() {
+        DispatchQueue.main.async {
             let noiseState = self.deviceState.noiseControlLevelState.urlParameter()
             self.slider.intValue = self.sliderMap[noiseState]!
             self.performAction(self.slider)
@@ -48,11 +48,11 @@ class NoiseController: NSViewController {
     }
 
 
-    @IBAction func noiseControl(sender: NSSlider) {
+    @IBAction func noiseControl(_ sender: NSSlider) {
         performAction(sender, updateUIOnly: false)
     }
 
-    private func performAction(slider: NSSlider, updateUIOnly: Bool = true) {
+    fileprivate func performAction(_ slider: NSSlider, updateUIOnly: Bool = true) {
 
         switch slider.integerValue {
         case 3:

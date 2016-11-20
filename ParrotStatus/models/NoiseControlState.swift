@@ -1,14 +1,14 @@
 struct NoiseControlState: Equatable {
-    private static let max: Int = 2
-    private static let normal: Int = 1
+    fileprivate static let max: Int = 2
+    fileprivate static let normal: Int = 1
 
 
-    private static let streetMode: String = "aoc"
-    private static let cancellingMode: String = "anc"
-    private static let off: String = "off"
+    fileprivate static let streetMode: String = "aoc"
+    fileprivate static let cancellingMode: String = "anc"
+    fileprivate static let off: String = "off"
 
-    private var readOnlylevel: Int = 0
-    private var readOnlyMode: String = String()
+    fileprivate var readOnlylevel: Int = 0
+    fileprivate var readOnlyMode: String = String()
 
     var level: Int {
         return readOnlylevel

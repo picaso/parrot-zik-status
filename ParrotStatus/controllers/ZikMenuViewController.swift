@@ -24,13 +24,13 @@ class ZikMenuViewController: NSViewController {
     var about: AboutProtocol?
     var notification = Notification()
 
-    private var enableNotification = true
+    fileprivate var enableNotification = true
 
-    let notificationCenter = NSNotificationCenter.defaultCenter()
+    let notificationCenter = NotificationCenter.default
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSApplication.sharedApplication().activateIgnoringOtherApps(true)
+        NSApplication.shared().activate(ignoringOtherApps: true)
     }
 
     override func viewWillAppear() {
@@ -39,18 +39,18 @@ class ZikMenuViewController: NSViewController {
         notificationCenter
             .addObserver(
                 self, selector: #selector(refreshView),
-                name: "refreshDataState",
+                name: NSNotification.Name(rawValue: "refreshDataState"),
                 object: nil
         )
         refreshView()
     }
 
-    private func makeViewPretty() {
-        header.backgroundColor = FlatUIColors.midnightBlueColor()
-        view.backgroundColor = FlatUIColors.wetAsphaltColor()
+    fileprivate func makeViewPretty() {
+        header.backgroundColor = FlatUIColors.midnightBlue()
+        view.backgroundColor = FlatUIColors.wetAsphalt()
     }
 
-    private func updateBatteryStatus() {
+    fileprivate func updateBatteryStatus() {
         if deviceState.batteryStatus == "in_use" {
             switch Int(self.deviceState.batteryLevel)! {
             case 5..<20:
@@ -76,8 +76,8 @@ class ZikMenuViewController: NSViewController {
         }
     }
 
-    @objc private func refreshView() {
-        dispatch_async(dispatch_get_main_queue()) {
+    @objc fileprivate func refreshView() {
+        DispatchQueue.main.async {
             self.updateBatteryStatus()
             self.noiseControlStatus.checked = self.deviceState.noiseCancellationEnabled
             self.equalizerStatus.checked = self.deviceState.equalizerEnabled
@@ -92,29 +92,29 @@ class ZikMenuViewController: NSViewController {
         }
     }
 
-    private func allowNotification() {
+    fileprivate func allowNotification() {
         if !enableNotification {
             enableNotification = true
         }
     }
 
-    @IBAction func noiseControlSwitch(sender: ITSwitch) {
+    @IBAction func noiseControlSwitch(_ sender: ITSwitch) {
         service?.toggleAsyncNoiseCancellation(sender.checked)
     }
 
-    @IBAction func equalizerSwitch(sender: ITSwitch) {
+    @IBAction func equalizerSwitch(_ sender: ITSwitch) {
         service?.toggleAsyncEqualizerStatus(sender.checked)
     }
 
-    @IBAction func concertHallSwitch(sender: ITSwitch) {
+    @IBAction func concertHallSwitch(_ sender: ITSwitch) {
         service?.toggleAsyncConcertHall(sender.checked)
     }
 
-    @IBAction func headDetectionSwitch(sender: ITSwitch) {
+    @IBAction func headDetectionSwitch(_ sender: ITSwitch) {
         service?.toggleAsyncHeadDetection(sender.checked)
     }
 
-    @IBAction func flightModeSwitch(sender: ITSwitch) {
+    @IBAction func flightModeSwitch(_ sender: ITSwitch) {
         service?.toggleAsyncFlightMode(sender.checked)
     }
 

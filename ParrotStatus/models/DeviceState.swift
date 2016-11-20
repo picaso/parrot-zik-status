@@ -1,18 +1,18 @@
 class DeviceState {
 
-    private static let Empty = String()
+    fileprivate static let Empty = String()
 
-    private var stateVersion: String = Empty
-    private var stateBatteryLevel: String = Empty
-    private var stateBatteryStatus: String = Empty
-    private var stateNoiseCancellationEnabled: Bool = false
-    private var stateDeviceName: String = Empty
-    private var stateNoiseControlEnabled: Bool = false
-    private var stateEqualizerEnabled: Bool = false
-    private var stateConcertHallEnabled: Bool = false
-    private var stateHeadModeDetection: Bool = false
-    private var stateFlightModeEnabled: Bool = false
-    private var noiseControlState: NoiseControlState = NoiseControlState.cancellingNormal
+    fileprivate var stateVersion: String = Empty
+    fileprivate var stateBatteryLevel: String = Empty
+    fileprivate var stateBatteryStatus: String = Empty
+    fileprivate var stateNoiseCancellationEnabled: Bool = false
+    fileprivate var stateDeviceName: String = Empty
+    fileprivate var stateNoiseControlEnabled: Bool = false
+    fileprivate var stateEqualizerEnabled: Bool = false
+    fileprivate var stateConcertHallEnabled: Bool = false
+    fileprivate var stateHeadModeDetection: Bool = false
+    fileprivate var stateFlightModeEnabled: Bool = false
+    fileprivate var noiseControlState: NoiseControlState = NoiseControlState.cancellingNormal
 
 
     var name: String {

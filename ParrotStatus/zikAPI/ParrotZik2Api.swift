@@ -2,11 +2,11 @@ import IOBluetooth
 
 class ParrotZik2Api {
 
-    private let get = ParrotRequestProtocols.getRequest
-    private let set: (String, Bool) -> ZikRequest = ParrotRequestProtocols.setRequest
-    private let setString: (String, String) -> [UInt8] = ParrotRequestProtocols.setRequest
+    fileprivate let get = ParrotRequestProtocols.getRequest
+    fileprivate let set: (String, Bool) -> ZikRequest = ParrotRequestProtocols.setRequest
+    fileprivate let setString: (String, String) -> [UInt8] = ParrotRequestProtocols.setRequest
 
-    private var apiRfCommChannel: IOBluetoothRFCOMMChannel?
+    fileprivate var apiRfCommChannel: IOBluetoothRFCOMMChannel?
 
     // MARK: Properties
     var rfcommChannel: IOBluetoothRFCOMMChannel {
@@ -25,7 +25,7 @@ class ParrotZik2Api {
         return sendRequest(get(ParrotZikEndpoints.NoiseCancellationStatus))
     }
 
-    func toggleAsyncNoiseCancellation(arg: Bool) -> Bool {
+    func toggleAsyncNoiseCancellation(_ arg: Bool) -> Bool {
         return sendRequest(set(ParrotZikEndpoints.SetNoiseCancellationStatus, arg))
     }
 
@@ -37,7 +37,7 @@ class ParrotZik2Api {
         return sendRequest(get(ParrotZikEndpoints.EqualizerStatus))
     }
 
-    func toggleAsyncEqualizerStatus(arg: Bool) -> Bool {
+    func toggleAsyncEqualizerStatus(_ arg: Bool) -> Bool {
         return sendRequest(set(ParrotZikEndpoints.SetEqualizerStatus, arg))
     }
 
@@ -45,7 +45,7 @@ class ParrotZik2Api {
         return sendRequest(get(ParrotZikEndpoints.ConcertHallStatus))
     }
 
-    func toggleAsyncConcerHallStatus(arg: Bool) -> Bool {
+    func toggleAsyncConcerHallStatus(_ arg: Bool) -> Bool {
         return sendRequest(set(ParrotZikEndpoints.SetConcertHallStatus, arg))
     }
 
@@ -53,7 +53,7 @@ class ParrotZik2Api {
         return sendRequest(get(ParrotZikEndpoints.NoiseControlLevelStatus))
     }
 
-    func setAsyncNoiseControlLevelStatus(arg: String) -> Bool {
+    func setAsyncNoiseControlLevelStatus(_ arg: String) -> Bool {
         return sendRequest(setString(ParrotZikEndpoints.SetNoiseControlLevelStatus, arg))
     }
 
@@ -76,7 +76,7 @@ class ParrotZik2Api {
         return sendRequest(get(ParrotZikEndpoints.HeadDetectionStatus))
     }
 
-    func toggleAsyncHeadDetection(arg: Bool) -> Bool {
+    func toggleAsyncHeadDetection(_ arg: Bool) -> Bool {
         return sendRequest(set(ParrotZikEndpoints.SetHeadModeDetectionStatus, arg))
     }
 
@@ -96,26 +96,26 @@ class ParrotZik2Api {
     }
 
     // MARK: Helper Functions
-    func sendRequest(request: String) -> Bool {
+    func sendRequest(_ request: String) -> Bool {
         return sendRequest(get(request))
     }
 
-    func initializeDevice(rfCommChannel: IOBluetoothRFCOMMChannel) -> Bool {
+    func initializeDevice(_ rfCommChannel: IOBluetoothRFCOMMChannel) -> Bool {
         self.apiRfCommChannel = rfCommChannel
         return sendRequest(createInitMessage())
     }
 
-    private func sendRequest(request: ZikRequest) -> Bool {
+    fileprivate func sendRequest(_ request: ZikRequest) -> Bool {
         let status = apiRfCommChannel?
             .writeAsync(
-                UnsafeMutablePointer(request),
+                UnsafeMutablePointer(mutating: request),
                 length: UInt16(request.count),
                 refcon: nil
         )
         return status == kIOReturnSuccess
     }
 
-    private func createInitMessage() -> ZikRequest {
+    fileprivate func createInitMessage() -> ZikRequest {
         let message = [UInt8(0), UInt8(3), UInt8(0)]
         return message
     }

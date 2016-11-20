@@ -7,35 +7,35 @@ protocol ZikMemuInterface {
 }
 
 class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
-    private let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2)
-    private let disconnectedImage = NSImage(named: "icon-disconnected")
-    private let connectedImage = NSImage(named: "icon-connected")
+    fileprivate let statusItem = NSStatusBar.system().statusItem(withLength: -2)
+    fileprivate let disconnectedImage = NSImage(named: "icon-disconnected")
+    fileprivate let connectedImage = NSImage(named: "icon-connected")
 
-    private static let mainStoryBoard = NSStoryboard(name: "Main", bundle: nil)
+    fileprivate static let mainStoryBoard = NSStoryboard(name: "Main", bundle: nil)
 
-    private var popover = NSPopover()
-    private var detector: AnyObject?
+    fileprivate var popover = NSPopover()
+    fileprivate var detector: AnyObject?
 
-    private let notificationCenter = NSNotificationCenter.defaultCenter()
-    private let zikConnectedViewController = mainStoryBoard
-        .instantiateControllerWithIdentifier("zikConnected") as? ZikMenuViewController
-    private let zikDisconnectedViewController = mainStoryBoard
-        .instantiateControllerWithIdentifier("zikDisconnected") as? DisconnectedViewController
+    fileprivate let notificationCenter = NotificationCenter.default
+    fileprivate let zikConnectedViewController = mainStoryBoard
+        .instantiateController(withIdentifier: "zikConnected") as? ZikMenuViewController
+    fileprivate let zikDisconnectedViewController = mainStoryBoard
+        .instantiateController(withIdentifier: "zikDisconnected") as? DisconnectedViewController
 
     override init() {
         super.init()
-        disconnectedImage?.template = true
-        connectedImage?.template = true
+        disconnectedImage?.isTemplate = true
+        connectedImage?.isTemplate = true
         notificationCenter
             .addObserver(
                 self, selector: #selector(connected),
-                name: "connected",
+                name: NSNotification.Name(rawValue: "connected"),
                 object: nil
         )
         notificationCenter
             .addObserver(
                 self, selector: #selector(disconnected),
-                name: "disconnected",
+                name: NSNotification.Name(rawValue: "disconnected"),
                 object: nil
         )
         popover = createPopover(with: zikDisconnectedViewController!)
@@ -53,7 +53,7 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
         return statusItem
     }
 
-    private func createPopover(with controller: NSViewController) -> NSPopover {
+    fileprivate func createPopover(with controller: NSViewController) -> NSPopover {
         let popover = NSPopover()
         popover.appearance = NSAppearance(named: NSAppearanceNameVibrantLight)
         popover.animates = false
@@ -61,60 +61,60 @@ class ZikMenu: NSObject, ZikMemuInterface, IOBluetoothRFCOMMChannelDelegate {
         return popover
     }
 
-    private func update(popover popover: NSPopover, with controller: NSViewController) {
+    fileprivate func update(popover: NSPopover, with controller: NSViewController) {
         popover.contentViewController = controller
         popover.contentSize = controller.view.frame.size
     }
 
-    private dynamic func disconnected() {
+    fileprivate dynamic func disconnected() {
         if let button = statusItem.button {
             button.image = disconnectedImage
         }
         switchPopoverViewController(with: zikDisconnectedViewController!)
     }
 
-    private dynamic func connected() {
+    fileprivate dynamic func connected() {
         if let button = statusItem.button {
             button.image = connectedImage
         }
         switchPopoverViewController(with: zikConnectedViewController!)
     }
 
-    private func switchPopoverViewController(with viewcontroller: NSViewController) {
-        if popover.shown {
+    fileprivate func switchPopoverViewController(with viewcontroller: NSViewController) {
+        if popover.isShown {
             update(popover: popover, with: viewcontroller)
         } else {
             popover = createPopover(with: viewcontroller)
         }
     }
 
-    @objc private func togglePopOverView(sender: AnyObject) {
-        if popover.shown {
+    @objc fileprivate func togglePopOverView(_ sender: AnyObject) {
+        if popover.isShown {
             closePopover(sender)
         } else {
             showPopover(sender)
         }
     }
 
-    private func showPopover(sender: AnyObject?) {
+    fileprivate func showPopover(_ sender: AnyObject?) {
         detector = NSEvent
-            .addGlobalMonitorForEventsMatchingMask([
-                NSEventMask.LeftMouseDownMask,
-                NSEventMask.RightMouseDownMask,
-                NSEventMask.KeyUpMask], handler: { [weak self] event in
+            .addGlobalMonitorForEvents(matching: [
+                NSEventMask.leftMouseDown,
+                NSEventMask.rightMouseDown,
+                NSEventMask.keyUp], handler: { [weak self] event in
             self?.closePopover(event)
-            })
+            }) as AnyObject?
 
         if let button = statusItem.button {
-            popover.showRelativeToRect(
-                button.bounds,
-                ofView: button,
-                preferredEdge: NSRectEdge.MinY
+            popover.show(
+                relativeTo: button.bounds,
+                of: button,
+                preferredEdge: NSRectEdge.minY
             )
         }
     }
 
-    private func closePopover(sender: AnyObject?) {
+    fileprivate func closePopover(_ sender: AnyObject?) {
         popover.close()
         if let temp: AnyObject = detector {
             NSEvent.removeMonitor(temp)

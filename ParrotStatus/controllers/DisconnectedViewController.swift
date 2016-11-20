@@ -8,18 +8,18 @@ class DisconnectedViewController: NSViewController, NSMenuDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSApplication.sharedApplication().activateIgnoringOtherApps(true)
+        NSApplication.shared().activate(ignoringOtherApps: true)
     }
 
     override func viewWillAppear() {
         preferredContentSize = view.fittingSize
-        footer.deviceName.hidden = true
+        footer.deviceName.isHidden = true
         makeViewPretty()
     }
 
-    private func makeViewPretty() {
-        header.backgroundColor = FlatUIColors.midnightBlueColor()
-        view.backgroundColor = FlatUIColors.wetAsphaltColor()
+    fileprivate func makeViewPretty() {
+        header.backgroundColor = FlatUIColors.midnightBlue()
+        view.backgroundColor = FlatUIColors.wetAsphalt()
     }
 
 }

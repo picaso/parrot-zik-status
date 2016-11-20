@@ -18,20 +18,20 @@ class ButtonEffects: NSButton {
         enableTracking()
     }
 
-    private func enableTracking() {
+    fileprivate func enableTracking() {
         // set tracking area
         let opts: NSTrackingAreaOptions =
-            [NSTrackingAreaOptions.MouseEnteredAndExited, NSTrackingAreaOptions.ActiveAlways]
+            [NSTrackingAreaOptions.mouseEnteredAndExited, NSTrackingAreaOptions.activeAlways]
         trackingArea = NSTrackingArea(rect: bounds, options: opts, owner: self, userInfo: nil)
         self.addTrackingArea(trackingArea)
     }
 
     // MARK: mouse events
-    override func mouseEntered(theEvent: NSEvent) {
+    override func mouseEntered(with theEvent: NSEvent) {
             self.alphaValue = 0.5
     }
 
-    override func mouseExited(theEvent: NSEvent) {
+    override func mouseExited(with theEvent: NSEvent) {
             self.alphaValue = 1
     }
 
@@ -51,19 +51,19 @@ class PopUpButtonEffects: NSPopUpButton {
         setTrackingArea()
     }
 
-    private func setTrackingArea() {
+    fileprivate func setTrackingArea() {
         let opts: NSTrackingAreaOptions =
-            [NSTrackingAreaOptions.MouseEnteredAndExited, NSTrackingAreaOptions.ActiveAlways]
+            [NSTrackingAreaOptions.mouseEnteredAndExited, NSTrackingAreaOptions.activeAlways]
         trackingArea = NSTrackingArea(rect: bounds, options: opts, owner: self, userInfo: nil)
         self.addTrackingArea(trackingArea)
     }
 
     // MARK: mouse events
-    override func mouseEntered(theEvent: NSEvent) {
+    override func mouseEntered(with theEvent: NSEvent) {
         self.alphaValue = 0.5
     }
 
-    override func mouseExited(theEvent: NSEvent) {
+    override func mouseExited(with theEvent: NSEvent) {
         self.alphaValue = 1
     }
 

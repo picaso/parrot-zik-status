@@ -1,13 +1,13 @@
 extension NSView {
     var backgroundColor: NSColor? {
         get {
-            guard let layer = layer, backgroundColor = layer.backgroundColor else { return nil }
-            return NSColor(CGColor: backgroundColor)
+            guard let layer = layer, let backgroundColor = layer.backgroundColor else { return nil }
+            return NSColor(cgColor: backgroundColor)
         }
 
         set {
             wantsLayer = true
-            layer?.backgroundColor = newValue?.CGColor
+            layer?.backgroundColor = newValue?.cgColor
         }
     }
 }

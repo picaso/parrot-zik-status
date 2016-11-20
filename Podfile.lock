@@ -1,33 +1,47 @@
 PODS:
-  - AEXML (3.0.0)
+  - AEXML (4.0.1)
   - FlatUIColors (0.3.0)
   - ITSwitch (1.0)
-  - LetsMove (1.20)
-  - Nimble (4.1.0)
-  - Quick (0.9.3)
-  - Swinject (1.1.4)
-  - TRexAboutWindowController (1.4)
+  - LetsMove (1.22)
+  - Nimble (5.1.1)
+  - Quick (0.10.0)
+  - Swinject (2.0.0-beta.2)
+  - SwinjectStoryboard (1.0.0-beta.2):
+    - Swinject (= 2.0.0-beta.2)
+  - TRexAboutWindowController (1.5.2)
 
 DEPENDENCIES:
   - AEXML
-  - FlatUIColors
+  - FlatUIColors (from `git@github.com:Jauzee/FlatUIColors.git`, branch `swift3`)
   - ITSwitch
   - LetsMove
   - Nimble
   - Quick
-  - Swinject
-  - TRexAboutWindowController (~> 1.4)
+  - Swinject (= 2.0.0-beta.2)
+  - SwinjectStoryboard (= 1.0.0-beta.2)
+  - TRexAboutWindowController
+
+EXTERNAL SOURCES:
+  FlatUIColors:
+    :branch: swift3
+    :git: git@github.com:Jauzee/FlatUIColors.git
+
+CHECKOUT OPTIONS:
+  FlatUIColors:
+    :commit: 98242133a9ca4e6ff8a14c496440d030a486e3c5
+    :git: git@github.com:Jauzee/FlatUIColors.git
 
 SPEC CHECKSUMS:
-  AEXML: 716fb0a8decba4a3517324a71fee3685b30233d2
+  AEXML: 905e50474c0a261d335aa8be4ee32d22d69b6fd5
   FlatUIColors: d4a5a0a8c1b61da6383946a1208cc27e440e3922
   ITSwitch: 7ff745d6f2a6910e9194b23e4eab9a843258a478
-  LetsMove: 40dda5f7a19bf9976e150ce304fa5765892bef8f
-  Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
-  Quick: 13a2a2b19a5d8e3ed4fd0c36ee46597fd77ebf71
-  Swinject: 8863ebff588a8574f1bc9af8a6abed11389865f7
-  TRexAboutWindowController: a626e33ec4ec6dcddb15cb568f768570ce1f6cf4
+  LetsMove: 407d4d14815e6dc1549b6a9fe8e4b0f6aed3e305
+  Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
+  Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
+  Swinject: 69a893192efa9f2cc44be79ef423d04d571b6af9
+  SwinjectStoryboard: b52b45821a50386ef604c3cd098f8029a50a268d
+  TRexAboutWindowController: d620e1f6373e0133d38eb4903e1cec23096c71e5
 
-PODFILE CHECKSUM: 9bee94a1f22f6bac249ce472fb8d1f19bb752df2
+PODFILE CHECKSUM: 604f96de19d43509fb07b1658b91a0ffe91453b2
 
-COCOAPODS: 1.1.0.beta.1
+COCOAPODS: 1.1.1

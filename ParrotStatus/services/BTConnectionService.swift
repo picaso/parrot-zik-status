@@ -4,36 +4,36 @@ protocol BTConnectionServiceInterface {}
 
 class BTConnectionService: BTConnectionServiceInterface {
 
-    private let serviceName = "Parrot RFcomm service"
+    fileprivate let serviceName = "Parrot RFcomm service"
 
-    private var communcationService: BTCommunicationServiceInterface!
-    let notificationCenter = NSNotificationCenter.defaultCenter()
+    fileprivate var communcationService: BTCommunicationServiceInterface!
+    let notificationCenter = NotificationCenter.default
 
     init(service: BTCommunicationServiceInterface) {
         self.communcationService = service
         IOBluetoothDevice
-            .registerForConnectNotifications(self, selector: #selector(connected))
+            .register(forConnectNotifications: self, selector: #selector(connected))
     }
 
-    private dynamic func connected(_: IOBluetoothUserNotification, fromDevice: IOBluetoothDevice) {
+    fileprivate dynamic func connected(_: IOBluetoothUserNotification, fromDevice: IOBluetoothDevice) {
         if let deviceService = searchForBluetoothService(fromDevice) {
-            fromDevice.registerForDisconnectNotification(
-                self, selector: #selector(disconnected)
+            fromDevice.register(
+                forDisconnectNotification: self, selector: #selector(disconnected)
             )
             assert(openConnectionChannel(with: deviceService), "Error Opening connection")
             NSLog("\(fromDevice.name) is Open")
-            notificationCenter.postNotificationName("connected", object: nil)
+            notificationCenter.post(name: Foundation.Notification.Name(rawValue: "connected"), object: nil)
         }
     }
 
-    private dynamic func disconnected(notification: IOBluetoothUserNotification,
+    fileprivate dynamic func disconnected(_ notification: IOBluetoothUserNotification,
         fromDevice device: IOBluetoothDevice) {
 
         NSLog("\(device.name) is Disonnected")
-        notificationCenter.postNotificationName("disconnected", object: nil)
+        notificationCenter.post(name: Foundation.Notification.Name(rawValue: "disconnected"), object: nil)
     }
 
-    private func searchForBluetoothService(fromDevice: IOBluetoothDevice)
+    fileprivate func searchForBluetoothService(_ fromDevice: IOBluetoothDevice)
         -> IOBluetoothSDPServiceRecord? {
         guard let services = fromDevice.services as? [IOBluetoothSDPServiceRecord] else { return nil }
 
@@ -41,11 +41,11 @@ class BTConnectionService: BTConnectionServiceInterface {
             .first
     }
 
-    private func filterByServiceNameFor(serviceRecord: IOBluetoothSDPServiceRecord?) -> Bool {
+    fileprivate func filterByServiceNameFor(_ serviceRecord: IOBluetoothSDPServiceRecord?) -> Bool {
         return serviceRecord?.getServiceName() == serviceName
     }
 
-    private func openConnectionChannel(with deviceService: IOBluetoothSDPServiceRecord) -> Bool {
+    fileprivate func openConnectionChannel(with deviceService: IOBluetoothSDPServiceRecord) -> Bool {
         var channelId: BluetoothRFCOMMChannelID = BluetoothRFCOMMChannelID()
         if deviceService.getRFCOMMChannelID(&channelId) == kIOReturnSuccess {
             NSLog("\(deviceService.device.name) is Connected")
@@ -53,7 +53,7 @@ class BTConnectionService: BTConnectionServiceInterface {
             deviceService
                 .device
                 .openRFCOMMChannelSync(&rfcommChannel,
-                    withChannelID: channelId, delegate: communcationService as? AnyObject!)
+                    withChannelID: channelId, delegate: communcationService)
             return true
         }
         NSLog("Error opening connection with Headset")

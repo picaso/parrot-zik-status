@@ -7,11 +7,11 @@ import Nimble
 
 class ZikResponseHandlerTest: QuickSpec {
 
-    private func loadXml(filePath: String) -> AEXMLDocument? {
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let path = bundle.pathForResource(filePath, ofType: "xml")
-        let content = NSData(contentsOfFile: path!)
-        return try? AEXMLDocument(xmlData: content!)
+    fileprivate func loadXml(_ filePath: String) -> AEXMLDocument? {
+        let bundle = Bundle(for: type(of: self))
+        let path = bundle.url(forResource: filePath, withExtension: "xml")
+        let content = try? Data(contentsOf: path!)
+        return try? AEXMLDocument(xml: content!)
     }
 
     override func spec() {

@@ -2,14 +2,14 @@ import AEXML
 import Darwin
 
 protocol BTResponseHandlerInterface {
-    func handle(document: AEXMLDocument)
+    func handle(_ document: AEXMLDocument)
 }
 
 class ZikResponseHandler: BTResponseHandlerInterface {
-    typealias function = AEXMLDocument -> Void
+    typealias function = (AEXMLDocument) -> Void
     var handlers = [String: function]()
 
-    private var deviceState: DeviceState!
+    fileprivate var deviceState: DeviceState!
     init() {}
     init(deviceState: DeviceState) {
         self.deviceState = deviceState
@@ -26,59 +26,59 @@ class ZikResponseHandler: BTResponseHandlerInterface {
         handlers[ParrotZikEndpoints.NoiseControlLevelStatus] = noiseControlLevelStatus
     }
 
-    func handle(document: AEXMLDocument) {
+    func handle(_ document: AEXMLDocument) {
         if let handle = handlers[document.root.attributes["path"]!] {
-            let notificationCenter = NSNotificationCenter.defaultCenter()
-            notificationCenter.postNotificationName("refreshDataState", object: nil)
+            let notificationCenter = NotificationCenter.default
+            notificationCenter.post(name: Foundation.Notification.Name(rawValue: "refreshDataState"), object: nil)
             handle(document)
         }
     }
 
-    private func friendlyName(document: AEXMLDocument) {
+    fileprivate func friendlyName(_ document: AEXMLDocument) {
         deviceState.name = document.root["bluetooth"].attributes["friendlyname"]!
     }
 
-    private func softwareVersion(document: AEXMLDocument) {
+    fileprivate func softwareVersion(_ document: AEXMLDocument) {
         deviceState.version = document.root["software"].attributes["sip6"]!
     }
 
-    private func batteryInfo(document: AEXMLDocument) {
+    fileprivate func batteryInfo(_ document: AEXMLDocument) {
         let batteryInfo = document.root["system"]["battery"]
         deviceState.batteryLevel = batteryInfo.attributes["percent"]!
         deviceState.batteryStatus = batteryInfo.attributes["state"]!
     }
 
-    private func noiseCancellationStatus(document: AEXMLDocument) {
+    fileprivate func noiseCancellationStatus(_ document: AEXMLDocument) {
         let noiseCancellationInfo = document
             .root["audio"]["noise_cancellation"].attributes["enabled"]!
         deviceState.noiseCancellationEnabled = NSString(string: noiseCancellationInfo).boolValue
     }
 
-    private func noiseControlStatus(document: AEXMLDocument) {
+    fileprivate func noiseControlStatus(_ document: AEXMLDocument) {
         let noiseControlStatus = document
             .root["audio"]["noise_control"].attributes["enabled"]!
         deviceState.noiseControlEnabled = NSString(string: noiseControlStatus).boolValue
     }
 
-    private func equalizerStatus(document: AEXMLDocument) {
+    fileprivate func equalizerStatus(_ document: AEXMLDocument) {
         let equalizerStatus = document
             .root["audio"]["equalizer"].attributes["enabled"]!
         deviceState.equalizerEnabled = NSString(string: equalizerStatus).boolValue
     }
 
-    private func concertHallStatus(document: AEXMLDocument) {
+    fileprivate func concertHallStatus(_ document: AEXMLDocument) {
         let concertHallStatus = document
             .root["audio"]["sound_effect"].attributes["enabled"]!
         deviceState.concertHallEnabled = NSString(string: concertHallStatus).boolValue
     }
 
-    private func headDetectionStatus(document: AEXMLDocument) {
+    fileprivate func headDetectionStatus(_ document: AEXMLDocument) {
         let headDetectionStatus = document
             .root["system"]["head_detection"].attributes["enabled"]!
         deviceState.headDetectionEnabled = NSString(string: headDetectionStatus).boolValue
     }
 
-    private func noiseControlLevelStatus(document: AEXMLDocument) {
+    fileprivate func noiseControlLevelStatus(_ document: AEXMLDocument) {
         let level = document
             .root["audio"]["noise_control"].attributes["value"]!
         let mode = document
@@ -87,11 +87,11 @@ class ZikResponseHandler: BTResponseHandlerInterface {
 
     }
 
-    private func exitParrot(document: AEXMLDocument) {
+    fileprivate func exitParrot(_ document: AEXMLDocument) {
         exit(0)
     }
 
-    private func flightModeStatus(document: AEXMLDocument) {
+    fileprivate func flightModeStatus(_ document: AEXMLDocument) {
         let flightModeStatus = document
             .root["flight_mode"].attributes["enabled"]!
         deviceState.flightModeEnabled = NSString(string: flightModeStatus).boolValue
