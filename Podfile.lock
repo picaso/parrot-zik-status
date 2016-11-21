@@ -12,7 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - AEXML
-  - FlatUIColors (from `git@github.com:Jauzee/FlatUIColors.git`, branch `swift3`)
+  - FlatUIColors (from `https://github.com/Jauzee/FlatUIColors.git`, branch `swift3`)
   - ITSwitch
   - LetsMove
   - Nimble
@@ -24,12 +24,12 @@ DEPENDENCIES:
 EXTERNAL SOURCES:
   FlatUIColors:
     :branch: swift3
-    :git: git@github.com:Jauzee/FlatUIColors.git
+    :git: https://github.com/Jauzee/FlatUIColors.git
 
 CHECKOUT OPTIONS:
   FlatUIColors:
     :commit: 98242133a9ca4e6ff8a14c496440d030a486e3c5
-    :git: git@github.com:Jauzee/FlatUIColors.git
+    :git: https://github.com/Jauzee/FlatUIColors.git
 
 SPEC CHECKSUMS:
   AEXML: 905e50474c0a261d335aa8be4ee32d22d69b6fd5
@@ -42,6 +42,6 @@ SPEC CHECKSUMS:
   SwinjectStoryboard: b52b45821a50386ef604c3cd098f8029a50a268d
   TRexAboutWindowController: d620e1f6373e0133d38eb4903e1cec23096c71e5
 
-PODFILE CHECKSUM: 604f96de19d43509fb07b1658b91a0ffe91453b2
+PODFILE CHECKSUM: 9a3832fd3fbb6d55bf3685f342f4c16e3f95f4ed
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0.beta.1
