@@ -22,7 +22,7 @@ class ZikMenuViewController: NSViewController {
     var service: BTCommunicationServiceInterface?
     var deviceState: DeviceState! = nil
     var about: AboutProtocol?
-    var notification = Notification()
+    var notification = ParrotNotification()
 
     fileprivate var enableNotification = true
 
@@ -65,7 +65,7 @@ class ZikMenuViewController: NSViewController {
             default:
                 self.batteryStatus.image = NSImage(named: "batteryDead")
                 if enableNotification {
-                    Notification.show(
+                    ParrotNotification.show(
                         "Headphone battery is about to die",
                         informativeText: "Please connect to an outlet to charge")
                 }
@@ -99,23 +99,23 @@ class ZikMenuViewController: NSViewController {
     }
 
     @IBAction func noiseControlSwitch(_ sender: ITSwitch) {
-        service?.toggleAsyncNoiseCancellation(sender.checked)
+        let _ = service?.toggleAsyncNoiseCancellation(sender.checked)
     }
 
     @IBAction func equalizerSwitch(_ sender: ITSwitch) {
-        service?.toggleAsyncEqualizerStatus(sender.checked)
+        let _ = service?.toggleAsyncEqualizerStatus(sender.checked)
     }
 
     @IBAction func concertHallSwitch(_ sender: ITSwitch) {
-        service?.toggleAsyncConcertHall(sender.checked)
+        let _ = service?.toggleAsyncConcertHall(sender.checked)
     }
 
     @IBAction func headDetectionSwitch(_ sender: ITSwitch) {
-        service?.toggleAsyncHeadDetection(sender.checked)
+        let _ = service?.toggleAsyncHeadDetection(sender.checked)
     }
 
     @IBAction func flightModeSwitch(_ sender: ITSwitch) {
-        service?.toggleAsyncFlightMode(sender.checked)
+        let _ = service?.toggleAsyncFlightMode(sender.checked)
     }
 
 }

@@ -11,7 +11,7 @@ before_install:
   - brew update
   - gem install activesupport -v  '= 4.2.6'
   - gem install xcpretty
-  - gem install cocoapods -v '1.0.1'
+  - gem install cocoapods -v '1.1.1'
 cache: cocoapods
 install:
     - pod install --repo-update

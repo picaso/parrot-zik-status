@@ -42,17 +42,17 @@ class BTCommunicationService: BTCommunicationServiceInterface, IOBluetoothRFCOMM
             }
         } else if isInitialization(message: message) {
             
-            api.getAsyncApplicationVersion()
-            api.getAsyncNoiseCancellationStatus()
-            api.getAsyncBatteryInfo()
-            api.getAsyncFriendlyName()
-            api.getAsyncNoiseControlStatus()
-            api.getAsyncEqualizerStatus()
-            api.getAsyncFlightModeStatus()
-            api.disableAsyncFlightMode()
-            api.getAsyncConcertHallStatus()
-            api.getAsyncheadDetectionStatus()
-            api.getAsyncNoiseControlLevelStatus()
+            let _ = api.getAsyncApplicationVersion()
+            let _ = api.getAsyncNoiseCancellationStatus()
+            let _ = api.getAsyncBatteryInfo()
+            let _ = api.getAsyncFriendlyName()
+            let _ = api.getAsyncNoiseControlStatus()
+            let _ = api.getAsyncEqualizerStatus()
+            let _ = api.getAsyncFlightModeStatus()
+            let _ = api.disableAsyncFlightMode()
+            let _ = api.getAsyncConcertHallStatus()
+            let _ = api.getAsyncheadDetectionStatus()
+            let _ = api.getAsyncNoiseControlLevelStatus()
         }
     }
     

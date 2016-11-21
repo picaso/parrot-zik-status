@@ -1,4 +1,4 @@
-struct Notification {
+struct ParrotNotification {
 
     static func show(_ title: String, informativeText: String = String()) -> Void {
         let notification = NSUserNotification()

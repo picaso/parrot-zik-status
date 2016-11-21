@@ -58,32 +58,32 @@ class NoiseController: NSViewController {
         case 3:
             self.status.stringValue = "OFF"
             if !updateUIOnly {
-                service?.setNoiseControlLevel(NoiseControlState.cancellingOff)
+                let _ = service?.setNoiseControlLevel(NoiseControlState.cancellingOff)
             }
         case 4:
             self.status.stringValue = "NORMAL"
             if !updateUIOnly {
-                service?.setNoiseControlLevel(NoiseControlState.cancellingNormal)
+                let _ = service?.setNoiseControlLevel(NoiseControlState.cancellingNormal)
             }
         case 5:
             self.status.stringValue = "MAX"
             if !updateUIOnly {
-                service?.setNoiseControlLevel(NoiseControlState.cancellingMax)
+                let _ = service?.setNoiseControlLevel(NoiseControlState.cancellingMax)
             }
         case 2:
             self.status.stringValue = "STREET"
             if !updateUIOnly {
-                service?.setNoiseControlLevel(NoiseControlState.streetNormal)
+               let _ = service?.setNoiseControlLevel(NoiseControlState.streetNormal)
             }
         case 1:
             self.status.stringValue = "STREET MAX"
             if !updateUIOnly {
-                service?.setNoiseControlLevel(NoiseControlState.streetMax)
+                let _ = service?.setNoiseControlLevel(NoiseControlState.streetMax)
             }
         default:
             self.status.stringValue = "OFF"
             if !updateUIOnly {
-                service?.setNoiseControlLevel(NoiseControlState.cancellingOff)
+                let _ = service?.setNoiseControlLevel(NoiseControlState.cancellingOff)
             }
         }
     }

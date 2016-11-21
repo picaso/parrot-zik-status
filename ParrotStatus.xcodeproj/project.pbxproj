@@ -30,7 +30,7 @@
 		2FB6DC7E1D559CE6007BBE07 /* ButtonEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6DC7D1D559CE6007BBE07 /* ButtonEffects.swift */; };
 		2FB6DC801D55BC0B007BBE07 /* NoiseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6DC7F1D55BC0B007BBE07 /* NoiseController.swift */; };
 		2FB6DC821D56790F007BBE07 /* NoiseControlState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6DC811D56790F007BBE07 /* NoiseControlState.swift */; };
-		2FB6DC841D5683EC007BBE07 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6DC831D5683EC007BBE07 /* Notification.swift */; };
+		2FB6DC841D5683EC007BBE07 /* ParrotNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB6DC831D5683EC007BBE07 /* ParrotNotification.swift */; };
 		2FC9CC5F1D4D84D4007EBED0 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC9CC5E1D4D84D4007EBED0 /* Footer.swift */; };
 		2FC9CC611D4D850C007EBED0 /* Footer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FC9CC601D4D850C007EBED0 /* Footer.xib */; };
 		2FC9CC631D4DAC93007EBED0 /* DeviceNameAnswer.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2FC9CC621D4DAC93007EBED0 /* DeviceNameAnswer.xml */; };
@@ -86,7 +86,7 @@
 		2FB6DC7D1D559CE6007BBE07 /* ButtonEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonEffects.swift; path = views/ButtonEffects.swift; sourceTree = "<group>"; };
 		2FB6DC7F1D55BC0B007BBE07 /* NoiseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoiseController.swift; sourceTree = "<group>"; };
 		2FB6DC811D56790F007BBE07 /* NoiseControlState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoiseControlState.swift; sourceTree = "<group>"; };
-		2FB6DC831D5683EC007BBE07 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		2FB6DC831D5683EC007BBE07 /* ParrotNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParrotNotification.swift; sourceTree = "<group>"; };
 		2FC9CC5E1D4D84D4007EBED0 /* Footer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Footer.swift; path = views/footer/Footer.swift; sourceTree = "<group>"; };
 		2FC9CC601D4D850C007EBED0 /* Footer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = Footer.xib; path = views/footer/Footer.xib; sourceTree = "<group>"; };
 		2FC9CC621D4DAC93007EBED0 /* DeviceNameAnswer.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DeviceNameAnswer.xml; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 			children = (
 				2F771ECC1D1C973F004E4ECA /* NSViewExtensions.swift */,
 				2F6F054F1D444A27002CB556 /* About.swift */,
-				2FB6DC831D5683EC007BBE07 /* Notification.swift */,
+				2FB6DC831D5683EC007BBE07 /* ParrotNotification.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -553,7 +553,7 @@
 				3FC71DE661D5A6D3354A9663 /* ParrotZik2Api.swift in Sources */,
 				2F6F05501D444A27002CB556 /* About.swift in Sources */,
 				2F771ECE1D1C973F004E4ECA /* NSViewExtensions.swift in Sources */,
-				2FB6DC841D5683EC007BBE07 /* Notification.swift in Sources */,
+				2FB6DC841D5683EC007BBE07 /* ParrotNotification.swift in Sources */,
 				2F04D5551D10CA2100423046 /* DisconnectedViewController.swift in Sources */,
 				2FB6DC801D55BC0B007BBE07 /* NoiseController.swift in Sources */,
 				2F74730D1D0F74CE0050B0A4 /* ZikMenuViewController.swift in Sources */,
@@ -633,7 +633,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = ParrotStatus;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
 				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
@@ -672,6 +673,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = ParrotStatus;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_REFLECTION_METADATA_LEVEL = none;
 				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
